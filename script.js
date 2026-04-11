@@ -180,8 +180,9 @@
   }
 
   /**
-   * Fills every [data-project-list] from bundle.projects (same data as JSON;
-   * keys are not used per field here — the array is the source of truth).
+   * Renders project rows into [data-project-list] from bundle.projects.
+   * Markup follows a magazine “teaser” pattern (headline + dek + read line),
+   * not product cards — styling is entirely in style.css (.teaser*).
    */
   function renderProjectCards(bundle) {
     var containers = document.querySelectorAll("[data-project-list]");
@@ -196,45 +197,58 @@
       container.innerHTML = "";
 
       list.forEach(function (proj, index) {
-        var article = document.createElement("article");
         var hasLink = proj.href && String(proj.href).trim() !== "";
-        article.className = "card" + (hasLink ? " card--linked" : " card--static");
+        var article = document.createElement("article");
+        article.className = "teaser" + (hasLink ? " teaser--linked" : " teaser--static");
 
-        var inner = document.createElement("div");
-        inner.className = "card__inner";
-
-        var h3 = document.createElement("h3");
-        h3.className = "card__title";
-        var title = proj.title;
-        h3.textContent = isRenderableValue(title)
-          ? String(title)
+        var titleText = isRenderableValue(proj.title)
+          ? String(proj.title)
           : missingText("projects[" + index + "].title");
-        inner.appendChild(h3);
-
-        var p = document.createElement("p");
-        p.className = "card__teaser";
-        var teaser = proj.teaser;
-        p.textContent = isRenderableValue(teaser)
-          ? String(teaser)
+        var deckText = isRenderableValue(proj.teaser)
+          ? String(proj.teaser)
           : missingText("projects[" + index + "].teaser");
-        inner.appendChild(p);
-
-        var footer = document.createElement("div");
-        footer.className = "card__footer";
-
-        var cta = document.createElement(hasLink ? "a" : "span");
-        cta.className = "card__cta";
-        var ctaText = proj.cta;
-        cta.textContent = isRenderableValue(ctaText)
-          ? String(ctaText)
+        var readText = isRenderableValue(proj.cta)
+          ? String(proj.cta)
           : missingText("projects[" + index + "].cta");
-        if (hasLink) {
-          cta.setAttribute("href", proj.href);
-        }
-        footer.appendChild(cta);
-        inner.appendChild(footer);
 
-        article.appendChild(inner);
+        if (hasLink) {
+          var link = document.createElement("a");
+          link.className = "teaser__link";
+          link.setAttribute("href", proj.href);
+
+          var h3 = document.createElement("h3");
+          h3.className = "teaser__hed";
+          h3.textContent = titleText;
+          link.appendChild(h3);
+
+          var deck = document.createElement("p");
+          deck.className = "teaser__deck";
+          deck.textContent = deckText;
+          link.appendChild(deck);
+
+          var read = document.createElement("span");
+          read.className = "teaser__read";
+          read.textContent = readText;
+          link.appendChild(read);
+
+          article.appendChild(link);
+        } else {
+          var h3s = document.createElement("h3");
+          h3s.className = "teaser__hed";
+          h3s.textContent = titleText;
+          article.appendChild(h3s);
+
+          var deckS = document.createElement("p");
+          deckS.className = "teaser__deck";
+          deckS.textContent = deckText;
+          article.appendChild(deckS);
+
+          var readS = document.createElement("span");
+          readS.className = "teaser__read";
+          readS.textContent = readText;
+          article.appendChild(readS);
+        }
+
         container.appendChild(article);
       });
     });
