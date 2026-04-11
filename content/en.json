@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "siteTitle": "Datenpunk",
+    "htmlLang": "en",
+    "documentTitle": {
+      "index": "Datenpunk — Home",
+      "projects": "Datenpunk — Projects",
+      "project1": "Datenpunk — Everyday sounds",
+      "about": "Datenpunk — About"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "langDe": "DE",
+    "langEn": "EN",
+    "langLabel": "Language",
+    "ariaMain": "Main navigation"
+  },
+  "footer": {
+    "note": "Datenpunk — data-driven stories.",
+    "yearLabel": "As of"
+  },
+  "home": {
+    "hero": {
+      "title": "Datenpunk",
+      "tagline": "data-driven stories between curiosity and chaos"
+    },
+    "intro": "I build data-driven stories at the intersection of analysis, curiosity, and clear communication. This portfolio documents projects where data is not only analysed but made narratively intelligible.",
+    "featuredHeading": "Featured projects",
+    "featuredIntro": "A glimpse into work where questions, data, and presentation come together.",
+    "aboutTeaserHeading": "About me",
+    "aboutTeaser": "My background is in scientific data analysis; I work with Python, R, and SQL. I am interested in how complex datasets become stories that are understandable, visual, and journalistically relevant.",
+    "aboutTeaserLink": "More in the about section"
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "intro": "Here I collect data journalism and analytical work — from first experiments to more developed narratives. Each project describes a question, how data was handled, and what follows from it.",
+    "cardsHeading": "All projects"
+  },
+  "projects": [
+    {
+      "id": "project1",
+      "href": "project1.html",
+      "title": "How absurd are everyday sounds?",
+      "teaser": "An initial experiment on whether everyday sounds can be distinguished and visualised in a data-driven way.",
+      "cta": "Open project"
+    },
+    {
+      "id": "project_placeholder",
+      "href": "",
+      "title": "Next project",
+      "teaser": "Another data journalism piece is in preparation — topic, data basis, and visualisation will follow.",
+      "cta": "Coming soon"
+    }
+  ],
+  "project1": {
+    "title": "How absurd are everyday sounds?",
+    "standfirst": "An initial experiment on whether everyday sounds can be distinguished and visualised in a data-driven way.",
+    "backLink": "Back to project overview",
+    "imageCaption": "Placeholder for a visualisation or figure from the project.",
+    "sections": {
+      "question": {
+        "heading": "Question",
+        "body": "Can sounds from daily life — traffic, kitchen, office — be captured and compared so that patterns emerge without losing all sense of lived texture?"
+      },
+      "data": {
+        "heading": "Data",
+        "body": "Short, anonymised audio clips and derived features (e.g. spectral properties), structured as a table for analysis and later visualisation."
+      },
+      "method": {
+        "heading": "Method",
+        "body": "Preparation in Python, exploratory statistics, and a clear decision path: which metrics aid readability, which mainly add noise?"
+      },
+      "visualisation": {
+        "heading": "Visualisation",
+        "body": "A calm, typography-led presentation of differences between categories — no gimmicks, emphasis on traceability."
+      },
+      "conclusion": {
+        "heading": "Conclusion",
+        "body": "A prototype: the question remains open for deeper measurement, but the workflow from raw signal to a narratively usable graphic is documented and extensible."
+      }
+    }
+  },
+  "aboutPage": {
+    "title": "About",
+    "intro": "I work at the intersection of data, analysis, and communication — aiming to make relationships visible and debatable.",
+    "backgroundHeading": "Background",
+    "background": "Scientific data analysis is the starting point: careful modelling, transparent assumptions, and a willingness to treat uncertainty explicitly. Data journalism adds narrative focus and an audience perspective.",
+    "skillsHeading": "Tools & focus",
+    "skills": "Python, R, and SQL; statistical foundations; research and documentation; visualisation for print and web; structured project planning.",
+    "motivationHeading": "Motivation",
+    "motivation": "I am driven by the question of which stories emerge from data when neither sensationalism nor technical isolation is chosen — but clarity, context, and thoughtful design.",
+    "contactHeading": "Contact",
+    "contact": "For questions or collaboration, please use the channels provided in applications. A public GitHub profile can be added here once it is relevant to the work.",
+    "githubPlaceholder": "github.com/your-username"
+  },
+  "common": {
+    "readMore": "Read more",
+    "allProjects": "All projects",
+    "skipToContent": "Skip to content"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "siteTitle": "Datenpunk",
+    "htmlLang": "de",
+    "documentTitle": {
+      "index": "Datenpunk — Start",
+      "projects": "Datenpunk — Projekte",
+      "project1": "Datenpunk — Alltagsgeräusche",
+      "about": "Datenpunk — Über mich"
+    }
+  },
+  "nav": {
+    "home": "Start",
+    "projects": "Projekte",
+    "about": "Über mich",
+    "langDe": "DE",
+    "langEn": "EN",
+    "langLabel": "Sprache",
+    "ariaMain": "Hauptnavigation"
+  },
+  "footer": {
+    "note": "Datenpunk — datengetriebene Geschichten.",
+    "yearLabel": "Stand"
+  },
+  "home": {
+    "hero": {
+      "title": "Datenpunk",
+      "tagline": "datengetriebene Geschichten zwischen Neugier und Chaos"
+    },
+    "intro": "Ich baue datengetriebene Geschichten an der Schnittstelle von Analyse, Neugier und verständlicher Vermittlung. Dieses Portfolio dokumentiert Projekte, in denen Daten nicht nur ausgewertet, sondern erzählbar gemacht werden.",
+    "featuredHeading": "Ausgewählte Projekte",
+    "featuredIntro": "Ein Einblick in Arbeiten, in denen Fragen, Daten und Darstellung zusammenkommen.",
+    "aboutTeaserHeading": "Kurz zu mir",
+    "aboutTeaser": "Ich komme aus der wissenschaftlichen Datenanalyse und arbeite mit Python, R und SQL. Mich interessiert, wie aus komplexen Datensätzen verständliche, visuelle und journalistisch relevante Geschichten werden.",
+    "aboutTeaserLink": "Mehr im Über-mich-Bereich"
+  },
+  "projectsPage": {
+    "title": "Projekte",
+    "intro": "Hier sammle ich datenjournalistische und analytische Arbeiten — von ersten Experimenten bis zu ausgereifteren Erzählungen. Jedes Projekt beschreibt eine Frage, den Umgang mit Daten und was sich daraus ergibt.",
+    "cardsHeading": "Alle Projekte"
+  },
+  "projects": [
+    {
+      "id": "project1",
+      "href": "project1.html",
+      "title": "Wie absurd sind Alltagsgeräusche?",
+      "teaser": "Ein erstes Experiment darüber, ob sich alltägliche Geräusche datenbasiert unterscheiden und sichtbar machen lassen.",
+      "cta": "Zum Projekt"
+    },
+    {
+      "id": "project_placeholder",
+      "href": "",
+      "title": "Nächstes Projekt",
+      "teaser": "Ein weiteres datenjournalistisches Stück ist in Vorbereitung — Thema, Datenlage und Visualisierung folgen.",
+      "cta": "Demnächst"
+    }
+  ],
+  "project1": {
+    "title": "Wie absurd sind Alltagsgeräusche?",
+    "standfirst": "Ein erstes Experiment darüber, ob sich alltägliche Geräusche datenbasiert unterscheiden und sichtbar machen lassen.",
+    "backLink": "Zurück zur Projektübersicht",
+    "imageCaption": "Platzhalter für eine Visualisierung oder Abbildung aus dem Projekt.",
+    "sections": {
+      "question": {
+        "heading": "Frage",
+        "body": "Lassen sich Geräusche aus dem Alltag — Verkehr, Küche, Büro — so erfassen und vergleichen, dass Muster sichtbar werden, ohne die Lebendigkeit völlig zu verlieren?"
+      },
+      "data": {
+        "heading": "Daten",
+        "body": "Kurze, anonymisierte Audioausschnitte und daraus abgeleitete Merkmale (z. B. spektrale Eigenschaften), strukturiert als Tabelle für Analyse und spätere Visualisierung."
+      },
+      "method": {
+        "heading": "Methode",
+        "body": "Aufbereitung in Python, explorative Statistik und ein klarer Entscheidungsweg: welche Kennzahlen tragen zur Lesbarkeit bei, welche eher zur Verunklarung?"
+      },
+      "visualisation": {
+        "heading": "Visualisierung",
+        "body": "Eine ruhige, typografisch geführte Darstellung der Unterschiede zwischen Kategorien — ohne Effekthascherei, mit Fokus auf Nachvollziehbarkeit."
+      },
+      "conclusion": {
+        "heading": "Fazit",
+        "body": "Ein Prototyp: Die Frage bleibt offen für vertiefende Messungen, aber der Workflow von Rohsignal zu erzählbarer Grafik ist dokumentiert und erweiterbar."
+      }
+    }
+  },
+  "aboutPage": {
+    "title": "Über mich",
+    "intro": "Ich arbeite an der Schnittstelle von Daten, Analyse und Vermittlung — mit dem Ziel, Zusammenhänge sichtbar und diskutierbar zu machen.",
+    "backgroundHeading": "Hintergrund",
+    "background": "Wissenschaftliche Datenanalyse bildet den Ausgangspunkt: saubere Modellierung, transparente Annahmen und die Bereitschaft, Unsicherheit mitzudenken. Datenjournalismus ergänzt das um narrative Schärfe und Publikumsperspektive.",
+    "skillsHeading": "Werkzeuge & Schwerpunkte",
+    "skills": "Python, R und SQL; statistische Grundlagen; Recherche und Dokumentation; Visualisierung für Print und Web; strukturierte Projektplanung.",
+    "motivationHeading": "Motivation",
+    "motivation": "Mich treibt die Frage an, welche Geschichten sich aus Daten ergeben, wenn man weder Sensationalismus noch technische Abschottung wählt — sondern Klarheit, Kontext und gestalterische Rücksicht.",
+    "contactHeading": "Kontakt",
+    "contact": "Für Rückfragen oder Zusammenarbeit erreichen Sie mich über die in Bewerbungen angegebenen Kanäle. Ein öffentliches GitHub-Profil kann hier ergänzt werden, sobald es für die Arbeit relevant ist.",
+    "githubPlaceholder": "github.com/ihr-benutzername"
+  },
+  "common": {
+    "readMore": "Weiterlesen",
+    "allProjects": "Alle Projekte",
+    "skipToContent": "Zum Inhalt springen"
+  }
+}

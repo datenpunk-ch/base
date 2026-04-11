@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de" data-i18n-document-title="meta.documentTitle.projects">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="common.skipToContent"></a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-title">
+          <a href="index.html" data-i18n="meta.siteTitle"></a>
+        </p>
+        <nav
+          class="site-nav"
+          data-i18n-attr="nav.ariaMain"
+          data-i18n-attr-name="aria-label"
+          aria-label=""
+        >
+          <ul class="site-nav__list">
+            <li><a href="index.html" data-i18n="nav.home"></a></li>
+            <li>
+              <a href="projects.html" aria-current="page" data-i18n="nav.projects"></a>
+            </li>
+            <li><a href="about.html" data-i18n="nav.about"></a></li>
+          </ul>
+          <div
+            class="lang-switch"
+            role="group"
+            data-i18n-attr="nav.langLabel"
+            data-i18n-attr-name="aria-label"
+            aria-label=""
+          >
+            <button type="button" data-set-lang="de" aria-pressed="false" data-i18n="nav.langDe"></button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-set-lang="en" aria-pressed="false" data-i18n="nav.langEn"></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <h1 class="page-title" data-i18n="projectsPage.title"></h1>
+      <p class="lede" data-i18n="projectsPage.intro"></p>
+
+      <section class="section" aria-labelledby="cards-heading">
+        <h2 id="cards-heading" data-i18n="projectsPage.cardsHeading"></h2>
+        <div class="card-grid" data-project-list aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p data-i18n="footer.note"></p>
+        <p>
+          <span data-i18n="footer.yearLabel"></span>
+          <span data-year></span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
