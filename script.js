@@ -47,7 +47,8 @@
  *
    * 6. For project cards on the home / projects pages, edit the "projects"
    *    array in JSON. Each item may include: id, href, title, teaser, cta,
-   *    and optional github (URL to the GitHub repository or GitHub Project).
+   *    optional github (URL), and optional thumb + thumbAlt (thumbnail image
+   *    URL and short alt text for the home / projects list).
  *    The script builds the card DOM from those fields (no extra keys in
  *    HTML for card body copy).
  *
@@ -221,8 +222,13 @@
 
       list.forEach(function (proj, index) {
         var hasLink = proj.href && String(proj.href).trim() !== "";
+        var thumbSrc = proj.thumb;
+        var hasThumb =
+          isRenderableValue(thumbSrc) && String(thumbSrc).trim() !== "";
+
         var article = document.createElement("article");
         article.className = "teaser" + (hasLink ? " teaser--linked" : " teaser--static");
+        if (hasThumb) article.classList.add("teaser--has-thumb");
 
         var titleText = isRenderableValue(proj.title)
           ? String(proj.title)
@@ -234,42 +240,61 @@
           ? String(proj.cta)
           : missingText("projects[" + index + "].cta");
 
+        function appendTeaserTextNodes(target) {
+          var h3 = document.createElement("h3");
+          h3.className = "teaser__hed";
+          h3.textContent = titleText;
+          target.appendChild(h3);
+
+          var deck = document.createElement("p");
+          deck.className = "teaser__deck";
+          deck.textContent = deckText;
+          target.appendChild(deck);
+
+          var read = document.createElement("span");
+          read.className = "teaser__read";
+          read.textContent = readText;
+          target.appendChild(read);
+        }
+
+        function makeThumbImg() {
+          var img = document.createElement("img");
+          img.className = "teaser__thumb";
+          img.src = String(thumbSrc).trim();
+          img.setAttribute("loading", "lazy");
+          img.setAttribute("decoding", "async");
+          var altVal = proj.thumbAlt;
+          img.alt = isRenderableValue(altVal) ? String(altVal) : "";
+          return img;
+        }
+
         if (hasLink) {
           var link = document.createElement("a");
           link.className = "teaser__link";
           link.setAttribute("href", proj.href);
 
-          var h3 = document.createElement("h3");
-          h3.className = "teaser__hed";
-          h3.textContent = titleText;
-          link.appendChild(h3);
-
-          var deck = document.createElement("p");
-          deck.className = "teaser__deck";
-          deck.textContent = deckText;
-          link.appendChild(deck);
-
-          var read = document.createElement("span");
-          read.className = "teaser__read";
-          read.textContent = readText;
-          link.appendChild(read);
+          if (hasThumb) {
+            link.appendChild(makeThumbImg());
+            var body = document.createElement("div");
+            body.className = "teaser__body";
+            appendTeaserTextNodes(body);
+            link.appendChild(body);
+          } else {
+            appendTeaserTextNodes(link);
+          }
 
           article.appendChild(link);
+        } else if (hasThumb) {
+          var row = document.createElement("div");
+          row.className = "teaser__row";
+          row.appendChild(makeThumbImg());
+          var bodyS = document.createElement("div");
+          bodyS.className = "teaser__body";
+          appendTeaserTextNodes(bodyS);
+          row.appendChild(bodyS);
+          article.appendChild(row);
         } else {
-          var h3s = document.createElement("h3");
-          h3s.className = "teaser__hed";
-          h3s.textContent = titleText;
-          article.appendChild(h3s);
-
-          var deckS = document.createElement("p");
-          deckS.className = "teaser__deck";
-          deckS.textContent = deckText;
-          article.appendChild(deckS);
-
-          var readS = document.createElement("span");
-          readS.className = "teaser__read";
-          readS.textContent = readText;
-          article.appendChild(readS);
+          appendTeaserTextNodes(article);
         }
 
         appendProjectGithubLink(article, proj, bundle);

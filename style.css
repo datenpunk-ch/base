@@ -14,6 +14,7 @@
 
 :root {
   --color-bg: #ffffff;
+  --color-bg-soft: #f7f8f9;
   --color-bg-hover: #f4f4f4;
   --color-ink: #000000;
   --color-ink-body: #111111;
@@ -387,6 +388,31 @@ main {
   color: var(--color-ink-body);
 }
 
+.home-preface {
+  margin-bottom: clamp(var(--space-5), 7vw, var(--space-6));
+  max-width: var(--measure);
+}
+
+.home-preface__heading {
+  margin: 0 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-rule);
+  font-family: var(--font-ui);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.home-preface p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.96875rem;
+  line-height: var(--lh-relaxed);
+  color: var(--color-ink-body);
+}
+
 .section {
   counter-increment: section;
   margin-bottom: clamp(var(--space-5), 7vw, var(--space-6));
@@ -582,6 +608,54 @@ main {
   font-weight: 600;
 }
 
+.teaser--has-thumb .teaser__link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.teaser__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.teaser__thumb {
+  width: min(34vw, 10.5rem);
+  max-width: 38%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--color-bg-soft);
+}
+
+.teaser__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.teaser--has-thumb .teaser__hed {
+  max-width: none;
+}
+
+@media (max-width: 520px) {
+  .teaser--has-thumb .teaser__link,
+  .teaser__row {
+    flex-direction: column;
+  }
+
+  .teaser--has-thumb .teaser__thumb,
+  .teaser__row .teaser__thumb {
+    width: 100%;
+    max-width: 100%;
+    max-height: 12rem;
+  }
+}
+
 @media (min-width: 720px) {
   .teaser-list--grid {
     display: grid;
@@ -638,6 +712,28 @@ main {
 .figure-placeholder p {
   max-width: 28rem;
   margin: 0;
+}
+
+.article-figure {
+  margin: var(--space-4) 0;
+  max-width: min(var(--measure), 100%);
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-bg-soft);
+}
+
+.article-figure figcaption {
+  margin-top: var(--space-2);
+  max-width: var(--measure);
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: var(--lh-relaxed);
+  color: var(--color-muted);
 }
 
 .back-nav {

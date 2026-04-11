@@ -26,9 +26,11 @@
   "home": {
     "hero": {
       "title": "Datenpunk",
-      "tagline": "Zahlen und Geschichten. In bunt. Und zum drauklicken."
+      "tagline": "Zahlen und Geschichten. In bunt. Und zum draufklicken."
     },
     "intro": "Introtext",
+    "prefaceHeading": "Mehr Kontext",
+    "prefaceBody": "Gwundrig und klebrig.",
     "featuredHeading": "Ausgewählte Projekte",
     "featuredIntro": "In Vorbereitung.",
     "aboutTeaserHeading": "Kurz zu mir",
@@ -47,6 +49,8 @@
       "title": "Testprojekt",
       "teaser": "Ein erstes Experiment.",
       "cta": "Zum Projekt",
+      "thumb": "assets/images/testimg.jpg",
+      "thumbAlt": "Vorschaubild: Testprojekt",
       "github": "https://github.com/orgs/datenpunk-ch/projects/1"
     },
     {
@@ -63,7 +67,8 @@
     "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
     "githubLinkLabel": "GitHub-Projekt (Code, Issues, Verlauf)",
     "backLink": "Zurück zur Projektübersicht",
-    "imageCaption": "Platzhalter für eine Visualisierung oder Abbildung aus dem Projekt.",
+    "imageAlt": "Abbildung zum Projekt Test1",
+    "imageCaption": "Visualisierung bzw. Abbildung aus dem Projekt.",
     "sections": {
       "question": {
         "heading": "Frage",

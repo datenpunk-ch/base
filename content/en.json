@@ -29,6 +29,8 @@
       "tagline": "data-driven stories between curiosity and chaos"
     },
     "intro": "I build data-driven stories at the intersection of analysis, curiosity, and clear communication. This portfolio documents projects where data is not only analysed but made narratively intelligible.",
+    "prefaceHeading": "More context",
+    "prefaceBody": "Use this block for a second, longer paragraph — background, how you work, or what readers should know before they dive into the projects. It sits below the opening fold and above the numbered sections.",
     "featuredHeading": "Featured projects",
     "featuredIntro": "A glimpse into work where questions, data, and presentation come together.",
     "aboutTeaserHeading": "About me",
@@ -47,6 +49,8 @@
       "title": "How absurd are everyday sounds?",
       "teaser": "An initial experiment on whether everyday sounds can be distinguished and visualised in a data-driven way.",
       "cta": "Open project",
+      "thumb": "assets/images/testimg.jpg",
+      "thumbAlt": "Thumbnail: everyday sounds project",
       "github": "https://github.com/orgs/datenpunk-ch/projects/1"
     },
     {
@@ -63,7 +67,8 @@
     "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
     "githubLinkLabel": "GitHub project (code, issues, history)",
     "backLink": "Back to project overview",
-    "imageCaption": "Placeholder for a visualisation or figure from the project.",
+    "imageAlt": "Figure illustrating the everyday sounds project",
+    "imageCaption": "Visualisation or figure from the project.",
     "sections": {
       "question": {
         "heading": "Question",
