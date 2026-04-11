@@ -5,8 +5,9 @@
     "documentTitle": {
       "index": "Datenpunk — Start",
       "projects": "Datenpunk — Projekte",
-      "project1": "Datenpunk — Alltagsgeräusche",
-      "about": "Datenpunk — Über mich"
+      "project1": "Datenpunk — Test",
+      "about": "Datenpunk — Über mich",
+      "impressum": "Datenpunk — Impressum"
     }
   },
   "nav": {
@@ -19,86 +20,109 @@
     "ariaMain": "Hauptnavigation"
   },
   "footer": {
-    "note": "Datenpunk — datengetriebene Geschichten.",
-    "yearLabel": "Stand"
+    "note": "Datenpunk — Zahlen und Geschichten.",
+    "impressumLink": "Impressum"
   },
   "home": {
     "hero": {
       "title": "Datenpunk",
-      "tagline": "datengetriebene Geschichten zwischen Neugier und Chaos"
+      "tagline": "Zahlen und Geschichten. In bunt. Und zum drauklicken."
     },
-    "intro": "Ich baue datengetriebene Geschichten an der Schnittstelle von Analyse, Neugier und verständlicher Vermittlung. Dieses Portfolio dokumentiert Projekte, in denen Daten nicht nur ausgewertet, sondern erzählbar gemacht werden.",
+    "intro": "Introtext",
     "featuredHeading": "Ausgewählte Projekte",
-    "featuredIntro": "Ein Einblick in Arbeiten, in denen Fragen, Daten und Darstellung zusammenkommen.",
+    "featuredIntro": "In Vorbereitung.",
     "aboutTeaserHeading": "Kurz zu mir",
-    "aboutTeaser": "Ich komme aus der wissenschaftlichen Datenanalyse und arbeite mit Python, R und SQL. Mich interessiert, wie aus komplexen Datensätzen verständliche, visuelle und journalistisch relevante Geschichten werden.",
+    "aboutTeaser": "Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage.",
     "aboutTeaserLink": "Mehr im Über-mich-Bereich"
   },
   "projectsPage": {
     "title": "Projekte",
-    "intro": "Hier sammle ich datenjournalistische und analytische Arbeiten — von ersten Experimenten bis zu ausgereifteren Erzählungen. Jedes Projekt beschreibt eine Frage, den Umgang mit Daten und was sich daraus ergibt.",
+    "intro": "Bunte Mischung.",
     "cardsHeading": "Alle Projekte"
   },
   "projects": [
     {
       "id": "project1",
       "href": "project1.html",
-      "title": "Wie absurd sind Alltagsgeräusche?",
-      "teaser": "Ein erstes Experiment darüber, ob sich alltägliche Geräusche datenbasiert unterscheiden und sichtbar machen lassen.",
-      "cta": "Zum Projekt"
+      "title": "Testprojekt",
+      "teaser": "Ein erstes Experiment.",
+      "cta": "Zum Projekt",
+      "github": "https://github.com/orgs/datenpunk-ch/projects/1"
     },
     {
       "id": "project_placeholder",
       "href": "",
       "title": "Nächstes Projekt",
-      "teaser": "Ein weiteres datenjournalistisches Stück ist in Vorbereitung — Thema, Datenlage und Visualisierung folgen.",
+      "teaser": "In Vorbereitung — bleibt neugierig.",
       "cta": "Demnächst"
     }
   ],
   "project1": {
-    "title": "Wie absurd sind Alltagsgeräusche?",
-    "standfirst": "Ein erstes Experiment darüber, ob sich alltägliche Geräusche datenbasiert unterscheiden und sichtbar machen lassen.",
+    "title": "Test1",
+    "standfirst": "Text zu Test 1",
+    "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
+    "githubLinkLabel": "GitHub-Projekt (Code, Issues, Verlauf)",
     "backLink": "Zurück zur Projektübersicht",
     "imageCaption": "Platzhalter für eine Visualisierung oder Abbildung aus dem Projekt.",
     "sections": {
       "question": {
         "heading": "Frage",
-        "body": "Lassen sich Geräusche aus dem Alltag — Verkehr, Küche, Büro — so erfassen und vergleichen, dass Muster sichtbar werden, ohne die Lebendigkeit völlig zu verlieren?"
+        "body": "Fragetext"
       },
       "data": {
         "heading": "Daten",
-        "body": "Kurze, anonymisierte Audioausschnitte und daraus abgeleitete Merkmale (z. B. spektrale Eigenschaften), strukturiert als Tabelle für Analyse und spätere Visualisierung."
+        "body": "Datentext"
       },
       "method": {
         "heading": "Methode",
-        "body": "Aufbereitung in Python, explorative Statistik und ein klarer Entscheidungsweg: welche Kennzahlen tragen zur Lesbarkeit bei, welche eher zur Verunklarung?"
+        "body": "Methodentext"
       },
       "visualisation": {
         "heading": "Visualisierung",
-        "body": "Eine ruhige, typografisch geführte Darstellung der Unterschiede zwischen Kategorien — ohne Effekthascherei, mit Fokus auf Nachvollziehbarkeit."
+        "body": "Auch in bunt."
       },
       "conclusion": {
         "heading": "Fazit",
-        "body": "Ein Prototyp: Die Frage bleibt offen für vertiefende Messungen, aber der Workflow von Rohsignal zu erzählbarer Grafik ist dokumentiert und erweiterbar."
+        "body": "Fazittext"
       }
     }
   },
   "aboutPage": {
     "title": "Über mich",
-    "intro": "Ich arbeite an der Schnittstelle von Daten, Analyse und Vermittlung — mit dem Ziel, Zusammenhänge sichtbar und diskutierbar zu machen.",
+    "intro": "Introtext",
     "backgroundHeading": "Hintergrund",
-    "background": "Wissenschaftliche Datenanalyse bildet den Ausgangspunkt: saubere Modellierung, transparente Annahmen und die Bereitschaft, Unsicherheit mitzudenken. Datenjournalismus ergänzt das um narrative Schärfe und Publikumsperspektive.",
+    "background": "Hintergrundtext",
     "skillsHeading": "Werkzeuge & Schwerpunkte",
-    "skills": "Python, R und SQL; statistische Grundlagen; Recherche und Dokumentation; Visualisierung für Print und Web; strukturierte Projektplanung.",
-    "motivationHeading": "Motivation",
-    "motivation": "Mich treibt die Frage an, welche Geschichten sich aus Daten ergeben, wenn man weder Sensationalismus noch technische Abschottung wählt — sondern Klarheit, Kontext und gestalterische Rücksicht.",
+    "skills": "Skills und Tools",
+    "motivationHeading": "Warum?",
+    "motivation": "Motivationstext",
     "contactHeading": "Kontakt",
-    "contact": "Für Rückfragen oder Zusammenarbeit erreichen Sie mich über die in Bewerbungen angegebenen Kanäle. Ein öffentliches GitHub-Profil kann hier ergänzt werden, sobald es für die Arbeit relevant ist.",
-    "githubPlaceholder": "github.com/ihr-benutzername"
+    "contact": "Für Rückfragen oder Zusammenarbeit bin ich immer offen.",
+    "githubPlaceholder": "https://github.com/datenpunk-ch"
+  },
+  "impressumPage": {
+    "title": "Impressum",
+    "lead": "Diese Website ist ein persönliches Portfolio meiner Projekte.",
+    "providerHeading": "Betreiberin / Betreiber",
+    "providerBody": "B. Walkenhorst\nZürich, Schweiz",
+    "contactHeading": "Kontakt",
+    "contactBody": "datenpunk.ch@gmail.ch",
+    "contentHeading": "Inhalt des Portfolios",
+    "contentBody": "Auf dieser Website werden eigenständige, datenjournalistisch oder analytisch motivierte Texte und Visualisierungen gezeigt. Die Darstellungen ersetzen keine professionelle Beratung in Statistik, Medizin, Recht oder anderen Fachgebieten. Quelltexte, Datenstände und Arbeitsnotizen sind, soweit vorhanden, über die verlinkten GitHub-Projekte einsehbar; dort gelten die Nutzungsbedingungen von GitHub.",
+    "liabilityContentHeading": "Haftung für Inhalte",
+    "liabilityContentBody": "Die Inhalte dieses Portfolios werden sorgfältig erstellt. Es wird keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der Angaben übernommen. Haftungsansprüche aus der Nutzung der Informationen sind ausgeschlossen, soweit gesetzlich zulässig.",
+    "liabilityLinksHeading": "Haftung für Links",
+    "liabilityLinksBody": "Die Website verweist unter anderem auf GitHub (Projekte, Repositories). Für Inhalte auf fremden Websites sind deren Betreiberinnen und Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar. Bei Bekanntwerden von Rechtsverletzungen werden Links angepasst oder entfernt.",
+    "copyrightHeading": "Urheberrecht",
+    "copyrightBody": "Texte, Grafiken, Layout und Datenvisualisierungen auf dieser Website unterliegen dem Urheberrecht, soweit nichts anderes ausgewiesen ist (z. B. Drittmaterial in GitHub-Repositories). Vervielfältigung oder Verwertung ausserhalb der gesetzlichen Grenzen bedarf der Zustimmung der Rechtsinhaberin / des Rechtsinhabers.",
+    "hostingHeading": "Hosting und eingebundene Dienste",
+    "hostingBody": "Die Seiten werden über «GitHub Pages» ausgeliefert (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Schriften werden über Google Fonts eingebunden (Google Ireland Limited / Google LLC). Beim Aufruf können technische Daten an diese Anbieter übermittelt werden. Für eine datenschutzrechtliche Erläuterung empfiehlt sich eine separate Datenschutzerklärung, sobald Sie über reine Selbstinformation hinaus personenbezogene Daten verarbeiten.",
+    "backHome": "Zur Startseite"
   },
   "common": {
     "readMore": "Weiterlesen",
     "allProjects": "Alle Projekte",
-    "skipToContent": "Zum Inhalt springen"
+    "skipToContent": "Zum Inhalt springen",
+    "projectGithubCta": "GitHub-Projekt"
   }
 }

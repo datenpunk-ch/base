@@ -252,6 +252,11 @@ img {
   z-index: 1;
 }
 
+/* Matches script.js ENABLE_LANG_SWITCH = false (class on <html>). */
+html.lang-switch-off .lang-switch {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .site-header__inner {
     flex-direction: column;

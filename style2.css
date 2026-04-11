@@ -257,6 +257,11 @@
     outline-offset: -2px;
   }
   
+  /* Set ENABLE_LANG_SWITCH = true in script.js to show the control again. */
+  html.lang-switch-off .lang-switch {
+    display: none;
+  }
+  
   @media (max-width: 640px) {
     .site-header__inner {
       flex-direction: column;
@@ -574,6 +579,36 @@
     color: var(--color-accent-hover);
   }
   
+  .teaser--linked .teaser__link {
+    padding-bottom: var(--space-2);
+  }
+  
+  .teaser__github {
+    display: inline-block;
+    margin: 0 0 var(--space-5);
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-rule);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  
+  .teaser__github:hover,
+  .teaser__github:focus-visible {
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent);
+    outline: none;
+  }
+  
+  .teaser__github:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  
   .teaser--static {
     padding: var(--space-4) 0 var(--space-5);
   }
@@ -650,6 +685,34 @@
     margin: 0;
   }
   
+  .project-github {
+    margin: var(--space-3) 0 0;
+    max-width: var(--measure);
+  }
+  
+  .project-github a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-rule);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  
+  .project-github a:hover,
+  .project-github a:focus-visible {
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent);
+    outline: none;
+  }
+  
+  .project-github a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  
   .back-nav {
     margin-top: var(--space-5);
     padding-top: var(--space-3);
@@ -723,6 +786,31 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+  }
+  
+  .site-footer__legal {
+    flex-basis: 100%;
+  }
+  
+  .site-footer__legal a {
+    font-family: var(--font-ui);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .site-footer__legal a:hover,
+  .site-footer__legal a:focus-visible {
+    color: var(--color-ink);
+    border-bottom-color: var(--color-accent);
+  }
+  
+  .impressum-lines {
+    white-space: pre-line;
   }
   
   /* ---------- Reduced motion ---------- */

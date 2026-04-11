@@ -6,7 +6,8 @@
       "index": "Datenpunk — Home",
       "projects": "Datenpunk — Projects",
       "project1": "Datenpunk — Everyday sounds",
-      "about": "Datenpunk — About"
+      "about": "Datenpunk — About",
+      "impressum": "Datenpunk — Legal notice"
     }
   },
   "nav": {
@@ -20,7 +21,7 @@
   },
   "footer": {
     "note": "Datenpunk — data-driven stories.",
-    "yearLabel": "As of"
+    "impressumLink": "Legal notice"
   },
   "home": {
     "hero": {
@@ -45,7 +46,8 @@
       "href": "project1.html",
       "title": "How absurd are everyday sounds?",
       "teaser": "An initial experiment on whether everyday sounds can be distinguished and visualised in a data-driven way.",
-      "cta": "Open project"
+      "cta": "Open project",
+      "github": "https://github.com/orgs/datenpunk-ch/projects/1"
     },
     {
       "id": "project_placeholder",
@@ -58,6 +60,8 @@
   "project1": {
     "title": "How absurd are everyday sounds?",
     "standfirst": "An initial experiment on whether everyday sounds can be distinguished and visualised in a data-driven way.",
+    "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
+    "githubLinkLabel": "GitHub project (code, issues, history)",
     "backLink": "Back to project overview",
     "imageCaption": "Placeholder for a visualisation or figure from the project.",
     "sections": {
@@ -96,9 +100,29 @@
     "contact": "For questions or collaboration, please use the channels provided in applications. A public GitHub profile can be added here once it is relevant to the work.",
     "githubPlaceholder": "github.com/your-username"
   },
+  "impressumPage": {
+    "title": "Legal notice",
+    "lead": "This website is a personal portfolio: it presents data-driven articles and projects.",
+    "providerHeading": "Site operator",
+    "providerBody": "B. Walkenhorst\nZurich, Switzerland",
+    "contactHeading": "Contact",
+    "contactBody": "datenpunk.ch@gmail.ch",
+    "contentHeading": "Portfolio content",
+    "contentBody": "This site publishes independent data journalism and analytical work. Nothing here is professional advice in statistics, medicine, law, or any other field. Where available, source code, data snapshots, and working notes are linked via GitHub Projects; GitHub’s own terms apply there.",
+    "liabilityContentHeading": "Liability for content",
+    "liabilityContentBody": "Portfolio content is prepared with care. No warranty is given for accuracy, completeness, or currency. Liability claims arising from use of the material are excluded to the extent permitted by law.",
+    "liabilityLinksHeading": "Liability for links",
+    "liabilityLinksBody": "The site links to GitHub (projects, repositories). Third-party sites are operated by their respective owners only. No unlawful content was apparent when links were added. Links will be adjusted or removed if violations become known.",
+    "copyrightHeading": "Copyright",
+    "copyrightBody": "Text, graphics, layout, and data visualisations on this site are protected by copyright unless stated otherwise (for example third-party material in GitHub repositories). Use beyond statutory limits requires the rights holder’s consent.",
+    "hostingHeading": "Hosting and embedded services",
+    "hostingBody": "Pages are served through “GitHub Pages” (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Fonts are loaded via Google Fonts (Google Ireland Limited / Google LLC). Technical data may be sent to those providers when you visit. Add a separate privacy policy if you process personal data beyond basic self-presentation.",
+    "backHome": "Back to home"
+  },
   "common": {
     "readMore": "Read more",
     "allProjects": "All projects",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "projectGithubCta": "GitHub project"
   }
 }

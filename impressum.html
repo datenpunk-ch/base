@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-i18n-document-title="meta.documentTitle.projects">
+<html lang="de" data-i18n-document-title="meta.documentTitle.impressum">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,9 +28,7 @@
         >
           <ul class="site-nav__list">
             <li><a href="index.html" data-i18n="nav.home"></a></li>
-            <li>
-              <a href="projects.html" aria-current="page" data-i18n="nav.projects"></a>
-            </li>
+            <li><a href="projects.html" data-i18n="nav.projects"></a></li>
             <li><a href="about.html" data-i18n="nav.about"></a></li>
           </ul>
           <div
@@ -49,13 +47,47 @@
     </header>
 
     <main id="main">
-      <h1 class="page-title" data-i18n="projectsPage.title"></h1>
-      <p class="lede" data-i18n="projectsPage.intro"></p>
+      <h1 class="page-title" data-i18n="impressumPage.title"></h1>
+      <p class="standfirst" data-i18n="impressumPage.lead"></p>
 
-      <section class="section" aria-labelledby="cards-heading">
-        <h2 id="cards-heading" data-i18n="projectsPage.cardsHeading"></h2>
-        <div class="teaser-list teaser-list--grid" data-project-list aria-live="polite"></div>
+      <section class="article-section" aria-labelledby="imp-provider">
+        <h2 id="imp-provider" data-i18n="impressumPage.providerHeading"></h2>
+        <p class="impressum-lines" data-i18n="impressumPage.providerBody"></p>
       </section>
+
+      <section class="article-section" aria-labelledby="imp-contact">
+        <h2 id="imp-contact" data-i18n="impressumPage.contactHeading"></h2>
+        <p class="impressum-lines" data-i18n="impressumPage.contactBody"></p>
+      </section>
+
+      <section class="article-section" aria-labelledby="imp-content">
+        <h2 id="imp-content" data-i18n="impressumPage.contentHeading"></h2>
+        <p data-i18n="impressumPage.contentBody"></p>
+      </section>
+
+      <section class="article-section" aria-labelledby="imp-liability-content">
+        <h2 id="imp-liability-content" data-i18n="impressumPage.liabilityContentHeading"></h2>
+        <p data-i18n="impressumPage.liabilityContentBody"></p>
+      </section>
+
+      <section class="article-section" aria-labelledby="imp-liability">
+        <h2 id="imp-liability" data-i18n="impressumPage.liabilityLinksHeading"></h2>
+        <p data-i18n="impressumPage.liabilityLinksBody"></p>
+      </section>
+
+      <section class="article-section" aria-labelledby="imp-copyright">
+        <h2 id="imp-copyright" data-i18n="impressumPage.copyrightHeading"></h2>
+        <p data-i18n="impressumPage.copyrightBody"></p>
+      </section>
+
+      <section class="article-section" aria-labelledby="imp-hosting">
+        <h2 id="imp-hosting" data-i18n="impressumPage.hostingHeading"></h2>
+        <p data-i18n="impressumPage.hostingBody"></p>
+      </section>
+
+      <p class="back-nav">
+        <a href="index.html" data-i18n="impressumPage.backHome"></a>
+      </p>
     </main>
 
     <footer class="site-footer">

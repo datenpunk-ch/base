@@ -10,6 +10,10 @@
  * localStorage (STORAGE_KEY) so it survives reloads and works on every
  * HTML page in this site.
  *
+ * Language switch UI: set ENABLE_LANG_SWITCH below to true to show the
+ * DE | EN control again. When false, the site always loads German ("de");
+ * localStorage is not read until the switch is re-enabled.
+ *
  * Local preview: fetch() usually fails on file:// URLs. Run a static
  * server from this folder (e.g. python -m http.server) so JSON loads.
  *
@@ -41,8 +45,9 @@
  *    Then add meta.documentTitle.about (or your chosen key) in both
  *    JSON files. If the key is missing, meta.siteTitle is used instead.
  *
- * 6. For project cards on the home / projects pages, edit the "projects"
- *    array in JSON. Each item may include: id, href, title, teaser, cta.
+   * 6. For project cards on the home / projects pages, edit the "projects"
+   *    array in JSON. Each item may include: id, href, title, teaser, cta,
+   *    and optional github (URL to the GitHub repository or GitHub Project).
  *    The script builds the card DOM from those fields (no extra keys in
  *    HTML for card body copy).
  *
@@ -58,6 +63,8 @@
 
   var STORAGE_KEY = "datenpunk-lang";
   var LANGS = ["de", "en"];
+  /** Set to true to show DE | EN and honour localStorage again. */
+  var ENABLE_LANG_SWITCH = false;
   var cache = {};
 
   function getByPath(obj, path) {
@@ -184,6 +191,22 @@
    * Markup follows a magazine “teaser” pattern (headline + dek + read line),
    * not product cards — styling is entirely in style.css (.teaser*).
    */
+  function appendProjectGithubLink(article, proj, bundle) {
+    var raw = proj.github;
+    if (!isRenderableValue(raw) || String(raw).trim() === "") return;
+
+    var gh = document.createElement("a");
+    gh.className = "teaser__github";
+    gh.href = String(raw).trim();
+    gh.setAttribute("rel", "noopener noreferrer");
+    gh.setAttribute("target", "_blank");
+
+    var label = getByPath(bundle, "common.projectGithubCta");
+    gh.textContent = isRenderableValue(label) ? String(label) : "GitHub";
+
+    article.appendChild(gh);
+  }
+
   function renderProjectCards(bundle) {
     var containers = document.querySelectorAll("[data-project-list]");
     if (!containers.length) return;
@@ -249,19 +272,15 @@
           article.appendChild(readS);
         }
 
+        appendProjectGithubLink(article, proj, bundle);
         container.appendChild(article);
       });
     });
   }
 
-  function fillFooterYear() {
-    var el = document.querySelector("[data-year]");
-    if (el) el.textContent = String(new Date().getFullYear());
-  }
-
   /**
    * Applies one loaded locale bundle to the current DOM: lang, title,
-   * all data-i18n nodes, attribute translations, project cards, year.
+   * all data-i18n nodes, attribute translations, and project cards.
    * Call this whenever the active language changes or after first load.
    */
   function applyLocaleToPage(bundle) {
@@ -271,7 +290,6 @@
     applyDataI18nNodes(bundle);
     applyDataI18nAttrs(bundle);
     renderProjectCards(bundle);
-    fillFooterYear();
   }
 
   function applyLanguage(lang) {
@@ -283,7 +301,14 @@
   }
 
   function init() {
-    applyLanguage(getStoredLang());
+    if (!ENABLE_LANG_SWITCH) {
+      document.documentElement.classList.add("lang-switch-off");
+    }
+
+    var initialLang = ENABLE_LANG_SWITCH ? getStoredLang() : "de";
+    applyLanguage(initialLang);
+
+    if (!ENABLE_LANG_SWITCH) return;
 
     document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
       btn.addEventListener("click", function () {
