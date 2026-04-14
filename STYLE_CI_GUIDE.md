@@ -1,6 +1,4 @@
-# Editorial UI Style Guide (portable)
-
-This document describes a **cool, high‑contrast editorial** visual style that you can reuse across projects. It focuses on **design rules and UI patterns** (not project structure, tooling, or features).
+# Style Guide 
 
 ---
 
@@ -28,6 +26,34 @@ Use a strict set of roles:
 - **Rule**: cool grey hairlines
 - **Accent**: one cool color used for emphasis and focus
 
+### Recommended hex palette (copy/paste)
+
+These values match the current editorial palette:
+
+- **Background**: `#ffffff`
+- **Background (soft)**: `#f7f8f9`
+- **Ink (headings/links default)**: `#0f0f0f`
+- **Body ink**: `#171717`
+- **Muted**: `#5f5f5f`
+- **Rule (hairlines)**: `#d9dde1`
+- **Accent**: `#3a677a`
+- **Accent (hover)**: `#2f5a6b`
+
+Optional CSS token block:
+
+```css
+:root{
+  --color-bg:#ffffff;
+  --color-bg-soft:#f7f8f9;
+  --color-ink:#0f0f0f;
+  --color-ink-body:#171717;
+  --color-muted:#5f5f5f;
+  --color-rule:#d9dde1;
+  --color-accent:#3a677a;
+  --color-accent-hover:#2f5a6b;
+}
+```
+
 Guidelines:
 
 - Prefer **cool greys** (blue-grey) for rules; avoid beige/cream “paper” tones.
@@ -42,6 +68,22 @@ Guidelines:
 - **Display/headlines**: high‑contrast serif (e.g. Spectral)
 - **UI/body**: neutral grotesk (e.g. Karla)
 - **Mono**: for technical hints, code-ish links, metadata (e.g. JetBrains Mono)
+
+### Recommended font stack (copy/paste)
+
+- **Display**: `"Spectral", "Georgia", serif`
+- **UI/body**: `"Karla", system-ui, sans-serif`
+- **Mono**: `"JetBrains Mono", ui-monospace, monospace`
+
+Optional CSS token block:
+
+```css
+:root{
+  --font-display:"Spectral","Georgia",serif;
+  --font-ui:"Karla",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+```
 
 ### Hierarchy
 
