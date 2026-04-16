@@ -222,6 +222,8 @@
 
       list.forEach(function (proj, index) {
         var hasLink = proj.href && String(proj.href).trim() !== "";
+        var href = hasLink ? String(proj.href).trim() : "";
+        var isExternalLink = /^https?:\/\//i.test(href);
         var thumbSrc = proj.thumb;
         var hasThumb =
           isRenderableValue(thumbSrc) && String(thumbSrc).trim() !== "";
@@ -271,7 +273,11 @@
         if (hasLink) {
           var link = document.createElement("a");
           link.className = "teaser__link";
-          link.setAttribute("href", proj.href);
+          link.setAttribute("href", href);
+          if (isExternalLink) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+          }
 
           if (hasThumb) {
             link.appendChild(makeThumbImg());

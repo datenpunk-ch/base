@@ -46,12 +46,12 @@
     {
       "id": "project1",
       "href": "project1.html",
-      "title": "Testprojekt",
-      "teaser": "Ein erstes Experiment.",
+      "title": "Open MicZH",
+      "teaser": "Ein erstes Cursor Projekt um Open Mic Comedy Events in Zürich zu visualisieren.",
       "cta": "Zum Projekt",
-      "thumb": "assets/images/testimg.jpg",
-      "thumbAlt": "Vorschaubild: Testprojekt",
-      "github": "https://github.com/orgs/datenpunk-ch/projects/1"
+      "thumb": "assets/images/open_mic.svg",
+      "thumbAlt": "Open MicZH",
+      "github": "https://github.com/datenpunk-ch/open_mics_ZH"
     },
     {
       "id": "project_placeholder",
@@ -66,6 +66,11 @@
     "standfirst": "Text zu Test 1",
     "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
     "githubLinkLabel": "GitHub-Projekt (Code, Issues, Verlauf)",
+    "embedHeading": "Interaktive Projektseite",
+    "embedIntro": "Die externe Projektseite ist hier eingebettet. Falls die Einbettung im Browser blockiert wird, öffnen Sie sie direkt.",
+    "embedUrl": "https://datenpunk-ch.github.io/open_mics_ZH/",
+    "embedTitle": "Open Mics Zürich — Projektseite",
+    "embedOpenLabel": "Externe Projektseite öffnen",
     "backLink": "Zurück zur Projektübersicht",
     "imageAlt": "Abbildung zum Projekt Test1",
     "imageCaption": "Visualisierung bzw. Abbildung aus dem Projekt.",
