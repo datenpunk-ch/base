@@ -7,13 +7,15 @@
       "projects": "Datenpunk — Projects",
       "project1": "Datenpunk — Everyday sounds",
       "about": "Datenpunk — About",
-      "impressum": "Datenpunk — Legal notice"
+      "impressum": "Datenpunk — Legal notice",
+      "contact": "Datenpunk — Contact"
     }
   },
   "nav": {
     "home": "Home",
     "projects": "Projects",
     "about": "About",
+    "contact": "Contact",
     "langDe": "DE",
     "langEn": "EN",
     "langLabel": "Language",
@@ -114,6 +116,21 @@
     "contactHeading": "Contact",
     "contact": "For questions or collaboration, please use the channels provided in applications. A public GitHub profile can be added here once it is relevant to the work.",
     "githubPlaceholder": "github.com/your-username"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "intro": "Questions, tips, collaboration ideas: feel free to reach out.",
+    "emailLabel": "Email",
+    "emailHref": "",
+    "emailText": "datenpunk.ch [at] gmail [dot] com",
+    "emailUser": "datenpunk.ch",
+    "emailDomain": "gmail.com",
+    "githubLabel": "GitHub",
+    "githubHref": "https://github.com/datenpunk-ch",
+    "githubText": "github.com/datenpunk-ch",
+    "linkedinLabel": "LinkedIn",
+    "linkedinHref": "https://www.linkedin.com/in/bwalkenhorst/",
+    "linkedinText": "linkedin.com/in/bwalkenhorst"
   },
   "impressumPage": {
     "title": "Legal notice",

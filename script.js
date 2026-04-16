@@ -180,6 +180,18 @@
     });
   }
 
+  function applyObfuscatedEmailLinks() {
+    document.querySelectorAll("[data-email-link]").forEach(function (a) {
+      var parent = a.parentElement || document;
+      var userEl = parent.querySelector("[data-email-user]");
+      var domainEl = parent.querySelector("[data-email-domain]");
+      var user = userEl ? String(userEl.textContent || "").trim() : "";
+      var domain = domainEl ? String(domainEl.textContent || "").trim() : "";
+      if (!user || !domain) return;
+      a.setAttribute("href", "mailto:" + user + "@" + domain);
+    });
+  }
+
   function updateLangButtons(lang) {
     document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
       var code = btn.getAttribute("data-set-lang");
@@ -321,6 +333,7 @@
     applyDataI18nNodes(bundle);
     applyDataI18nAttrs(bundle);
     renderProjectCards(bundle);
+    applyObfuscatedEmailLinks();
   }
 
   function applyLanguage(lang) {

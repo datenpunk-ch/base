@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-i18n-document-title="meta.documentTitle.index">
+<html lang="de" data-i18n-document-title="meta.documentTitle.contact">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,11 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <!-- Site-wide styles: edit colours, spacing, and layout in style2.css -->
     <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-    <!-- Text copy: edit content/de.json and content/en.json (keys stay stable). -->
     <a class="skip-link" href="#main" data-i18n="common.skipToContent"></a>
 
     <header class="site-header">
@@ -29,17 +27,11 @@
           aria-label=""
         >
           <ul class="site-nav__list">
+            <li><a href="index.html" data-i18n="nav.home"></a></li>
+            <li><a href="projects.html" data-i18n="nav.projects"></a></li>
+            <li><a href="about.html" data-i18n="nav.about"></a></li>
             <li>
-              <a href="index.html" aria-current="page" data-i18n="nav.home"></a>
-            </li>
-            <li>
-              <a href="projects.html" data-i18n="nav.projects"></a>
-            </li>
-            <li>
-              <a href="about.html" data-i18n="nav.about"></a>
-            </li>
-            <li>
-              <a href="kontakt.html" data-i18n="nav.contact"></a>
+              <a href="kontakt.html" aria-current="page" data-i18n="nav.contact"></a>
             </li>
           </ul>
           <div
@@ -58,36 +50,42 @@
     </header>
 
     <main id="main">
-      <!-- Front fold: title + hook + intro read as one magazine opening (not a marketing hero). -->
-      <div class="front-masthead">
-        <section class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title" data-i18n="home.hero.title"></h1>
-          <p class="tagline" data-i18n="home.hero.tagline"></p>
-        </section>
-        <p class="lede" data-i18n="home.intro"></p>
-      </div>
+      <h1 class="page-title" data-i18n="contactPage.title"></h1>
+      <p class="lede" data-i18n="contactPage.intro"></p>
 
-      <section class="home-preface" aria-labelledby="preface-heading">
-        <h2 id="preface-heading" class="home-preface__heading" data-i18n="home.prefaceHeading"></h2>
-        <p data-i18n="home.prefaceBody"></p>
-      </section>
-
-      <section class="section" aria-labelledby="feat-heading">
-        <h2 id="feat-heading" data-i18n="home.featuredHeading"></h2>
-        <!-- Teasers built from content/*.json → "projects" (see script.js). -->
-        <div
-          class="teaser-list"
-          data-project-list
-          data-project-limit="1"
-          aria-live="polite"
-        ></div>
-      </section>
-
-      <section class="section" aria-labelledby="about-teaser-heading">
-        <h2 id="about-teaser-heading" data-i18n="home.aboutTeaserHeading"></h2>
-        <p data-i18n="home.aboutTeaser"></p>
-        <p class="section__continue">
-          <a href="about.html" data-i18n="home.aboutTeaserLink"></a>
+      <section class="section contact-block" aria-labelledby="contact-channels">
+        <h2 id="contact-channels" data-i18n="contactPage.title"></h2>
+        <p class="impressum-lines">
+          <strong data-i18n="contactPage.emailLabel"></strong><br />
+          <a
+            data-i18n="contactPage.emailText"
+            data-email-link
+            href="#"
+          ></a>
+          <span hidden data-i18n="contactPage.emailUser" data-email-user></span>
+          <span hidden data-i18n="contactPage.emailDomain" data-email-domain></span>
+        </p>
+        <p class="impressum-lines">
+          <strong data-i18n="contactPage.githubLabel"></strong><br />
+          <a
+            href=""
+            data-i18n-attr="contactPage.githubHref"
+            data-i18n-attr-name="href"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="contactPage.githubText"
+          ></a>
+        </p>
+        <p class="impressum-lines">
+          <strong data-i18n="contactPage.linkedinLabel"></strong><br />
+          <a
+            href=""
+            data-i18n-attr="contactPage.linkedinHref"
+            data-i18n-attr-name="href"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="contactPage.linkedinText"
+          ></a>
         </p>
       </section>
     </main>
@@ -101,7 +99,7 @@
       </div>
     </footer>
 
-    <!-- Language logic and JSON loading: see script.js -->
     <script src="script.js" defer></script>
   </body>
 </html>
+

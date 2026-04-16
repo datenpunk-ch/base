@@ -7,13 +7,15 @@
       "projects": "Datenpunk — Projekte",
       "project1": "Datenpunk — Test",
       "about": "Datenpunk — Über mich",
-      "impressum": "Datenpunk — Impressum"
+      "impressum": "Datenpunk — Impressum",
+      "contact": "Datenpunk — Kontakt"
     }
   },
   "nav": {
     "home": "Start",
     "projects": "Projekte",
     "about": "Über mich",
+    "contact": "Kontakt",
     "langDe": "DE",
     "langEn": "EN",
     "langLabel": "Sprache",
@@ -34,7 +36,7 @@
     "featuredHeading": "Ausgewählte Projekte",
     "aboutTeaserHeading": "Kurz zu mir",
     "aboutTeaser": "Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage.",
-    "aboutTeaserLink": "Mehr im Über-mich-Bereich"
+    "aboutTeaserLink": "Länger zu mir"
   },
   "projectsPage": {
     "title": "Projekte",
@@ -108,13 +110,28 @@
     "contact": "Für Rückfragen oder Zusammenarbeit bin ich immer offen.",
     "githubPlaceholder": "https://github.com/datenpunk-ch"
   },
+  "contactPage": {
+    "title": "Kontakt",
+    "intro": "Für Rückfragen, Hinweise oder Zusammenarbeit: schreib mir.",
+    "emailLabel": "E-Mail",
+    "emailHref": "",
+    "emailText": "datenpunk.ch [at] gmail [dot] com",
+    "emailUser": "datenpunk.ch",
+    "emailDomain": "gmail.com",
+    "githubLabel": "GitHub",
+    "githubHref": "https://github.com/datenpunk-ch",
+    "githubText": "github.com/datenpunk-ch",
+    "linkedinLabel": "LinkedIn",
+    "linkedinHref": "https://www.linkedin.com/in/bwalkenhorst/",
+    "linkedinText": "linkedin.com/in/bwalkenhorst"
+  },
   "impressumPage": {
     "title": "Impressum",
     "lead": "Diese Website ist ein persönliches Portfolio meiner Projekte.",
     "providerHeading": "Betreiberin",
     "providerBody": "B. Walkenhorst\nZürich, Schweiz",
     "contactHeading": "Kontakt",
-    "contactBody": "datenpunk.ch@gmail.ch",
+    "contactBody": "datenpunk.ch [at] gmail [dot] com",
     "contentHeading": "Inhalt des Portfolios",
     "contentBody": "Auf dieser Website werden eigenständige, datenjournalistisch oder analytisch motivierte Texte und Visualisierungen gezeigt. Die Darstellungen ersetzen keine professionelle Beratung in Statistik, Medizin, Recht oder anderen Fachgebieten. Quelltexte, Datenstände und Arbeitsnotizen sind, soweit vorhanden, über die verlinkten GitHub-Projekte einsehbar; dort gelten die Nutzungsbedingungen von GitHub.",
     "liabilityContentHeading": "Haftung für Inhalte",
