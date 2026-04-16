@@ -71,16 +71,15 @@
   "project1": {
     "title": "How absurd are everyday sounds?",
     "standfirst": "An initial experiment on whether everyday sounds can be distinguished and visualised in a data-driven way.",
-    "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
+    "githubHref": "https://github.com/datenpunk-ch/open_mics_ZH",
     "githubLinkLabel": "GitHub project (code, issues, history)",
-    "embedHeading": "Interactive project page",
-    "embedIntro": "The external project site is embedded here. If your browser blocks embedding, open it directly.",
     "embedUrl": "https://datenpunk-ch.github.io/open_mics_ZH/",
     "embedTitle": "Open Mics Zurich — project page",
     "embedOpenLabel": "Open external project site",
+    "intro": "Open MicZH collects recurring open-mic events in Zurich from multiple sources and makes them filterable — by weekday, language, and venue. This project documents the path from scraping and data cleaning to an interactive presentation.",
     "backLink": "Back to project overview",
-    "imageAlt": "Figure illustrating the everyday sounds project",
-    "imageCaption": "Visualisation or figure from the project.",
+    "imageAlt": "Graphic for the Open MicZH project",
+    "imageCaption": "Project graphic (thumbnail).",
     "sections": {
       "question": {
         "heading": "Question",

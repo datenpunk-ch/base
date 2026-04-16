@@ -64,16 +64,15 @@
   "project1": {
     "title": "Test1",
     "standfirst": "Text zu Test 1",
-    "githubHref": "https://github.com/orgs/datenpunk-ch/projects/1",
+    "githubHref": "https://github.com/datenpunk-ch/open_mics_ZH",
     "githubLinkLabel": "GitHub-Projekt (Code, Issues, Verlauf)",
-    "embedHeading": "Interaktive Projektseite",
-    "embedIntro": "Die externe Projektseite ist hier eingebettet. Falls die Einbettung im Browser blockiert wird, öffnen Sie sie direkt.",
     "embedUrl": "https://datenpunk-ch.github.io/open_mics_ZH/",
     "embedTitle": "Open Mics Zürich — Projektseite",
     "embedOpenLabel": "Externe Projektseite öffnen",
+    "intro": "Ein Prototypprojekt um Cursor als Entwicklungsumgebung zu testen. MicZH sammelt wiederkehrende Open-Mic-Termine in Zürich aus mehreren Quellen und stellt sie visuell und filterbar dar.",
     "backLink": "Zurück zur Projektübersicht",
-    "imageAlt": "Abbildung zum Projekt Test1",
-    "imageCaption": "Visualisierung bzw. Abbildung aus dem Projekt.",
+    "imageAlt": "Grafik zum Projekt Open MicZH",
+    "imageCaption": "Projektgrafik (Thumbnail).",
     "sections": {
       "question": {
         "heading": "Frage",

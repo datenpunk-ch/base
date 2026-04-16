@@ -722,6 +722,10 @@
     max-width: var(--measure);
   }
   
+  .article-section--wide {
+    max-width: none;
+  }
+  
   .article-section h2 {
     margin: 0 0 var(--space-2);
     padding-bottom: var(--space-1);
@@ -745,8 +749,8 @@
 
   .embed-frame {
     margin-top: var(--space-3);
-    max-width: min(var(--measure), 100%);
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: clamp(34rem, 75vh, 62rem);
     background: var(--color-bg-soft);
   }
 

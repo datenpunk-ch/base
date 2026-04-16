@@ -50,40 +50,11 @@
 
     <main id="main">
       <article>
-        <header>
-          <h1 class="page-title" data-i18n="project1.title"></h1>
-          <p class="standfirst" data-i18n="project1.standfirst"></p>
-          <p class="project-github">
-            <a
-              href=""
-              data-i18n-attr="project1.githubHref"
-              data-i18n-attr-name="href"
-              rel="noopener noreferrer"
-              target="_blank"
-              data-i18n="project1.githubLinkLabel"
-            ></a>
-          </p>
-        </header>
-
-        <figure class="article-figure">
-          <img
-            src="assets/images/testimg.jpg"
-            alt=""
-            data-i18n-attr="project1.imageAlt"
-            data-i18n-attr-name="alt"
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption data-i18n="project1.imageCaption"></figcaption>
-        </figure>
-
-        <section class="article-section" aria-labelledby="sec-embed">
-          <h2 id="sec-embed" data-i18n="project1.embedHeading"></h2>
-          <p data-i18n="project1.embedIntro"></p>
+        <section class="article-section article-section--wide" aria-labelledby="sec-embed">
           <div class="embed-frame">
             <iframe
               src=""
-              title=""
+              title="Embedded project"
               data-i18n-attr="project1.embedUrl"
               data-i18n-attr-name="src"
               loading="lazy"
@@ -101,7 +72,19 @@
               data-i18n="project1.embedOpenLabel"
             ></a>
           </p>
+          <p class="embed-fallback">
+            <a
+              href=""
+              data-i18n-attr="project1.githubHref"
+              data-i18n-attr-name="href"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="project1.githubLinkLabel"
+            ></a>
+          </p>
         </section>
+
+        <p class="lede" data-i18n="project1.intro"></p>
 
         <section class="article-section" aria-labelledby="sec-q">
           <h2 id="sec-q" data-i18n="project1.sections.question.heading"></h2>
