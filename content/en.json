@@ -32,7 +32,6 @@
     "prefaceHeading": "More context",
     "prefaceBody": "Use this block for a second, longer paragraph — background, how you work, or what readers should know before they dive into the projects. It sits below the opening fold and above the numbered sections.",
     "featuredHeading": "Featured projects",
-    "featuredIntro": "A glimpse into work where questions, data, and presentation come together.",
     "aboutTeaserHeading": "About me",
     "aboutTeaser": "My background is in scientific data analysis; I work with Python, R, and SQL. I am interested in how complex datasets become stories that are understandable, visual, and journalistically relevant.",
     "aboutTeaserLink": "More in the about section"

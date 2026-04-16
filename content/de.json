@@ -32,7 +32,6 @@
     "prefaceHeading": "Mehr Kontext",
     "prefaceBody": "Gwunderig und klebrig.",
     "featuredHeading": "Ausgewählte Projekte",
-    "featuredIntro": "In Vorbereitung.",
     "aboutTeaserHeading": "Kurz zu mir",
     "aboutTeaser": "Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage.",
     "aboutTeaserLink": "Mehr im Über-mich-Bereich"
@@ -112,7 +111,7 @@
   "impressumPage": {
     "title": "Impressum",
     "lead": "Diese Website ist ein persönliches Portfolio meiner Projekte.",
-    "providerHeading": "Betreiberin / Betreiber",
+    "providerHeading": "Betreiberin",
     "providerBody": "B. Walkenhorst\nZürich, Schweiz",
     "contactHeading": "Kontakt",
     "contactBody": "datenpunk.ch@gmail.ch",
