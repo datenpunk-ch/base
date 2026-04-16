@@ -31,7 +31,7 @@ jobs:
       - name: Assemble site (exclude .github from upload)
         run: |
           mkdir -p _site/assets/images
-          cp index.html projects.html project1.html about.html impressum.html style2.css script.js .nojekyll _site/
+          cp index.html projects.html project1.html about.html kontakt.html impressum.html style2.css script.js .nojekyll _site/
           cp -r content _site/
           if [ -d assets ]; then cp -r assets/. _site/assets/; fi
 
