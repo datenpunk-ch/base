@@ -67,6 +67,7 @@
   /** Set to true to show DE | EN and honour localStorage again. */
   var ENABLE_LANG_SWITCH = false;
   var cache = {};
+  var progressBarEl = null;
 
   function getByPath(obj, path) {
     if (!obj || !path) return undefined;
@@ -344,6 +345,87 @@
     });
   }
 
+  function initProgressBar() {
+    if (document.getElementById("progress")) {
+      progressBarEl = document.getElementById("progress");
+      progressBarEl.classList.add("progress-bar");
+      return;
+    }
+
+    progressBarEl = document.createElement("div");
+    progressBarEl.id = "progress";
+    progressBarEl.className = "progress-bar";
+    document.body.appendChild(progressBarEl);
+  }
+
+  function updateProgressBar() {
+    if (!progressBarEl) return;
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    if (max <= 0) {
+      progressBarEl.style.width = "0%";
+      return;
+    }
+    var pct = (h.scrollTop / max) * 100;
+    progressBarEl.style.width = pct.toFixed(2) + "%";
+  }
+
+  function initScrollProgress() {
+    initProgressBar();
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        ticking = false;
+        updateProgressBar();
+      });
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    updateProgressBar();
+  }
+
+  function initReveals() {
+    var nodes = document.querySelectorAll(".reveal");
+    if (!nodes.length) return;
+
+    var reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      nodes.forEach(function (el) {
+        el.classList.add("reveal--visible");
+      });
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      nodes.forEach(function (el) {
+        el.classList.add("reveal--visible");
+      });
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("reveal--visible");
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    nodes.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
   function init() {
     if (!ENABLE_LANG_SWITCH) {
       document.documentElement.classList.add("lang-switch-off");
@@ -351,6 +433,9 @@
 
     var initialLang = ENABLE_LANG_SWITCH ? getStoredLang() : "de";
     applyLanguage(initialLang);
+
+    initScrollProgress();
+    initReveals();
 
     if (!ENABLE_LANG_SWITCH) return;
 

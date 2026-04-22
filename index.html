@@ -61,22 +61,26 @@
       <!-- Front fold: title + hook + intro read as one magazine opening (not a marketing hero). -->
       <div class="front-masthead">
         <section class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title" data-i18n="home.hero.title"></h1>
-          <p class="tagline" data-i18n="home.hero.tagline"></p>
+          <h1 id="hero-title" class="reveal" data-i18n="home.hero.title"></h1>
+          <p class="tagline reveal" data-i18n="home.hero.tagline"></p>
         </section>
-        <p class="lede" data-i18n="home.intro"></p>
+        <p class="lede reveal" data-i18n="home.intro"></p>
       </div>
 
       <section class="home-preface" aria-labelledby="preface-heading">
-        <h2 id="preface-heading" class="home-preface__heading" data-i18n="home.prefaceHeading"></h2>
-        <p data-i18n="home.prefaceBody"></p>
+        <h2
+          id="preface-heading"
+          class="home-preface__heading reveal"
+          data-i18n="home.prefaceHeading"
+        ></h2>
+        <p class="reveal" data-i18n="home.prefaceBody"></p>
       </section>
 
       <section class="section" aria-labelledby="feat-heading">
-        <h2 id="feat-heading" data-i18n="home.featuredHeading"></h2>
+        <h2 id="feat-heading" class="reveal" data-i18n="home.featuredHeading"></h2>
         <!-- Teasers built from content/*.json → "projects" (see script.js). -->
         <div
-          class="teaser-list"
+          class="teaser-list reveal"
           data-project-list
           data-project-limit="1"
           aria-live="polite"
@@ -84,9 +88,13 @@
       </section>
 
       <section class="section" aria-labelledby="about-teaser-heading">
-        <h2 id="about-teaser-heading" data-i18n="home.aboutTeaserHeading"></h2>
-        <p data-i18n="home.aboutTeaser"></p>
-        <p class="section__continue">
+        <h2
+          id="about-teaser-heading"
+          class="reveal"
+          data-i18n="home.aboutTeaserHeading"
+        ></h2>
+        <p class="reveal" data-i18n="home.aboutTeaser"></p>
+        <p class="section__continue reveal">
           <a href="about.html" data-i18n="home.aboutTeaserLink"></a>
         </p>
       </section>
