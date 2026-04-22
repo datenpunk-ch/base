@@ -68,6 +68,7 @@
   var ENABLE_LANG_SWITCH = false;
   var cache = {};
   var progressBarEl = null;
+  var revealObserver = null;
 
   function getByPath(obj, path) {
     if (!obj || !path) return undefined;
@@ -242,7 +243,8 @@
           isRenderableValue(thumbSrc) && String(thumbSrc).trim() !== "";
 
         var article = document.createElement("article");
-        article.className = "teaser" + (hasLink ? " teaser--linked" : " teaser--static");
+        article.className =
+          "teaser reveal" + (hasLink ? " teaser--linked" : " teaser--static");
         if (hasThumb) article.classList.add("teaser--has-thumb");
 
         var titleText = isRenderableValue(proj.title)
@@ -335,6 +337,7 @@
     applyDataI18nAttrs(bundle);
     renderProjectCards(bundle);
     applyObfuscatedEmailLinks();
+    refreshReveals();
   }
 
   function applyLanguage(lang) {
@@ -389,40 +392,51 @@
   }
 
   function initReveals() {
-    var nodes = document.querySelectorAll(".reveal");
-    if (!nodes.length) return;
-
     var reduce =
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      nodes.forEach(function (el) {
-        el.classList.add("reveal--visible");
-      });
+      refreshReveals();
       return;
     }
 
     if (!("IntersectionObserver" in window)) {
-      nodes.forEach(function (el) {
-        el.classList.add("reveal--visible");
-      });
+      refreshReveals();
       return;
     }
 
-    var observer = new IntersectionObserver(
+    revealObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) {
             e.target.classList.add("reveal--visible");
-            observer.unobserve(e.target);
+            revealObserver.unobserve(e.target);
           }
         });
       },
       { threshold: 0.12 }
     );
 
+    refreshReveals();
+  }
+
+  function refreshReveals() {
+    var nodes = document.querySelectorAll(".reveal:not(.reveal--visible)");
+    if (!nodes.length) return;
+
+    var reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduce || !("IntersectionObserver" in window) || !revealObserver) {
+      nodes.forEach(function (el) {
+        el.classList.add("reveal--visible");
+      });
+      return;
+    }
+
     nodes.forEach(function (el) {
-      observer.observe(el);
+      revealObserver.observe(el);
     });
   }
 
