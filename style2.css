@@ -756,9 +756,9 @@
   .embed-frame {
     margin-top: var(--space-3);
     width: 100%;
-    height: clamp(42rem, 88vh, 82rem);
+    height: clamp(48rem, 94vh, 96rem);
     background: var(--color-bg-soft);
-    overflow: auto;
+    overflow: hidden;
   }
 
   .embed-frame iframe {
@@ -770,9 +770,9 @@
 
   /* Let wide embeds breathe (reduce side clipping). */
   .article-section--wide .embed-frame {
-    margin-left: calc(-1 * var(--gutter-start));
-    margin-right: calc(-1 * var(--gutter-end));
-    width: calc(100% + var(--gutter-start) + var(--gutter-end));
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
   }
 
   .embed-fallback {

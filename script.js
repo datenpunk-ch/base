@@ -171,14 +171,20 @@
 
   function applyDataI18nAttrs(bundle) {
     document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n-attr");
-      var attrName = el.getAttribute("data-i18n-attr-name") || "aria-label";
-      var val = getByPath(bundle, key);
-      if (isRenderableValue(val)) {
-        el.setAttribute(attrName, String(val));
-      } else {
-        el.setAttribute(attrName, missingText(key));
+      function applyOne(keyAttr, nameAttr, defaultName) {
+        var key = el.getAttribute(keyAttr);
+        if (!key) return;
+        var attrName = el.getAttribute(nameAttr) || defaultName;
+        var val = getByPath(bundle, key);
+        if (isRenderableValue(val)) {
+          el.setAttribute(attrName, String(val));
+        } else {
+          el.setAttribute(attrName, missingText(key));
+        }
       }
+
+      applyOne("data-i18n-attr", "data-i18n-attr-name", "aria-label");
+      applyOne("data-i18n-attr-2", "data-i18n-attr-name-2", "title");
     });
   }
 
