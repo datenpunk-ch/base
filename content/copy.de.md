@@ -40,7 +40,7 @@ Datenpunk — Kontakt
 
 ## `nav.home`
 
-Start
+Datenpunk
 
 ## `nav.projects`
 
@@ -72,7 +72,7 @@ Hauptnavigation
 
 ## `footer.note`
 
-Datenpunk — Stories und Zahlen.
+Datenpunk. — Stories und Zahlen.
 
 ## `footer.impressumLink`
 
@@ -80,7 +80,7 @@ Impressum
 
 ## `home.hero.title`
 
-Datenpunk
+Datenpunk.
 
 ## `home.hero.tagline`
 

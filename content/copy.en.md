@@ -40,7 +40,7 @@ Datenpunk — Contact
 
 ## `nav.home`
 
-Home
+Datenpunk
 
 ## `nav.projects`
 
