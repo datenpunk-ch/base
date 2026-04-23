@@ -213,7 +213,7 @@
 
     function loadFromMarkdown() {
       var mdUrl = "content/copy." + lang + ".md";
-      return fetch(mdUrl).then(function (res) {
+      return fetch(mdUrl, { cache: "no-store" }).then(function (res) {
         if (!res.ok) throw new Error("Failed to load " + mdUrl);
         return res.text();
       });
@@ -221,7 +221,7 @@
 
     function loadFromJson() {
       var url = "content/" + lang + ".json";
-      return fetch(url).then(function (res) {
+      return fetch(url, { cache: "no-store" }).then(function (res) {
         if (!res.ok) throw new Error("Failed to load " + url);
         return res.json();
       });
