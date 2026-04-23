@@ -1005,7 +1005,7 @@
   /* Featured: title over image (semi-transparent white label). */
   .teaser--featured .teaser__hed {
     position: absolute;
-    top: clamp(16.5rem, 2vw, 1.6rem);
+    top: clamp(1.5rem, 2vw, 1.6rem);
     left: clamp(16.5rem, 1.1vw, 0.95rem);
     right: clamp(0.6rem, 1.1vw, 0.95rem);
     z-index: 3;
