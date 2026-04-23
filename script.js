@@ -228,6 +228,15 @@
     article.appendChild(gh);
   }
 
+  function normalizeTag(tag) {
+    if (!isRenderableValue(tag)) return "";
+    return String(tag).trim();
+  }
+
+  function normalizeTagKey(tag) {
+    return normalizeTag(tag).toLowerCase();
+  }
+
   function renderProjectCards(bundle) {
     var containers = document.querySelectorAll("[data-project-list]");
     if (!containers.length) return;
@@ -248,10 +257,19 @@
         var hasThumb =
           isRenderableValue(thumbSrc) && String(thumbSrc).trim() !== "";
 
+        var tagsRaw = Array.isArray(proj.tags) ? proj.tags : [];
+        var tags = tagsRaw
+          .map(normalizeTag)
+          .filter(function (t) {
+            return t !== "";
+          });
+        var tagKeys = tags.map(normalizeTagKey);
+
         var article = document.createElement("article");
         article.className =
           "teaser reveal" + (hasLink ? " teaser--linked" : " teaser--static");
         if (hasThumb) article.classList.add("teaser--has-thumb");
+        if (tagKeys.length) article.setAttribute("data-tags", tagKeys.join(" "));
 
         var titleText = isRenderableValue(proj.title)
           ? String(proj.title)
@@ -263,6 +281,19 @@
           ? String(proj.cta)
           : missingText("projects[" + index + "].cta");
 
+        function appendTags(target) {
+          if (!tags.length) return;
+          var wrap = document.createElement("ul");
+          wrap.className = "teaser__tags";
+          tags.forEach(function (t) {
+            var li = document.createElement("li");
+            li.className = "teaser__tag";
+            li.textContent = t;
+            wrap.appendChild(li);
+          });
+          target.appendChild(wrap);
+        }
+
         function appendTeaserTextNodes(target) {
           var h3 = document.createElement("h3");
           h3.className = "teaser__hed";
@@ -273,6 +304,8 @@
           deck.className = "teaser__deck";
           deck.textContent = deckText;
           target.appendChild(deck);
+
+          appendTags(target);
 
           var read = document.createElement("span");
           read.className = "teaser__read";
@@ -330,6 +363,116 @@
     });
   }
 
+  function initProjectTagFilters(bundle) {
+    var filterRoot = document.querySelector("[data-project-tag-filter]");
+    if (!filterRoot) return;
+
+    var controls = filterRoot.querySelector(".tag-filter__controls");
+    if (!controls) return;
+
+    var listContainer = document.querySelector("[data-project-list]");
+    if (!listContainer) return;
+
+    var emptyEl = document.querySelector("[data-project-empty]");
+
+    var projects = getByPath(bundle, "projects");
+    if (!Array.isArray(projects)) return;
+
+    var tagMap = {};
+    projects.forEach(function (p) {
+      var tags = Array.isArray(p.tags) ? p.tags : [];
+      tags
+        .map(normalizeTag)
+        .filter(function (t) {
+          return t !== "";
+        })
+        .forEach(function (t) {
+          var key = normalizeTagKey(t);
+          if (!key) return;
+          if (!tagMap[key]) tagMap[key] = t;
+        });
+    });
+
+    var keys = Object.keys(tagMap).sort(function (a, b) {
+      return a.localeCompare(b);
+    });
+
+    controls.innerHTML = "";
+
+    var allLabel = getByPath(bundle, "projectsPage.filterAll");
+    var allText = isRenderableValue(allLabel) ? String(allLabel) : "All";
+
+    var selected = {};
+
+    function getSelectedKeys() {
+      return Object.keys(selected).filter(function (k) {
+        return selected[k];
+      });
+    }
+
+    function setButtonState(btn, on) {
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    }
+
+    function applyFilter() {
+      var selectedKeys = getSelectedKeys();
+      var cards = listContainer.querySelectorAll("article.teaser");
+      var shown = 0;
+
+      cards.forEach(function (card) {
+        var tagAttr = card.getAttribute("data-tags") || "";
+        var tags = tagAttr ? tagAttr.split(/\s+/).filter(Boolean) : [];
+
+        var match =
+          selectedKeys.length === 0 ||
+          selectedKeys.some(function (k) {
+            return tags.indexOf(k) !== -1;
+          });
+
+        card.hidden = !match;
+        if (match) shown++;
+      });
+
+      if (emptyEl) emptyEl.hidden = shown !== 0;
+    }
+
+    var allBtn = document.createElement("button");
+    allBtn.type = "button";
+    allBtn.className = "tag-filter__btn tag-filter__btn--all";
+    allBtn.textContent = allText;
+    setButtonState(allBtn, true);
+    allBtn.addEventListener("click", function () {
+      selected = {};
+      Array.prototype.slice.call(controls.querySelectorAll("[data-tag-key]")).forEach(function (b) {
+        setButtonState(b, false);
+      });
+      setButtonState(allBtn, true);
+      applyFilter();
+    });
+    controls.appendChild(allBtn);
+
+    keys.forEach(function (key) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "tag-filter__btn";
+      btn.textContent = tagMap[key];
+      btn.setAttribute("data-tag-key", key);
+      setButtonState(btn, false);
+      btn.addEventListener("click", function () {
+        var next = !selected[key];
+        selected[key] = next;
+        setButtonState(btn, next);
+
+        var any = getSelectedKeys().length > 0;
+        setButtonState(allBtn, !any);
+        applyFilter();
+      });
+      controls.appendChild(btn);
+    });
+
+    applyFilter();
+  }
+
   /**
    * Applies one loaded locale bundle to the current DOM: lang, title,
    * all data-i18n nodes, attribute translations, and project cards.
@@ -342,6 +485,7 @@
     applyDataI18nNodes(bundle);
     applyDataI18nAttrs(bundle);
     renderProjectCards(bundle);
+    initProjectTagFilters(bundle);
     applyObfuscatedEmailLinks();
     refreshReveals();
   }

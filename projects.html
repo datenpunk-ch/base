@@ -53,6 +53,17 @@
       <h1 class="page-title reveal" data-i18n="projectsPage.title"></h1>
       <p class="lede reveal" data-i18n="projectsPage.intro"></p>
 
+      <section class="section tag-filter-section" aria-labelledby="tag-filter-heading">
+        <h2 id="tag-filter-heading" class="reveal" data-i18n="projectsPage.filterHeading"></h2>
+        <div class="divider reveal" aria-hidden="true"></div>
+        <div class="tag-filter reveal" data-project-tag-filter aria-label="">
+          <p class="tag-filter__label" data-i18n="projectsPage.filterLabel"></p>
+          <div class="tag-filter__controls" role="group" data-i18n-attr="projectsPage.filterAria" data-i18n-attr-name="aria-label" aria-label="">
+            <!-- buttons inserted by script.js -->
+          </div>
+        </div>
+      </section>
+
       <section class="section" aria-labelledby="cards-heading">
         <h2 id="cards-heading" class="reveal" data-i18n="projectsPage.cardsHeading"></h2>
         <div class="divider reveal" aria-hidden="true"></div>
@@ -61,6 +72,7 @@
           data-project-list
           aria-live="polite"
         ></div>
+        <p class="tag-filter__empty reveal" data-project-empty hidden data-i18n="projectsPage.filterEmpty"></p>
       </section>
     </main>
 

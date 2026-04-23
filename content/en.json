@@ -41,7 +41,12 @@
   "projectsPage": {
     "title": "Projects",
     "intro": "Here I collect data journalism and analytical work — from first experiments to more developed narratives. Each project describes a question, how data was handled, and what follows from it.",
-    "cardsHeading": "All projects"
+    "cardsHeading": "All projects",
+    "filterHeading": "Filter",
+    "filterLabel": "Filter by tags:",
+    "filterAria": "Project tags (filter)",
+    "filterAll": "All",
+    "filterEmpty": "No projects match this selection."
   },
   "projects": [
     {
@@ -52,21 +57,24 @@
       "cta": "Open project",
       "thumb": "assets/images/testimg.jpg",
       "thumbAlt": "Thumbnail: everyday sounds project",
-      "github": "https://github.com/orgs/datenpunk-ch/projects/1"
+      "github": "https://github.com/orgs/datenpunk-ch/projects/1",
+      "tags": ["Experiment", "Audio", "Analysis", "crawl"]
     },
     {
       "id": "open_mics_zh",
       "href": "project1.html",
       "title": "Open Mics Zurich",
       "teaser": "External project page with story, data, and visualisation.",
-      "cta": "Open project"
+      "cta": "Open project",
+      "tags": ["Data Viz", "Web", "Zurich"]
     },
     {
       "id": "project_placeholder",
       "href": "",
       "title": "Next project",
       "teaser": "Another data journalism piece is in preparation — topic, data basis, and visualisation will follow.",
-      "cta": "Coming soon"
+      "cta": "Coming soon",
+      "tags": ["In progress"]
     }
   ],
   "project1": {

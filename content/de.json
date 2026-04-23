@@ -41,7 +41,12 @@
   "projectsPage": {
     "title": "Projekte",
     "intro": "Bunte Mischung.",
-    "cardsHeading": "Alle Projekte"
+    "cardsHeading": "Alle Projekte",
+    "filterHeading": "Filter",
+    "filterLabel": "Nach Tags filtern:",
+    "filterAria": "Projekt-Tags (Filter)",
+    "filterAll": "Alle",
+    "filterEmpty": "Keine Projekte passen zu dieser Auswahl."
   },
   "projects": [
     {
@@ -52,14 +57,16 @@
       "cta": "Zum Projekt",
       "thumb": "assets/images/open_mic.svg",
       "thumbAlt": "Open MicZH",
-      "github": "https://github.com/datenpunk-ch/open_mics_ZH"
+      "github": "https://github.com/datenpunk-ch/open_mics_ZH",
+      "tags": ["Data Viz", "Web", "Zürich", "crawl"]
     },
     {
       "id": "project_placeholder",
       "href": "",
       "title": "Erdmännchen gegen das Patriarchat",
       "teaser": "In Vorbereitung — bleibt neugierig.",
-      "cta": "Demnächst"
+      "cta": "Demnächst",
+      "tags": ["In Vorbereitung"]
     }
   ],
   "project1": {
