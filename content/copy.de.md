@@ -8,7 +8,7 @@ note: "Edit values below; keys are stable."
 
 ## `meta.siteTitle`
 
-Datenpunk
+Datenpunk.
 
 ## `meta.htmlLang`
 
@@ -16,27 +16,27 @@ de
 
 ## `meta.documentTitle.index`
 
-Datenpunk — Start
+Datenpunk. — Stories und Zahlen
 
 ## `meta.documentTitle.projects`
 
-Datenpunk — Projekte
+Datenpunk. — Projekte
 
 ## `meta.documentTitle.project1`
 
-Datenpunk — Test
+Datenpunk. — Test
 
 ## `meta.documentTitle.about`
 
-Datenpunk — Über mich
+Datenpunk. — Über mich
 
 ## `meta.documentTitle.impressum`
 
-Datenpunk — Impressum
+Datenpunk. — Impressum
 
 ## `meta.documentTitle.contact`
 
-Datenpunk — Kontakt
+Datenpunk. — Kontakt
 
 ## `nav.home`
 
