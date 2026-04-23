@@ -1171,6 +1171,15 @@
     white-space: nowrap;
   }
 
+  /* ---------- Article divider (project pages) ---------- */
+
+  .article-divider {
+    margin: var(--space-4) 0;
+    max-width: var(--measure);
+    height: 1px;
+    background: var(--color-rule);
+  }
+
   /* ---------- Project tag filter (projects.html) ---------- */
 
   .tag-filter {

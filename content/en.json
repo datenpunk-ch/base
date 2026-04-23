@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "Datenpunk",
-    "htmlLang": "en",
+    "htmlLang": "en-GB",
     "documentTitle": {
       "index": "Datenpunk — Home",
       "projects": "Datenpunk — Projects",
@@ -62,19 +62,6 @@
         "Experiment",
         "Audio",
         "Analysis",
-        "crawl"
-      ]
-    },
-    {
-      "id": "open_mics_zh",
-      "href": "project1.html",
-      "title": "Open Mics Zurich",
-      "teaser": "External project page with story, data, and visualisation.",
-      "cta": "Open project",
-      "tags": [
-        "Data Viz",
-        "Web",
-        "Zurich",
         "crawl"
       ]
     },

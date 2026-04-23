@@ -1,0 +1,25 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "allowCompoundWords": true,
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "_site/**",
+    "assets/fonts/**"
+  ],
+  "words": [
+    "Datenpunk",
+    "MicZH",
+    "GitHub",
+    "Zürich",
+    "Zurich",
+    "Walkenhorst",
+    "revDSG",
+    "revFADP",
+    "gstatic",
+    "googleapis"
+  ],
+  "files": ["content/en.json"]
+}
+
