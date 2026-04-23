@@ -380,11 +380,11 @@
 
   /* Project detail pages: reduce whitespace above the first embed. */
   main.main--project {
-    padding-top: clamp(var(--space-3), 5vw, var(--space-4));
+    padding-top: clamp(var(--space-2), 3vw, var(--space-3));
   }
 
   main.main--project .embed-frame {
-    margin-top: var(--space-2);
+    margin-top: var(--space-1);
   }
   
   /* ---------- Front masthead ---------- */

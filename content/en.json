@@ -58,7 +58,12 @@
       "thumb": "assets/images/testimg.jpg",
       "thumbAlt": "Thumbnail: everyday sounds project",
       "github": "https://github.com/orgs/datenpunk-ch/projects/1",
-      "tags": ["Experiment", "Audio", "Analysis", "crawl"]
+      "tags": [
+        "Experiment",
+        "Audio",
+        "Analysis",
+        "crawl"
+      ]
     },
     {
       "id": "open_mics_zh",
@@ -66,7 +71,12 @@
       "title": "Open Mics Zurich",
       "teaser": "External project page with story, data, and visualisation.",
       "cta": "Open project",
-      "tags": ["Data Viz", "Web", "Zurich"]
+      "tags": [
+        "Data Viz",
+        "Web",
+        "Zurich",
+        "crawl"
+      ]
     },
     {
       "id": "project_placeholder",
@@ -74,7 +84,9 @@
       "title": "Next project",
       "teaser": "Another data journalism piece is in preparation — topic, data basis, and visualisation will follow.",
       "cta": "Coming soon",
-      "tags": ["In progress"]
+      "tags": [
+        "In progress"
+      ]
     }
   ],
   "project1": {
