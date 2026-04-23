@@ -234,7 +234,14 @@
   }
 
   function normalizeTagKey(tag) {
-    return normalizeTag(tag).toLowerCase();
+    // Must be safe for space-separated storage in data-tags.
+    // e.g. "In Vorbereitung" -> "in-vorbereitung", "Data Viz" -> "data-viz"
+    return normalizeTag(tag)
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9\u00C0-\u017F-]+/g, "")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
   }
 
   function renderProjectCards(bundle) {
