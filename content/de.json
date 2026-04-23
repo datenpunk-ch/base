@@ -55,7 +55,7 @@
       "title": "Open MicZH",
       "teaser": "Ein erstes Cursor Projekt um Open Mic Comedy Events in Zürich zu visualisieren.",
       "cta": "Zum Projekt",
-      "thumb": "assets/images/open_mic_vivid.svg",
+      "thumb": "assets/images/openmicZH.jpg",
       "thumbAlt": "Open MicZH",
       "github": "https://github.com/datenpunk-ch/open_mics_ZH",
       "tags": ["Data Viz", "Web", "Zürich", "crawl"]
