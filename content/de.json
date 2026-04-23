@@ -67,6 +67,14 @@
       "teaser": "In Vorbereitung — bleibt neugierig.",
       "cta": "Demnächst",
       "tags": ["In Vorbereitung"]
+    },
+    {
+      "id": "project_placeholder_2",
+      "href": "",
+      "title": "Platzhalter-Projekt",
+      "teaser": "In Vorbereitung — folgt bald.",
+      "cta": "Demnächst",
+      "tags": ["In Vorbereitung"]
     }
   ],
   "project1": {

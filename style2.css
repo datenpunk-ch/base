@@ -124,9 +124,9 @@
     --space-7: 7rem;
   
     --measure: 42rem;
-    --page-max: 74rem;
-    --gutter-start: clamp(1.25rem, 4vw, 2.5rem);
-    --gutter-end: clamp(1.5rem, 8vw, 5rem);
+    --page-max: 72rem;
+    --gutter-start: clamp(0.75rem, 2.2vw, 1.75rem);
+    --gutter-end: clamp(1rem, 4.5vw, 3rem);
   
     --lh-tight: 1.02;
     --lh-head: 1.08;
@@ -392,9 +392,9 @@
   .front-masthead {
     margin-bottom: clamp(var(--space-5), 7vw, var(--space-6));
     padding-bottom: var(--space-5);
-    border-bottom: 2px solid var(--color-ink);
+    border-bottom: 0;
   }
-  
+
   .front-masthead .hero {
     margin: 0;
     padding: 0;
@@ -402,7 +402,7 @@
   }
   
   .front-masthead .hero h1 {
-    margin: 0 0 var(--space-3);
+    margin: 0 0 var(--space-2);
     max-width: 10ch;
     font-family: var(--font-display);
     font-size: clamp(3.4rem, 6vw + 1.5rem, 6.3rem);
@@ -451,7 +451,7 @@
     .front-masthead .lede {
       grid-column: 2;
       grid-row: 1;
-      margin-top: clamp(2.6rem, 4vw, 4rem);
+      margin-top: 0.35rem;
       max-width: none;
       padding-left: var(--space-4);
       border-left: 1px solid var(--color-ink);
@@ -530,6 +530,11 @@
   .section {
     counter-increment: section;
     margin-bottom: clamp(var(--space-5), 7vw, var(--space-6));
+  }
+
+  /* Home: featured strip sits right under masthead. */
+  .section--featured-strip {
+    margin-top: calc(var(--space-5) * -1);
   }
   
   .section:last-of-type {
@@ -742,6 +747,11 @@
     outline-offset: 3px;
   }
 
+  .teaser__github--placeholder {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   .teaser__tags {
     list-style: none;
     margin: 0 0 var(--space-2);
@@ -807,6 +817,19 @@
     flex-shrink: 0;
     background: var(--color-bg-soft);
   }
+
+  /* Smooth thumbnail reveal (inherits reveal timing). */
+  .teaser .teaser__thumb {
+    transform: translateY(10px) scale(0.985);
+    opacity: 0.001;
+    transition: transform 0.65s ease, opacity 0.65s ease;
+    will-change: transform, opacity;
+  }
+
+  .teaser.reveal--visible .teaser__thumb {
+    transform: none;
+    opacity: 1;
+  }
   
   .teaser__body {
     flex: 1 1 auto;
@@ -843,6 +866,141 @@
       border-bottom: 1px solid var(--color-rule);
     }
   }
+
+  /* ---------- Home: featured projects (big thumbs, text underneath) ---------- */
+
+  .teaser-list--featured {
+    border-top: 0;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2) var(--space-3);
+    align-items: stretch;
+    max-width: var(--page-max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 720px) {
+    .teaser-list--featured {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1020px) {
+    .teaser-list--featured {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Keep featured projects big: stay at two columns longer. */
+  @media (min-width: 1700px) {
+    .teaser-list--featured {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .teaser--featured {
+    border-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    padding: 0;
+  }
+
+  .teaser--featured .teaser__link {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teaser--featured.teaser--has-thumb .teaser__link {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .teaser--featured .teaser__row {
+    flex-direction: column;
+    height: 100%;
+    gap: 0;
+  }
+
+  .teaser--featured .teaser__thumb {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    flex: 0 0 auto;
+  }
+
+  /* Keep featured grid aligned while still animating: no vertical offset. */
+  .teaser-list--featured .reveal {
+    transform: none;
+  }
+
+  .teaser--featured .teaser__body {
+    padding-top: var(--space-2);
+  }
+
+  .teaser--featured .teaser__hed {
+    font-size: clamp(1.55rem, 1.2vw + 1.1rem, 2.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  .teaser--featured .teaser__deck {
+    font-size: 1.02rem;
+    line-height: var(--lh-relaxed);
+  }
+
+  .teaser--featured .teaser__body {
+    padding-top: var(--space-3);
+    flex: 1 1 auto;
+  }
+
+  .teaser--featured .teaser__hed {
+    max-width: none;
+  }
+
+  /* Keep featured cards aligned: reserve consistent text space. */
+  .teaser--featured .teaser__body {
+    min-height: 11.25rem;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-content: start;
+  }
+
+  .teaser--featured .teaser__hed,
+  .teaser--featured .teaser__deck {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .teaser--featured .teaser__hed {
+    -webkit-line-clamp: 2;
+    /* Reserve exactly two lines so tags start aligned. */
+    min-height: calc(2 * 1.15em);
+    margin-bottom: 0.15rem;
+  }
+
+  .teaser--featured .teaser__deck {
+    -webkit-line-clamp: 3;
+    margin-bottom: var(--space-2);
+    /* Reserve exactly three lines so tags start aligned. */
+    min-height: calc(3 * 1.65em);
+  }
+
+  .teaser--featured .teaser__tags {
+    margin-bottom: var(--space-2);
+    max-height: 2.35rem;
+    min-height: 2.35rem;
+    overflow: hidden;
+  }
+
   
   /* ---------- Article ---------- */
   
@@ -1021,6 +1179,14 @@
   .contact-block {
     max-width: var(--measure);
   }
+
+  .contact-block .impressum-lines {
+    margin-bottom: var(--space-2);
+  }
+
+  .contact-block .impressum-lines:last-child {
+    margin-bottom: 0;
+  }
   
   .mono-hint {
     margin-top: var(--space-2);
@@ -1113,7 +1279,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 2px;
+    height: 3px;
     width: 0%;
     background: var(--color-accent);
     z-index: 120;
@@ -1135,6 +1301,12 @@
     .reveal {
       opacity: 1 !important;
       transform: none !important;
+    }
+
+    .teaser .teaser__thumb {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
     }
   }
 

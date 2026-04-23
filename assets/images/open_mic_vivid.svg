@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset="0.55" stop-color="#1b3b4a"/>
+      <stop offset="1" stop-color="#3a677a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="62%" cy="36%" r="55%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f3f8"/>
+      <stop offset="1" stop-color="#cfe3ec"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.12" stroke="#ffffff" stroke-width="1">
+    <path d="M120 160H1480"/>
+    <path d="M120 260H1480"/>
+    <path d="M120 360H1480"/>
+    <path d="M120 460H1480"/>
+    <path d="M120 560H1480"/>
+    <path d="M120 660H1480"/>
+    <path d="M120 760H1480"/>
+    <path d="M240 120V820"/>
+    <path d="M440 120V820"/>
+    <path d="M640 120V820"/>
+    <path d="M840 120V820"/>
+    <path d="M1040 120V820"/>
+    <path d="M1240 120V820"/>
+    <path d="M1440 120V820"/>
+  </g>
+
+  <!-- Data line motif -->
+  <g fill="none" stroke="#e8f3f8" stroke-width="3" opacity="0.55">
+    <path d="M260 640 C420 540, 520 690, 700 600 S1020 520, 1200 610 S1380 690, 1460 620"/>
+  </g>
+  <g fill="#e8f3f8" opacity="0.9">
+    <circle cx="260" cy="640" r="6"/>
+    <circle cx="540" cy="668" r="6"/>
+    <circle cx="700" cy="600" r="6"/>
+    <circle cx="1020" cy="520" r="6"/>
+    <circle cx="1200" cy="610" r="6"/>
+    <circle cx="1460" cy="620" r="6"/>
+  </g>
+
+  <!-- Microphone + pin mark -->
+  <g transform="translate(0,0)">
+    <!-- Soft highlight behind icon -->
+    <circle cx="800" cy="380" r="210" fill="#ffffff" opacity="0.12" filter="url(#soft)"/>
+
+    <!-- Pin -->
+    <path d="M800 170c-82 0-148 64-148 144 0 124 148 310 148 310s148-186 148-310c0-80-66-144-148-144z"
+          fill="none" stroke="#e8f3f8" stroke-width="10" opacity="0.95"/>
+    <circle cx="800" cy="312" r="46" fill="url(#accent)" opacity="0.95"/>
+
+    <!-- Microphone body -->
+    <rect x="746" y="256" width="108" height="220" rx="54"
+          fill="none" stroke="#e8f3f8" stroke-width="10" opacity="0.95"/>
+    <g opacity="0.55" stroke="#e8f3f8" stroke-width="6">
+      <path d="M770 292H830"/>
+      <path d="M770 328H830"/>
+      <path d="M770 364H830"/>
+      <path d="M770 400H830"/>
+    </g>
+
+    <!-- Mic stand -->
+    <path d="M800 476v92" stroke="#e8f3f8" stroke-width="10" opacity="0.95"/>
+    <path d="M730 568h140" stroke="#e8f3f8" stroke-width="10" opacity="0.95"/>
+    <path d="M800 568v78" stroke="#e8f3f8" stroke-width="10" opacity="0.95"/>
+    <path d="M732 646h136" stroke="#e8f3f8" stroke-width="10" opacity="0.95"/>
+  </g>
+
+  <!-- Title block -->
+  <g font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+     fill="#ffffff">
+    <text x="120" y="782" font-size="40" letter-spacing="6" opacity="0.95">OPEN MICZH</text>
+    <text x="120" y="828" font-size="22" letter-spacing="4" opacity="0.75">ZÜRICH</text>
+  </g>
+
+  <!-- Border/frame -->
+  <rect x="72" y="72" width="1456" height="756" fill="none" stroke="#ffffff" opacity="0.22" stroke-width="2"/>
+</svg>
+

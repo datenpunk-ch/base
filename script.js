@@ -113,19 +113,138 @@
       callback(null, cache[lang]);
       return;
     }
-    var url = "content/" + lang + ".json";
-    fetch(url)
-      .then(function (res) {
+
+    function setByPath(root, pathStr, value) {
+      if (!root || !pathStr) return;
+
+      // Tokens: "foo", "bar", 0, "baz" from "foo.bar[0].baz"
+      var tokens = [];
+      var i = 0;
+      while (i < pathStr.length) {
+        var ch = pathStr[i];
+        if (ch === ".") {
+          i++;
+          continue;
+        }
+        if (ch === "[") {
+          var end = pathStr.indexOf("]", i + 1);
+          if (end === -1) break;
+          var inner = pathStr.slice(i + 1, end);
+          var idx = parseInt(inner, 10);
+          if (!isNaN(idx)) tokens.push(idx);
+          i = end + 1;
+          continue;
+        }
+        // identifier
+        var j = i;
+        while (j < pathStr.length && pathStr[j] !== "." && pathStr[j] !== "[") j++;
+        tokens.push(pathStr.slice(i, j));
+        i = j;
+      }
+
+      var cur = root;
+      for (var t = 0; t < tokens.length; t++) {
+        var key = tokens[t];
+        var isLast = t === tokens.length - 1;
+        var nextKey = tokens[t + 1];
+        var nextIsIndex = typeof nextKey === "number";
+
+        if (isLast) {
+          cur[key] = value;
+          return;
+        }
+
+        if (cur[key] == null) {
+          cur[key] = nextIsIndex ? [] : {};
+        }
+
+        cur = cur[key];
+      }
+    }
+
+    function parseCopyMarkdown(text) {
+      // Format produced by scripts/export-i18n-to-md.mjs:
+      // ## `path.to.key`
+      // <value lines> OR ```text ... ```
+      var out = {};
+      var lines = String(text || "").replace(/\r\n/g, "\n").split("\n");
+
+      var curKey = null;
+      var curValLines = [];
+      var inFence = false;
+      var started = false;
+
+      function flush() {
+        if (!curKey) return;
+        var raw = curValLines.join("\n");
+        var val = raw.trimEnd();
+        setByPath(out, curKey, val);
+      }
+
+      for (var li = 0; li < lines.length; li++) {
+        var line = lines[li];
+        var m = line.match(/^##\s+`(.+)`\s*$/);
+        if (!inFence && m) {
+          started = true;
+          flush();
+          curKey = m[1];
+          curValLines = [];
+          continue;
+        }
+
+        if (!started) continue;
+
+        if (line.trim() === "```text") {
+          inFence = true;
+          continue;
+        }
+        if (line.trim() === "```" && inFence) {
+          inFence = false;
+          continue;
+        }
+
+        // Collect value lines (including blank lines inside fences)
+        curValLines.push(line);
+      }
+
+      flush();
+      return out;
+    }
+
+    function loadFromMarkdown() {
+      var mdUrl = "content/copy." + lang + ".md";
+      return fetch(mdUrl).then(function (res) {
+        if (!res.ok) throw new Error("Failed to load " + mdUrl);
+        return res.text();
+      });
+    }
+
+    function loadFromJson() {
+      var url = "content/" + lang + ".json";
+      return fetch(url).then(function (res) {
         if (!res.ok) throw new Error("Failed to load " + url);
         return res.json();
-      })
-      .then(function (data) {
+      });
+    }
+
+    loadFromMarkdown()
+      .then(function (md) {
+        var data = parseCopyMarkdown(md);
         cache[lang] = data;
         callback(null, data);
       })
-      .catch(function (err) {
-        console.error(err);
-        callback(err, null);
+      .catch(function (errMd) {
+        // Fallback to JSON so the site still works if copy.*.md is missing.
+        loadFromJson()
+          .then(function (data) {
+            cache[lang] = data;
+            callback(null, data);
+          })
+          .catch(function (errJson) {
+            console.error(errMd);
+            console.error(errJson);
+            callback(errJson, null);
+          });
       });
   }
 
@@ -212,20 +331,33 @@
    * Markup follows a magazine “teaser” pattern (headline + dek + read line),
    * not product cards — styling is entirely in style.css (.teaser*).
    */
-  function appendProjectGithubLink(article, proj, bundle) {
+  function appendProjectGithubLink(target, proj, bundle, opts) {
+    var options = opts || {};
     var raw = proj.github;
-    if (!isRenderableValue(raw) || String(raw).trim() === "") return;
+    var hasRaw = isRenderableValue(raw) && String(raw).trim() !== "";
 
-    var gh = document.createElement("a");
-    gh.className = "teaser__github";
-    gh.href = String(raw).trim();
-    gh.setAttribute("rel", "noopener noreferrer");
-    gh.setAttribute("target", "_blank");
+    if (!hasRaw && !options.always) return;
 
     var label = getByPath(bundle, "common.projectGithubCta");
-    gh.textContent = isRenderableValue(label) ? String(label) : "GitHub";
+    var text = isRenderableValue(label) ? String(label) : "GitHub";
 
-    article.appendChild(gh);
+    var el;
+    if (hasRaw) {
+      el = document.createElement("a");
+      el.href = String(raw).trim();
+      el.setAttribute("rel", "noopener noreferrer");
+      el.setAttribute("target", "_blank");
+    } else {
+      // Placeholder to keep card heights aligned when some projects lack GitHub.
+      el = document.createElement("span");
+      el.setAttribute("aria-hidden", "true");
+    }
+
+    el.className = options.className || "teaser__github";
+    el.textContent = text;
+    if (!hasRaw) el.classList.add("teaser__github--placeholder");
+
+    target.appendChild(el);
   }
 
   function normalizeTag(tag) {
@@ -254,6 +386,7 @@
     containers.forEach(function (container) {
       var max = container.getAttribute("data-project-limit");
       var list = max ? projects.slice(0, parseInt(max, 10)) : projects.slice();
+      var layout = container.getAttribute("data-project-layout") || "";
       container.innerHTML = "";
 
       list.forEach(function (proj, index) {
@@ -263,6 +396,13 @@
         var thumbSrc = proj.thumb;
         var hasThumb =
           isRenderableValue(thumbSrc) && String(thumbSrc).trim() !== "";
+        var effectiveThumbSrc =
+          hasThumb || layout !== "featured"
+            ? thumbSrc
+            : "assets/images/testimg.jpg";
+        var effectiveHasThumb =
+          isRenderableValue(effectiveThumbSrc) &&
+          String(effectiveThumbSrc).trim() !== "";
 
         var tagsRaw = Array.isArray(proj.tags) ? proj.tags : [];
         var tags = tagsRaw
@@ -275,7 +415,8 @@
         var article = document.createElement("article");
         article.className =
           "teaser reveal" + (hasLink ? " teaser--linked" : " teaser--static");
-        if (hasThumb) article.classList.add("teaser--has-thumb");
+        if (effectiveHasThumb) article.classList.add("teaser--has-thumb");
+        if (layout === "featured") article.classList.add("teaser--featured");
         if (tagKeys.length) article.setAttribute("data-tags", tagKeys.join(" "));
 
         var titleText = isRenderableValue(proj.title)
@@ -314,16 +455,19 @@
 
           appendTags(target);
 
-          var read = document.createElement("span");
-          read.className = "teaser__read";
-          read.textContent = readText;
-          target.appendChild(read);
+          // Featured cards use a cleaner editorial block: no "read" line.
+          if (layout !== "featured") {
+            var read = document.createElement("span");
+            read.className = "teaser__read";
+            read.textContent = readText;
+            target.appendChild(read);
+          }
         }
 
         function makeThumbImg() {
           var img = document.createElement("img");
           img.className = "teaser__thumb";
-          img.src = String(thumbSrc).trim();
+          img.src = String(effectiveThumbSrc).trim();
           img.setAttribute("loading", "lazy");
           img.setAttribute("decoding", "async");
           var altVal = proj.thumbAlt;
@@ -340,7 +484,7 @@
             link.setAttribute("rel", "noopener noreferrer");
           }
 
-          if (hasThumb) {
+          if (effectiveHasThumb) {
             link.appendChild(makeThumbImg());
             var body = document.createElement("div");
             body.className = "teaser__body";
@@ -351,7 +495,7 @@
           }
 
           article.appendChild(link);
-        } else if (hasThumb) {
+        } else if (effectiveHasThumb) {
           var row = document.createElement("div");
           row.className = "teaser__row";
           row.appendChild(makeThumbImg());
@@ -364,7 +508,7 @@
           appendTeaserTextNodes(article);
         }
 
-        appendProjectGithubLink(article, proj, bundle);
+        if (layout !== "featured") appendProjectGithubLink(article, proj, bundle);
         container.appendChild(article);
       });
     });

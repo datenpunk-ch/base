@@ -67,6 +67,14 @@
       "teaser": "In progress — stay curious.",
       "cta": "Coming soon",
       "tags": ["In progress"]
+    },
+    {
+      "id": "project_placeholder_2",
+      "href": "",
+      "title": "Placeholder project",
+      "teaser": "In progress — more soon.",
+      "cta": "Coming soon",
+      "tags": ["In progress"]
     }
   ],
   "project1": {
