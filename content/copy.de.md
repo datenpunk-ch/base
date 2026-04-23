@@ -38,6 +38,10 @@ Datenpunk — Impressum
 
 Datenpunk — Kontakt
 
+## `meta.documentTitle.cv`
+
+Datenpunk — CV
+
 ## `nav.home`
 
 Datenpunk
@@ -369,6 +373,10 @@ Für Rückfragen oder Zusammenarbeit bin ich immer offen.
 ## `aboutPage.githubPlaceholder`
 
 https://github.com/datenpunk-ch
+
+## `aboutPage.cvLink`
+
+CV ansehen
 
 ## `contactPage.title`
 
