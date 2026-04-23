@@ -38,6 +38,10 @@ Datenpunk — Legal notice
 
 Datenpunk — Contact
 
+## `meta.documentTitle.cv`
+
+Datenpunk — CV
+
 ## `nav.home`
 
 Datenpunk
@@ -369,6 +373,10 @@ I’m always open to questions or collaboration.
 ## `aboutPage.githubPlaceholder`
 
 https://github.com/datenpunk-ch
+
+## `aboutPage.cvLink`
+
+View CV
 
 ## `contactPage.title`
 

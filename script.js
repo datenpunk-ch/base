@@ -399,7 +399,7 @@
         var effectiveThumbSrc =
           hasThumb || layout !== "featured"
             ? thumbSrc
-            : "assets/images/testimg.jpg";
+            : "assets/images/meerkats.jpg";
         var effectiveHasThumb =
           isRenderableValue(effectiveThumbSrc) &&
           String(effectiveThumbSrc).trim() !== "";
