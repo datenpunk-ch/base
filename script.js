@@ -464,6 +464,30 @@
           }
         }
 
+        function appendTeaserBodyNodes(target) {
+          var deck = document.createElement("p");
+          deck.className = "teaser__deck";
+          deck.textContent = deckText;
+          target.appendChild(deck);
+
+          appendTags(target);
+        }
+
+        function makeTitleHed() {
+          var h3 = document.createElement("h3");
+          h3.className = "teaser__hed";
+          h3.textContent = titleText;
+          return h3;
+        }
+
+        function makeMediaWithTitle() {
+          var media = document.createElement("div");
+          media.className = "teaser__media";
+          media.appendChild(makeThumbImg());
+          media.appendChild(makeTitleHed());
+          return media;
+        }
+
         function makeThumbImg() {
           var img = document.createElement("img");
           img.className = "teaser__thumb";
@@ -485,11 +509,19 @@
           }
 
           if (effectiveHasThumb) {
-            link.appendChild(makeThumbImg());
-            var body = document.createElement("div");
-            body.className = "teaser__body";
-            appendTeaserTextNodes(body);
-            link.appendChild(body);
+            if (layout === "featured") {
+              link.appendChild(makeMediaWithTitle());
+              var bodyF = document.createElement("div");
+              bodyF.className = "teaser__body";
+              appendTeaserBodyNodes(bodyF);
+              link.appendChild(bodyF);
+            } else {
+              link.appendChild(makeThumbImg());
+              var body = document.createElement("div");
+              body.className = "teaser__body";
+              appendTeaserTextNodes(body);
+              link.appendChild(body);
+            }
           } else {
             appendTeaserTextNodes(link);
           }
@@ -498,10 +530,12 @@
         } else if (effectiveHasThumb) {
           var row = document.createElement("div");
           row.className = "teaser__row";
-          row.appendChild(makeThumbImg());
+          if (layout === "featured") row.appendChild(makeMediaWithTitle());
+          else row.appendChild(makeThumbImg());
           var bodyS = document.createElement("div");
           bodyS.className = "teaser__body";
-          appendTeaserTextNodes(bodyS);
+          if (layout === "featured") appendTeaserBodyNodes(bodyS);
+          else appendTeaserTextNodes(bodyS);
           row.appendChild(bodyS);
           article.appendChild(row);
         } else {
