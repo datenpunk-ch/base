@@ -168,7 +168,7 @@ Zum Projekt
 
 ## `projects[0].thumb`
 
-assets/images/open_mic_vivid.svg
+assets/images/openmicZH.jpg
 
 ## `projects[0].thumbAlt`
 
