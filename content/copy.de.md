@@ -112,7 +112,7 @@ Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage
 
 ## `home.aboutTeaserLink`
 
-Länger zu mir
+Mehr zu mir
 
 ## `projectsPage.title`
 
