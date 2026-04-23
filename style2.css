@@ -287,6 +287,15 @@
       clamp(var(--space-6), 10vw, var(--space-7))
       var(--gutter-start);
   }
+
+  /* Project detail pages: reduce whitespace above the first embed. */
+  main.main--project {
+    padding-top: clamp(var(--space-3), 5vw, var(--space-4));
+  }
+
+  main.main--project .embed-frame {
+    margin-top: var(--space-2);
+  }
   
   /* ---------- Front masthead ---------- */
   
