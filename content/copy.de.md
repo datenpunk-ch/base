@@ -16,27 +16,27 @@ de
 
 ## `meta.documentTitle.index`
 
-Datenpunk. — Stories und Zahlen
+Datenpunk — Stories und Zahlen
 
 ## `meta.documentTitle.projects`
 
-Datenpunk. — Projekte
+Datenpunk — Projekte
 
 ## `meta.documentTitle.project1`
 
-Datenpunk. — Test
+Datenpunk — Open MicZH
 
 ## `meta.documentTitle.about`
 
-Datenpunk. — Über mich
+Datenpunk — Über mich
 
 ## `meta.documentTitle.impressum`
 
-Datenpunk. — Impressum
+Datenpunk — Impressum
 
 ## `meta.documentTitle.contact`
 
-Datenpunk. — Kontakt
+Datenpunk — Kontakt
 
 ## `nav.home`
 
@@ -72,7 +72,7 @@ Hauptnavigation
 
 ## `footer.note`
 
-Datenpunk. — Stories und Zahlen.
+Datenpunk — Stories und Zahlen.
 
 ## `footer.impressumLink`
 
