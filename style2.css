@@ -11,6 +11,96 @@
   - Mono: JetBrains Mono
 */
 
+/* ---------- Self-hosted fonts (no Google Fonts requests) ---------- */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/jetbrains-mono-400-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/karla-regular-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/karla-regular-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/karla-regular-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/karla-regular-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/karla-italic-400-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/spectral-roman-400-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/spectral-roman-500-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/spectral-roman-600-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/spectral-roman-700-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spectral";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/spectral-italic-400-latin.woff2") format("woff2");
+}
+
 :root {
     --color-bg: #ffffff;
     --color-bg-soft: #f7f8f9;
