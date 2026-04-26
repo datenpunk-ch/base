@@ -366,6 +366,14 @@ Hintergrund
 
 Hintergrundtext
 
+## `aboutPage.mapAlt`
+
+Landkarte meiner Stationen bisher.
+
+## `aboutPage.mapCaption`
+
+Meine Stationen.
+
 ## `aboutPage.skillsHeading`
 
 Werkzeuge & Schwerpunkte

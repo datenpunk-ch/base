@@ -219,14 +219,6 @@
       });
     }
 
-    function loadFromJson() {
-      var url = "content/" + lang + ".json";
-      return fetch(url, { cache: "no-store" }).then(function (res) {
-        if (!res.ok) throw new Error("Failed to load " + url);
-        return res.json();
-      });
-    }
-
     loadFromMarkdown()
       .then(function (md) {
         var data = parseCopyMarkdown(md);
@@ -234,17 +226,8 @@
         callback(null, data);
       })
       .catch(function (errMd) {
-        // Fallback to JSON so the site still works if copy.*.md is missing.
-        loadFromJson()
-          .then(function (data) {
-            cache[lang] = data;
-            callback(null, data);
-          })
-          .catch(function (errJson) {
-            console.error(errMd);
-            console.error(errJson);
-            callback(errJson, null);
-          });
+        console.error(errMd);
+        callback(errMd, null);
       });
   }
 
@@ -734,6 +717,37 @@
     setActive(0);
   }
 
+  function initEuropeMap() {
+    var maps = document.querySelectorAll("[data-europe-map]");
+    if (!maps.length) return;
+
+    var reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduce || !("IntersectionObserver" in window)) {
+      maps.forEach(function (svg) {
+        svg.classList.add("is-visible");
+      });
+      return;
+    }
+
+    var obs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add("is-visible");
+          obs.unobserve(e.target);
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    maps.forEach(function (svg) {
+      if (!svg.classList.contains("is-visible")) obs.observe(svg);
+    });
+  }
+
   /**
    * Applies one loaded locale bundle to the current DOM: lang, title,
    * all data-i18n nodes, attribute translations, and project cards.
@@ -747,6 +761,7 @@
     applyDataI18nAttrs(bundle);
     renderProjectCards(bundle);
     initFeaturedCarousel();
+    initEuropeMap();
     initProjectTagFilters(bundle);
     applyObfuscatedEmailLinks();
     refreshReveals();

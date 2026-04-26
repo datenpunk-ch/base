@@ -366,6 +366,14 @@ Background
 
 Background text
 
+## `aboutPage.mapAlt`
+
+Map of my bases so far.
+
+## `aboutPage.mapCaption`
+
+My bases.
+
 ## `aboutPage.skillsHeading`
 
 Tools & focus
