@@ -58,7 +58,7 @@
       "thumb": "assets/images/openmicZH.jpg",
       "thumbAlt": "Open MicZH",
       "github": "https://github.com/datenpunk-ch/open_mics_ZH",
-      "tags": ["Data Viz", "Web", "Zurich", "crawl"]
+      "tags": ["Zurich", "Web Crawl", "Geo"]
     },
     {
       "id": "project_placeholder",
@@ -66,7 +66,9 @@
       "title": "Meerkats against the patriarchy",
       "teaser": "In progress — stay curious.",
       "cta": "Coming soon",
-      "tags": ["In progress"]
+      "thumb": "assets/images/meerkats.jpg",
+      "thumbAlt": "Meerkats",
+      "tags": ["In progress", "Wissenschaft"]
     },
     {
       "id": "project_placeholder_2",
@@ -74,7 +76,9 @@
       "title": "Placeholder project",
       "teaser": "In progress — more soon.",
       "cta": "Coming soon",
-      "tags": ["In progress"]
+      "thumb": "assets/images/testimg.jpg",
+      "thumbAlt": "Test image",
+      "tags": ["In progress", "Kolumne"]
     }
   ],
   "project1": {

@@ -658,6 +658,82 @@
     applyFilter();
   }
 
+  function initFeaturedCarousel() {
+    var container = document.querySelector("[data-featured-carousel]");
+    if (!container) return;
+
+    var articles = Array.prototype.slice.call(container.querySelectorAll(":scope > article"));
+    if (!articles.length) return;
+
+    // Only “carousel mode” when scrolling is possible (3+ cards).
+    if (articles.length <= 2) {
+      container.removeAttribute("data-featured-ready");
+      return;
+    }
+    container.setAttribute("data-featured-ready", "true");
+
+    var dotsRoot = document.querySelector("[data-featured-dots]");
+    if (!dotsRoot) return;
+
+    var dots = Array.prototype.slice.call(dotsRoot.querySelectorAll("[data-featured-dot]"));
+    if (dots.length < 2) return;
+
+    function setActive(idx) {
+      dots.forEach(function (d, i) {
+        d.setAttribute("aria-current", i === idx ? "true" : "false");
+      });
+    }
+
+    function cardStepPx() {
+      if (!articles.length) return 0;
+      var a0 = articles[0];
+      var a1 = articles[1];
+      if (!a0) return 0;
+      if (!a1) return a0.getBoundingClientRect().width;
+      return Math.max(0, a1.offsetLeft - a0.offsetLeft);
+    }
+
+    function scrollLeftForEnd() {
+      // Desired “end” view:
+      // - 3 cards: show (2,3) => left at 1 step
+      // - 4 cards: show (3,4) => left at 2 steps
+      var steps = Math.max(0, Math.min(2, articles.length - 2));
+      var stepPx = cardStepPx();
+      if (!stepPx) return container.scrollWidth - container.clientWidth;
+      return steps * stepPx;
+    }
+
+    if (container.getAttribute("data-featured-bound") !== "true") {
+      dots.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var idx = parseInt(btn.getAttribute("data-featured-dot"), 10);
+          if (isNaN(idx)) return;
+          var left = idx === 0 ? 0 : scrollLeftForEnd();
+          container.scrollTo({ left: left, behavior: "smooth" });
+        });
+      });
+
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+          ticking = false;
+          var endLeft = scrollLeftForEnd();
+          var atEnd = endLeft > 0 && container.scrollLeft >= endLeft * 0.5;
+          setActive(atEnd ? 1 : 0);
+        });
+      }
+
+      container.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+      container.setAttribute("data-featured-bound", "true");
+    }
+
+    // Initial state
+    setActive(0);
+  }
+
   /**
    * Applies one loaded locale bundle to the current DOM: lang, title,
    * all data-i18n nodes, attribute translations, and project cards.
@@ -670,6 +746,7 @@
     applyDataI18nNodes(bundle);
     applyDataI18nAttrs(bundle);
     renderProjectCards(bundle);
+    initFeaturedCarousel();
     initProjectTagFilters(bundle);
     applyObfuscatedEmailLinks();
     refreshReveals();

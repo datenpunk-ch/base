@@ -898,6 +898,59 @@
     .teaser-list--grid .teaser {
       border-bottom: 1px solid var(--color-rule);
     }
+
+    /*
+      Projects page: give the grid a more “magazine” feel.
+      Make thumbnails larger and stack them above the text (similar spirit to
+      the featured strip on the home page, but within the normal page column).
+    */
+    .teaser-list--grid .teaser--has-thumb .teaser__link {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-2);
+    }
+
+    .teaser-list--grid .teaser__row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-2);
+    }
+
+    .teaser-list--grid .teaser--has-thumb .teaser__thumb {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    .teaser-list--grid .teaser__deck,
+    .teaser-list--grid .teaser__tags {
+      max-width: none;
+    }
+
+    /* Denser grid rhythm: less padding/margin inside cards. */
+    .teaser-list--grid .teaser__link {
+      padding: var(--space-3) 0 var(--space-4);
+    }
+
+    .teaser-list--grid .teaser--linked .teaser__link {
+      padding-bottom: var(--space-2);
+    }
+
+    .teaser-list--grid .teaser--static {
+      padding: var(--space-3) 0 var(--space-4);
+    }
+
+    .teaser-list--grid .teaser__hed {
+      margin-bottom: var(--space-1);
+    }
+
+    .teaser-list--grid .teaser__deck {
+      margin-bottom: var(--space-1);
+    }
+
+    .teaser-list--grid .teaser__github {
+      margin-bottom: var(--space-4);
+    }
   }
 
   /* ---------- Home: featured projects (big thumbs, text underneath) ---------- */
@@ -919,21 +972,97 @@
     transform: translateX(calc(-50%));
   }
 
+  /* Featured carousel on home: horizontal scroll with two “pages” (2+2). */
+  .featured-carousel {
+    position: relative;
+  }
+
+  .teaser-list--featured[data-featured-carousel] {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: var(--space-3);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Keep the carousel framed inside the main page column.
+       The scroll viewport should span exactly the same width as the normal
+       2-up layout (no breakout sizing). */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    left: auto;
+    transform: none;
+    padding-bottom: var(--space-2);
+    scrollbar-width: thin; /* Firefox */
+  }
+
+  .teaser-list--featured[data-featured-carousel]::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .teaser-list--featured[data-featured-carousel]::-webkit-scrollbar-thumb {
+    background: var(--color-rule);
+  }
+
   @media (min-width: 720px) {
-    .teaser-list--featured {
+    .teaser-list--featured[data-featured-carousel] {
+      /* Always show two cards in the viewport. */
+      grid-auto-columns: calc((100% - var(--space-3)) / 2);
+      /* Prevent grid-template-columns rules from the non-carousel layout. */
+      grid-template-columns: none;
+    }
+  }
+
+  /* Slightly shorter images inside the home carousel. */
+  .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
+    aspect-ratio: 21 / 10;
+  }
+
+  .teaser-list--featured[data-featured-carousel] > article {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .featured-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: var(--space-2);
+  }
+
+  .featured-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-ink);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .featured-dot[aria-current="true"] {
+    background: var(--color-ink);
+  }
+
+  @media (min-width: 720px) {
+    .teaser-list--featured:not([data-featured-carousel]) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   @media (min-width: 1020px) {
-    .teaser-list--featured {
+    .teaser-list--featured:not([data-featured-carousel]) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   /* Keep featured projects big: stay at two columns longer. */
   @media (min-width: 1700px) {
-    .teaser-list--featured {
+    .teaser-list--featured:not([data-featured-carousel]) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -1281,6 +1410,21 @@
   .contact-block strong {
     display: inline-block;
     margin-bottom: 0.05rem;
+  }
+
+  /* Contact page: slightly denser rhythm. */
+  body.contact main {
+    padding-top: clamp(var(--space-4), 6vw, var(--space-5));
+    padding-bottom: clamp(var(--space-5), 9vw, var(--space-6));
+  }
+
+  body.contact .lede {
+    margin-bottom: var(--space-4);
+  }
+
+  body.contact .contact-block .impressum-lines {
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
   }
 
   /* ---------- CV ---------- */

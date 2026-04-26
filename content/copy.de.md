@@ -184,19 +184,15 @@ https://github.com/datenpunk-ch/open_mics_ZH
 
 ## `projects[0].tags[0]`
 
-Data Viz
+Zürich
 
 ## `projects[0].tags[1]`
 
-Web
+Web Crawl
 
 ## `projects[0].tags[2]`
 
-Zürich
-
-## `projects[0].tags[3]`
-
-crawl
+Geo
 
 ## `projects[1].id`
 
@@ -218,9 +214,21 @@ In Vorbereitung — bleibt neugierig.
 
 Demnächst
 
+## `projects[1].thumb`
+
+assets/images/meerkats.jpg
+
+## `projects[1].thumbAlt`
+
+Erdmännchen
+
 ## `projects[1].tags[0]`
 
 In Vorbereitung
+
+## `projects[1].tags[1]`
+
+Wissenschaft
 
 ## `projects[2].id`
 
@@ -242,9 +250,21 @@ In Vorbereitung — folgt bald.
 
 Demnächst
 
+## `projects[2].thumb`
+
+assets/images/testimg.jpg
+
+## `projects[2].thumbAlt`
+
+Testbild
+
 ## `projects[2].tags[0]`
 
 In Vorbereitung
+
+## `projects[2].tags[1]`
+
+Kolumne
 
 ## `project1.title`
 

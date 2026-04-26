@@ -184,19 +184,15 @@ https://github.com/datenpunk-ch/open_mics_ZH
 
 ## `projects[0].tags[0]`
 
-Data Viz
+Zurich
 
 ## `projects[0].tags[1]`
 
-Web
+Web Crawl
 
 ## `projects[0].tags[2]`
 
-Zurich
-
-## `projects[0].tags[3]`
-
-crawl
+Geo
 
 ## `projects[1].id`
 
@@ -218,9 +214,21 @@ In progress — stay curious.
 
 Coming soon
 
+## `projects[1].thumb`
+
+assets/images/meerkats.jpg
+
+## `projects[1].thumbAlt`
+
+Meerkats
+
 ## `projects[1].tags[0]`
 
 In progress
+
+## `projects[1].tags[1]`
+
+Wissenschaft
 
 ## `projects[2].id`
 
@@ -242,9 +250,21 @@ In progress — more soon.
 
 Coming soon
 
+## `projects[2].thumb`
+
+assets/images/testimg.jpg
+
+## `projects[2].thumbAlt`
+
+Test image
+
 ## `projects[2].tags[0]`
 
 In progress
+
+## `projects[2].tags[1]`
+
+Kolumne
 
 ## `project1.title`
 

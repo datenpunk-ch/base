@@ -58,7 +58,7 @@
       "thumb": "assets/images/openmicZH.jpg",
       "thumbAlt": "Open MicZH",
       "github": "https://github.com/datenpunk-ch/open_mics_ZH",
-      "tags": ["Data Viz", "Web", "Zürich", "crawl"]
+      "tags": ["Zürich", "Web Crawl", "Geo"]
     },
     {
       "id": "project_placeholder",
@@ -66,7 +66,9 @@
       "title": "Erdmännchen gegen das Patriarchat",
       "teaser": "In Vorbereitung — bleibt neugierig.",
       "cta": "Demnächst",
-      "tags": ["In Vorbereitung"]
+      "thumb": "assets/images/meerkats.jpg",
+      "thumbAlt": "Erdmännchen",
+      "tags": ["In Vorbereitung", "Wissenschaft"]
     },
     {
       "id": "project_placeholder_2",
@@ -74,7 +76,9 @@
       "title": "Platzhalter-Projekt",
       "teaser": "In Vorbereitung — folgt bald.",
       "cta": "Demnächst",
-      "tags": ["In Vorbereitung"]
+      "thumb": "assets/images/testimg.jpg",
+      "thumbAlt": "Testbild",
+      "tags": ["In Vorbereitung", "Kolumne"]
     }
   ],
   "project1": {

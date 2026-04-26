@@ -63,13 +63,20 @@
 
       <section class="section section--featured-strip" aria-label="">
         <!-- Teasers built from content/*.json → "projects" (see script.js). -->
-        <div
-          class="teaser-list teaser-list--featured reveal"
-          data-project-list
-          data-project-limit="2"
-          data-project-layout="featured"
-          aria-live="polite"
-        ></div>
+        <div class="featured-carousel">
+          <div
+            class="teaser-list teaser-list--featured reveal"
+            data-project-list
+            data-project-limit="4"
+            data-project-layout="featured"
+            data-featured-carousel
+            aria-live="polite"
+          ></div>
+          <div class="featured-dots" data-featured-dots aria-label="Featured projects pagination">
+            <button type="button" class="featured-dot" data-featured-dot="0" aria-label="Scroll to beginning" aria-current="true"></button>
+            <button type="button" class="featured-dot" data-featured-dot="1" aria-label="Scroll to end" aria-current="false"></button>
+          </div>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="about-teaser-heading">
