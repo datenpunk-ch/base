@@ -393,6 +393,11 @@
           .filter(function (t) {
             return t !== "";
           });
+        tags.sort(function (a, b) {
+          return String(a).localeCompare(String(b), undefined, {
+            sensitivity: "base",
+          });
+        });
         var tagKeys = tags.map(normalizeTagKey);
 
         var article = document.createElement("article");
@@ -562,7 +567,9 @@
     });
 
     var keys = Object.keys(tagMap).sort(function (a, b) {
-      return a.localeCompare(b);
+      return String(tagMap[a]).localeCompare(String(tagMap[b]), undefined, {
+        sensitivity: "base",
+      });
     });
 
     controls.innerHTML = "";
