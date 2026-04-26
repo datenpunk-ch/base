@@ -47,44 +47,47 @@
       <h1 class="page-title reveal" data-i18n="contactPage.title"></h1>
       <p class="lede reveal" data-i18n="contactPage.intro"></p>
 
-      <section
-        class="contact-block"
-        data-i18n-attr="contactPage.title"
-        data-i18n-attr-name="aria-label"
-        aria-label=""
-      >
-        <p class="impressum-lines reveal">
-          <strong data-i18n="contactPage.emailLabel"></strong><br />
-          <a
-            data-i18n="contactPage.emailText"
-            data-email-link
-            href="#"
-          ></a>
-          <span hidden data-i18n="contactPage.emailUser" data-email-user></span>
-          <span hidden data-i18n="contactPage.emailDomain" data-email-domain></span>
-        </p>
-        <p class="impressum-lines reveal">
-          <strong data-i18n="contactPage.githubLabel"></strong><br />
-          <a
-            href=""
-            data-i18n-attr="contactPage.githubHref"
-            data-i18n-attr-name="href"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-i18n="contactPage.githubText"
-          ></a>
-        </p>
-        <p class="impressum-lines reveal">
-          <strong data-i18n="contactPage.linkedinLabel"></strong><br />
-          <a
-            href=""
-            data-i18n-attr="contactPage.linkedinHref"
-            data-i18n-attr-name="href"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-i18n="contactPage.linkedinText"
-          ></a>
-        </p>
+      <section class="article-section" aria-labelledby="contact-email">
+        <h2 id="contact-email" class="reveal" data-i18n="contactPage.emailLabel"></h2>
+        <ul class="project-bullets reveal">
+          <li>
+            <a data-i18n="contactPage.emailText" data-email-link href="#"></a>
+            <span hidden data-i18n="contactPage.emailUser" data-email-user></span>
+            <span hidden data-i18n="contactPage.emailDomain" data-email-domain></span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="article-section" aria-labelledby="contact-github">
+        <h2 id="contact-github" class="reveal" data-i18n="contactPage.githubLabel"></h2>
+        <ul class="project-bullets reveal">
+          <li>
+            <a
+              href=""
+              data-i18n-attr="contactPage.githubHref"
+              data-i18n-attr-name="href"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="contactPage.githubText"
+            ></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="article-section" aria-labelledby="contact-linkedin">
+        <h2 id="contact-linkedin" class="reveal" data-i18n="contactPage.linkedinLabel"></h2>
+        <ul class="project-bullets reveal">
+          <li>
+            <a
+              href=""
+              data-i18n-attr="contactPage.linkedinHref"
+              data-i18n-attr-name="href"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="contactPage.linkedinText"
+            ></a>
+          </li>
+        </ul>
       </section>
     </main>
 

@@ -1610,28 +1610,10 @@
   
   /* ---------- Contact / mono ---------- */
   
-  .contact-block {
-    max-width: var(--measure);
-  }
-  
-  .contact-block a {
+  body.contact main .article-section a {
     font-family: var(--font-mono);
     font-size: 0.9rem;
     letter-spacing: 0.01em;
-  }
-
-  .contact-block .impressum-lines {
-    margin-bottom: 0.5rem;
-    line-height: 1.25;
-  }
-
-  .contact-block .impressum-lines:last-child {
-    margin-bottom: 0;
-  }
-
-  .contact-block strong {
-    display: inline-block;
-    margin-bottom: 0.05rem;
   }
 
   /* Contact page: slightly denser rhythm. */
@@ -1644,9 +1626,16 @@
     margin-bottom: var(--space-4);
   }
 
-  body.contact .contact-block .impressum-lines {
-    margin-bottom: 0.35rem;
-    line-height: 1.2;
+  body.contact main .article-section {
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  body.contact main .article-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   /* ---------- CV ---------- */
