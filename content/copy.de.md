@@ -298,6 +298,50 @@ Externe Projektseite öffnen
 
 Ein Prototypprojekt um Cursor als Entwicklungsumgebung zu testen. MicZH sammelt wiederkehrende Open-Mic-Termine in Zürich aus mehreren Quellen und stellt sie visuell und filterbar dar.
 
+## `project1.specs.heading`
+
+Projekt Beschreibung
+
+## `project1.specs.role.label`
+
+Rolle
+
+## `project1.specs.role.value`
+
+Konzept, Datenbeschaffung, Umsetzung (End-to-End)
+
+## `project1.specs.data.label`
+
+Daten
+
+## `project1.specs.data.value`
+
+Open-Mic-Termine aus mehreren öffentlichen Quellen (manuell kuratiert)
+
+## `project1.specs.methods.label`
+
+Methoden
+
+## `project1.specs.methods.value`
+
+Web-Recherche, Zusammenführen/Deduplizieren, einfache Georeferenzierung (Lat/Lon), UI-Filter
+
+## `project1.specs.tech.label`
+
+Tools/Tech
+
+## `project1.specs.tech.value`
+
+Vanilla JavaScript, HTML/CSS, GitHub Pages
+
+## `project1.specs.output.label`
+
+Output
+
+## `project1.specs.output.value`
+
+Interaktive Projektseite (Map + Filter) + GitHub-Repository
+
 ## `project1.backLink`
 
 Zurück zur Projektübersicht
@@ -312,43 +356,111 @@ Projektgrafik (Thumbnail).
 
 ## `project1.sections.question.heading`
 
-Frage
+Kurzbeschreibung
 
 ## `project1.sections.question.body`
 
-Fragetext
+MicZH beantwortet die Frage, wo und wann man in Zürich Open‑Mic‑Comedy sehen (oder selbst auftreten) kann. Dafür werden Termine aus mehreren Quellen gesammelt, vereinheitlicht und als wiederkehrende Events strukturiert. Das Ergebnis ist eine filterbare Übersicht mit Karte, Liste und Detailinfos.
 
 ## `project1.sections.data.heading`
 
 Daten
 
-## `project1.sections.data.body`
+## `project1.sections.data.bullets[0]`
 
-Datentext
+Öffentlich verfügbare Open‑Mic‑Termine aus unterschiedlichen Listing‑ und Event‑Seiten.
+
+## `project1.sections.data.bullets[1]`
+
+Erfasst werden u. a. Wochentag, Uhrzeit, Ort, Kosten und Bühnen‑Sprache (On‑Stage‑Sprache).
+
+## `project1.sections.data.bullets[2]`
+
+Serien über mehrere Termine hinweg werden als wiederkehrende Events zusammengeführt.
 
 ## `project1.sections.method.heading`
 
-Methode
+Methoden
 
-## `project1.sections.method.body`
+## `project1.sections.method.bullets[0]`
 
-Methodentext
+Automatisiertes Scraping: Listing‑Seiten → Detailseiten.
+
+## `project1.sections.method.bullets[1]`
+
+Metadaten‑Extraktion aus strukturierten Daten, Meta‑Tags und sichtbarem Seitentext.
+
+## `project1.sections.method.bullets[2]`
+
+Enrichment und Flattening in tabellarische Datensätze für Analyse und Export.
+
+## `project1.sections.method.bullets[3]`
+
+Build‑time Geokodierung (Nominatim) mit Cache — ohne Laufzeit‑Geokodierung in der statischen Site.
 
 ## `project1.sections.visualisation.heading`
 
-Visualisierung
+Output
 
-## `project1.sections.visualisation.body`
+## `project1.sections.visualisation.bullets[0]`
 
-Auch in bunt.
+Statische Website auf GitHub Pages (HTML/CSS/JavaScript) — ohne Backend.
+
+## `project1.sections.visualisation.bullets[1]`
+
+Interaktive Ansicht mit Karte, Event‑Liste und Filtern (z. B. Wochentag/Sprache).
+
+## `project1.sections.visualisation.bullets[2]`
+
+Lokale Streamlit‑App für Entwicklung und Exploration.
 
 ## `project1.sections.conclusion.heading`
 
-Fazit
+Tools/Tech
 
-## `project1.sections.conclusion.body`
+## `project1.techBullets.python`
 
-Fazittext
+Python für Scraping, Verarbeitung, Geokodierung und Export.
+
+## `project1.techBullets.playwright`
+
+Playwright‑basierte Scraper (Listing‑ und Detailseiten).
+
+## `project1.techBullets.geocoding`
+
+Build‑time Geokodierung via Nominatim mit Cache.
+
+## `project1.techBullets.staticSite`
+
+Statische Website auf GitHub Pages (HTML/CSS/JavaScript) mit Karte, Liste und Filtern.
+
+## `project1.techBullets.streamlit`
+
+Streamlit‑App für lokale Nutzung/Entwicklung.
+
+## `project1.techTags.python`
+
+Python
+
+## `project1.techTags.playwright`
+
+Playwright
+
+## `project1.techTags.nominatim`
+
+Nominatim
+
+## `project1.techTags.streamlit`
+
+Streamlit
+
+## `project1.techTags.ghPages`
+
+GitHub Pages
+
+## `project1.techTags.web`
+
+HTML/CSS/JavaScript
 
 ## `aboutPage.title`
 

@@ -46,6 +46,7 @@
     <main id="main" class="main--project">
       <article>
         <section class="article-section article-section--wide" aria-labelledby="sec-embed">
+          <a class="embed-jump reveal" href="#sec-q">↓ Projekt Beschreibung</a>
           <div class="embed-frame">
             <iframe
               src=""
@@ -59,8 +60,26 @@
               allowfullscreen
             ></iframe>
           </div>
-          <p class="embed-fallback reveal">
+        </section>
+
+        <div class="article-divider article-divider--double reveal" aria-hidden="true"></div>
+
+        <section id="project-description" class="article-section" aria-labelledby="sec-q">
+          <h2 id="sec-q" class="reveal" data-i18n="project1.sections.question.heading"></h2>
+          <ul class="teaser__tags tool-tags reveal" aria-label="Tool tags">
+            <li class="teaser__tag" data-i18n="project1.techTags.python"></li>
+            <li class="teaser__tag" data-i18n="project1.techTags.playwright"></li>
+            <li class="teaser__tag" data-i18n="project1.techTags.nominatim"></li>
+            <li class="teaser__tag" data-i18n="project1.techTags.streamlit"></li>
+            <li class="teaser__tag" data-i18n="project1.techTags.ghPages"></li>
+            <li class="teaser__tag" data-i18n="project1.techTags.web"></li>
+          </ul>
+
+          <p class="reveal" data-i18n="project1.sections.question.body"></p>
+
+          <div class="article-meta reveal" aria-label="Project links">
             <a
+              class="article-meta__link"
               href=""
               data-i18n-attr="project1.embedUrl"
               data-i18n-attr-name="href"
@@ -68,9 +87,8 @@
               rel="noopener noreferrer"
               data-i18n="project1.embedOpenLabel"
             ></a>
-          </p>
-          <p class="embed-fallback reveal">
             <a
+              class="article-meta__link"
               href=""
               data-i18n-attr="project1.githubHref"
               data-i18n-attr-name="href"
@@ -78,26 +96,39 @@
               rel="noopener noreferrer"
               data-i18n="project1.githubLinkLabel"
             ></a>
-          </p>
-        </section>
-
-        <div class="article-divider reveal" aria-hidden="true"></div>
-
-        <p class="lede reveal" data-i18n="project1.intro"></p>
-
-        <section class="article-section" aria-labelledby="sec-q">
-          <h2 id="sec-q" class="reveal" data-i18n="project1.sections.question.heading"></h2>
-          <p class="reveal" data-i18n="project1.sections.question.body"></p>
+          </div>
         </section>
 
         <section class="article-section" aria-labelledby="sec-d">
           <h2 id="sec-d" class="reveal" data-i18n="project1.sections.data.heading"></h2>
-          <p class="reveal" data-i18n="project1.sections.data.body"></p>
+          <ul class="project-bullets reveal">
+            <li data-i18n="project1.sections.data.bullets[0]"></li>
+            <li data-i18n="project1.sections.data.bullets[1]"></li>
+            <li data-i18n="project1.sections.data.bullets[2]"></li>
+          </ul>
         </section>
 
         <section class="article-section" aria-labelledby="sec-m">
           <h2 id="sec-m" class="reveal" data-i18n="project1.sections.method.heading"></h2>
-          <p class="reveal" data-i18n="project1.sections.method.body"></p>
+          <ul class="project-bullets reveal">
+            <li data-i18n="project1.sections.method.bullets[0]"></li>
+            <li data-i18n="project1.sections.method.bullets[1]"></li>
+            <li data-i18n="project1.sections.method.bullets[2]"></li>
+            <li data-i18n="project1.sections.method.bullets[3]"></li>
+          </ul>
+        </section>
+
+        <section class="article-section" aria-labelledby="sec-c">
+          <h2 id="sec-c" class="reveal" data-i18n="project1.sections.conclusion.heading"></h2>
+          <div class="tech-stack reveal" role="region" aria-labelledby="sec-c">
+            <ul class="tech-bullets">
+              <li data-i18n="project1.techBullets.python"></li>
+              <li data-i18n="project1.techBullets.playwright"></li>
+              <li data-i18n="project1.techBullets.geocoding"></li>
+              <li data-i18n="project1.techBullets.staticSite"></li>
+              <li data-i18n="project1.techBullets.streamlit"></li>
+            </ul>
+          </div>
         </section>
 
         <section class="article-section" aria-labelledby="sec-v">
@@ -106,12 +137,11 @@
             class="reveal"
             data-i18n="project1.sections.visualisation.heading"
           ></h2>
-          <p class="reveal" data-i18n="project1.sections.visualisation.body"></p>
-        </section>
-
-        <section class="article-section" aria-labelledby="sec-c">
-          <h2 id="sec-c" class="reveal" data-i18n="project1.sections.conclusion.heading"></h2>
-          <p class="reveal" data-i18n="project1.sections.conclusion.body"></p>
+          <ul class="project-bullets reveal">
+            <li data-i18n="project1.sections.visualisation.bullets[0]"></li>
+            <li data-i18n="project1.sections.visualisation.bullets[1]"></li>
+            <li data-i18n="project1.sections.visualisation.bullets[2]"></li>
+          </ul>
         </section>
 
         <p class="back-nav reveal">

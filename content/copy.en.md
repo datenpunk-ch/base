@@ -298,6 +298,50 @@ Open external project site
 
 A prototype project to test Cursor as a development environment. MicZH collects recurring open-mic dates in Zurich from multiple sources and presents them visually with filters.
 
+## `project1.specs.heading`
+
+Project specs
+
+## `project1.specs.role.label`
+
+Role
+
+## `project1.specs.role.value`
+
+Concept, data collection, implementation (end-to-end)
+
+## `project1.specs.data.label`
+
+Data
+
+## `project1.specs.data.value`
+
+Open-mic events from multiple public sources (manually curated)
+
+## `project1.specs.methods.label`
+
+Methods
+
+## `project1.specs.methods.value`
+
+Web research, merging/deduplication, light georeferencing (lat/lon), UI filtering
+
+## `project1.specs.tech.label`
+
+Tools/Tech
+
+## `project1.specs.tech.value`
+
+Vanilla JavaScript, HTML/CSS, GitHub Pages
+
+## `project1.specs.output.label`
+
+Output
+
+## `project1.specs.output.value`
+
+Interactive project page (map + filters) + GitHub repository
+
 ## `project1.backLink`
 
 Back to project overview
@@ -312,43 +356,111 @@ Project graphic (thumbnail).
 
 ## `project1.sections.question.heading`
 
-Question
+Overview
 
 ## `project1.sections.question.body`
 
-Question text
+MicZH answers a simple question: where (and when) can you watch open-mic comedy in Zurich — or get on stage yourself? It collects events from multiple sources, standardises them, and models recurring series. The result is a filterable overview with map, list, and details.
 
 ## `project1.sections.data.heading`
 
 Data
 
-## `project1.sections.data.body`
+## `project1.sections.data.bullets[0]`
 
-Data text
+Publicly available open-mic events from different listing and event pages.
+
+## `project1.sections.data.bullets[1]`
+
+Captured fields include weekday, time, venue, cost, and on-stage language.
+
+## `project1.sections.data.bullets[2]`
+
+Series spanning multiple dates are grouped as recurring events.
 
 ## `project1.sections.method.heading`
 
-Method
+Methods
 
-## `project1.sections.method.body`
+## `project1.sections.method.bullets[0]`
 
-Method text
+Automated scraping: listing pages → detail pages.
+
+## `project1.sections.method.bullets[1]`
+
+Metadata extraction from structured data, meta tags, and visible page text.
+
+## `project1.sections.method.bullets[2]`
+
+Enrichment and flattening into tabular datasets for analysis and export.
+
+## `project1.sections.method.bullets[3]`
+
+Build-time geocoding (Nominatim) with caching — no runtime geocoding in the static site.
 
 ## `project1.sections.visualisation.heading`
 
-Visualisation
+Output
 
-## `project1.sections.visualisation.body`
+## `project1.sections.visualisation.bullets[0]`
 
-Also in colour.
+Static website on GitHub Pages (HTML/CSS/JavaScript) — no backend.
+
+## `project1.sections.visualisation.bullets[1]`
+
+Interactive view with map, event list, and filters (e.g. weekday/language).
+
+## `project1.sections.visualisation.bullets[2]`
+
+Local Streamlit app for development and exploration.
 
 ## `project1.sections.conclusion.heading`
 
-Conclusion
+Tools/Tech
 
-## `project1.sections.conclusion.body`
+## `project1.techBullets.python`
 
-Conclusion text
+Python for scraping, processing, geocoding, and export.
+
+## `project1.techBullets.playwright`
+
+Playwright-based scrapers (listing and detail pages).
+
+## `project1.techBullets.geocoding`
+
+Build-time geocoding via Nominatim with caching.
+
+## `project1.techBullets.staticSite`
+
+Static site on GitHub Pages (HTML/CSS/JavaScript) with map, list, and filters.
+
+## `project1.techBullets.streamlit`
+
+Streamlit app for local use/development.
+
+## `project1.techTags.python`
+
+Python
+
+## `project1.techTags.playwright`
+
+Playwright
+
+## `project1.techTags.nominatim`
+
+Nominatim
+
+## `project1.techTags.streamlit`
+
+Streamlit
+
+## `project1.techTags.ghPages`
+
+GitHub Pages
+
+## `project1.techTags.web`
+
+HTML/CSS/JavaScript
 
 ## `aboutPage.title`
 

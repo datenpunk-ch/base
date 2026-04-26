@@ -70,13 +70,45 @@
   var progressBarEl = null;
   var revealObserver = null;
 
+  function parsePathTokens(pathStr) {
+    if (!pathStr) return [];
+
+    // Tokens: "foo", "bar", 0, "baz" from "foo.bar[0].baz"
+    var tokens = [];
+    var i = 0;
+    while (i < pathStr.length) {
+      var ch = pathStr[i];
+      if (ch === ".") {
+        i++;
+        continue;
+      }
+      if (ch === "[") {
+        var end = pathStr.indexOf("]", i + 1);
+        if (end === -1) break;
+        var inner = pathStr.slice(i + 1, end);
+        var idx = parseInt(inner, 10);
+        if (!isNaN(idx)) tokens.push(idx);
+        i = end + 1;
+        continue;
+      }
+
+      var j = i;
+      while (j < pathStr.length && pathStr[j] !== "." && pathStr[j] !== "[") j++;
+      tokens.push(pathStr.slice(i, j));
+      i = j;
+    }
+
+    return tokens;
+  }
+
   function getByPath(obj, path) {
     if (!obj || !path) return undefined;
-    var parts = path.split(".");
+
+    var tokens = parsePathTokens(String(path));
     var cur = obj;
-    for (var i = 0; i < parts.length; i++) {
+    for (var t = 0; t < tokens.length; t++) {
       if (cur == null || typeof cur !== "object") return undefined;
-      cur = cur[parts[i]];
+      cur = cur[tokens[t]];
     }
     return cur;
   }
@@ -117,30 +149,7 @@
     function setByPath(root, pathStr, value) {
       if (!root || !pathStr) return;
 
-      // Tokens: "foo", "bar", 0, "baz" from "foo.bar[0].baz"
-      var tokens = [];
-      var i = 0;
-      while (i < pathStr.length) {
-        var ch = pathStr[i];
-        if (ch === ".") {
-          i++;
-          continue;
-        }
-        if (ch === "[") {
-          var end = pathStr.indexOf("]", i + 1);
-          if (end === -1) break;
-          var inner = pathStr.slice(i + 1, end);
-          var idx = parseInt(inner, 10);
-          if (!isNaN(idx)) tokens.push(idx);
-          i = end + 1;
-          continue;
-        }
-        // identifier
-        var j = i;
-        while (j < pathStr.length && pathStr[j] !== "." && pathStr[j] !== "[") j++;
-        tokens.push(pathStr.slice(i, j));
-        i = j;
-      }
+      var tokens = parsePathTokens(String(pathStr));
 
       var cur = root;
       for (var t = 0; t < tokens.length; t++) {
@@ -755,6 +764,37 @@
     });
   }
 
+  function sortProjectToolTags(bundle) {
+    var main = document.querySelector("main.main--project");
+    if (!main) return;
+
+    var lists = main.querySelectorAll("ul.teaser__tags.tool-tags");
+    if (!lists.length) return;
+
+    var locale = undefined;
+    if (bundle) {
+      var lang = getByPath(bundle, "meta.htmlLang");
+      if (isRenderableValue(lang)) locale = String(lang).trim();
+    }
+
+    lists.forEach(function (ul) {
+      var items = Array.prototype.slice.call(ul.querySelectorAll("li.teaser__tag"));
+      if (items.length < 2) return;
+
+      items.sort(function (a, b) {
+        return String(a.textContent || "")
+          .trim()
+          .localeCompare(String(b.textContent || "").trim(), locale, {
+            sensitivity: "base",
+          });
+      });
+
+      items.forEach(function (li) {
+        ul.appendChild(li);
+      });
+    });
+  }
+
   /**
    * Applies one loaded locale bundle to the current DOM: lang, title,
    * all data-i18n nodes, attribute translations, and project cards.
@@ -766,6 +806,7 @@
     applyDocumentTitle(bundle);
     applyDataI18nNodes(bundle);
     applyDataI18nAttrs(bundle);
+    sortProjectToolTags(bundle);
     renderProjectCards(bundle);
     initFeaturedCarousel();
     initEuropeMap();

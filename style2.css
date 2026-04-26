@@ -1246,6 +1246,11 @@
     text-transform: uppercase;
     color: var(--color-muted);
   }
+
+  /* Anchor targets on project pages shouldn't hide under sticky header. */
+  .main--project [id] {
+    scroll-margin-top: 6.5rem;
+  }
   
   .article-section p {
     margin: 0;
@@ -1264,6 +1269,11 @@
     overflow: hidden;
   }
 
+  /* Project1: make the embed a bit taller. */
+  html[data-i18n-document-title="meta.documentTitle.project1"] .embed-frame {
+    height: clamp(56rem, 102vh, 110rem);
+  }
+
   .embed-frame iframe {
     display: block;
     width: 100%;
@@ -1274,6 +1284,15 @@
   /* Let wide embeds breathe (reduce side clipping). */
   .article-section--wide .embed-frame {
     width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  /* When a wide embed is followed by the divider, make it flush + full width. */
+  .article-section--wide + .article-divider {
+    width: 100vw;
+    max-width: none;
+    margin-top: 0;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
   }
@@ -1294,6 +1313,63 @@
   .embed-fallback a:hover {
     color: var(--color-accent-hover);
     border-bottom-color: var(--color-accent);
+  }
+
+  .article-meta {
+    margin: var(--space-2) 0 0;
+    max-width: var(--measure);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.25rem;
+  }
+
+  .article-meta__link {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .article-meta__link:hover {
+    color: var(--color-accent-hover);
+    border-bottom-color: var(--color-accent);
+  }
+
+  .tech-stack {
+    max-width: var(--measure);
+    margin-top: var(--space-2);
+  }
+
+  .tech-bullets {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-family: var(--font-ui);
+    color: var(--color-ink-body);
+    line-height: var(--lh-relaxed);
+  }
+
+  .tech-bullets li {
+    margin: 0.2rem 0;
+  }
+
+  .project-bullets {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-family: var(--font-ui);
+    color: var(--color-ink-body);
+    line-height: var(--lh-relaxed);
+  }
+
+  .project-bullets li {
+    margin: 0.2rem 0;
+  }
+
+  /* Project1: tool tags should match project-card tag styling. */
+  .main--project .tool-tags {
+    margin: var(--space-2) 0 var(--space-3);
+    max-width: var(--measure);
   }
   
   .figure-placeholder {
@@ -2044,6 +2120,34 @@
     max-width: var(--measure);
     height: 1px;
     background: var(--color-rule);
+  }
+
+  .article-divider--double {
+    height: 3px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-rule),
+      var(--color-rule) 1px,
+      transparent 1px,
+      transparent 2px,
+      var(--color-rule) 2px,
+      var(--color-rule) 3px
+    );
+  }
+
+  .embed-jump {
+    display: inline-block;
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+    border-bottom: 1px solid transparent;
+  }
+
+  .embed-jump:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-rule);
   }
 
   /* ---------- Project tag filter (projects.html) ---------- */
