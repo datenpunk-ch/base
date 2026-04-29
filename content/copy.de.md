@@ -74,6 +74,10 @@ Sprache
 
 Hauptnavigation
 
+## `common.kickerLine`
+
+Datenpunk · Zürich
+
 ## `footer.note`
 
 Datenpunk — Stories und Zahlen.
@@ -85,6 +89,10 @@ Impressum
 ## `home.hero.title`
 
 Datenpunk.
+
+## `home.kickerLine`
+
+Stories & Zahlen
 
 ## `home.hero.tagline`
 
@@ -469,6 +477,10 @@ HTML/CSS/JavaScript
 ## `aboutPage.intro`
 
 Introtext
+
+## `aboutPage.portraitCaption`
+
+Autorinnenfoto.
 
 ## `aboutPage.backgroundHeading`
 

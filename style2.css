@@ -102,14 +102,38 @@
 }
 
 :root {
+    /* Urban / punk palette: hard ink, neutral off-white, one controlled accent. */
     --color-bg: #ffffff;
-    --color-bg-soft: #f7f8f9;
-    --color-ink: #0f0f0f;
-    --color-ink-body: #171717;
-    --color-muted: #5f5f5f;
-    --color-rule: #d9dde1;
-    --color-accent: #3a677a;
-    --color-accent-hover: #2f5a6b;
+    --color-bg-soft: #f4f4f4;
+    /* Section bands (featured strip etc.) — keep neutral (no teal cast). */
+    /* Featured strip band: light anthracite (neutral grey, no green/blue cast). */
+    --color-band: #f2f2f2;
+    --color-ink: #0b0d10;
+    --color-ink-body: #12161b;
+    --color-muted: #55606a;
+    --color-rule: #d6d6d6;
+    /* Accent: hair copper (warm, editorial, not neon) */
+    --color-accent: #b5542a;
+    --color-accent-hover: #944322;
+    /* Use darker tones for accent-coloured text on white. */
+    --color-accent-text: #7a3418;
+    --color-accent-text-hover: #5c2712;
+
+    /* Image treatment: subtle cohesive warmth (project thumbs). */
+    --thumb-filter: saturate(0.96) contrast(1.03) brightness(0.99) sepia(0.08)
+      hue-rotate(-6deg);
+    --thumb-filter-hover: saturate(1) contrast(1.04) brightness(1)
+      sepia(0.08) hue-rotate(-6deg);
+
+    /* Derived surfaces */
+    --color-bg-glass: rgba(255, 255, 255, 0.96);
+    --color-overlay: rgba(255, 255, 255, 0.82);
+    --shadow-hairline: rgba(0, 0, 0, 0.06);
+
+    /* Stroke weights (reduce “filigree” feeling) */
+    --rule-w: 2px;
+    --rule-strong-w: 4px;
+    --underline-w: 2px;
   
     --font-display: "Spectral", "Georgia", serif;
     --font-ui: "Karla", system-ui, sans-serif;
@@ -132,12 +156,15 @@
     --page-max: 78rem;
     /* Featured strip width (selected projects) */
     --featured-max: min(
-      120rem,
+      132rem,
       calc(100dvw - var(--gutter-start) - var(--gutter-end))
     );
     /* Global gutters: symmetric so content is centred */
     --gutter-start: clamp(0.95rem, 3.1vw, 2.4rem);
     --gutter-end: clamp(0.95rem, 3.1vw, 2.4rem);
+
+    /* Featured strip: add a bit more side air than the global gutter. */
+    --featured-pad-extra: clamp(3.25rem, 9vw, 11rem);
   
     --lh-tight: 1.02;
     --lh-head: 1.08;
@@ -146,6 +173,19 @@
     --lh-relaxed: 1.75;
   
     --text-body: clamp(0.95rem, 0.15vw + 0.9rem, 1rem);
+  }
+
+  /* ---------- Styling variants (test via URL params) ---------- */
+
+  /* Type “mood” (magazine calm vs cover loud) */
+  html[data-mood="calm"] {
+    --dp-h1-scale: clamp(3.25rem, 5.6vw + 1.35rem, 6rem);
+    --dp-h1-track: -0.045em;
+  }
+
+  html[data-mood="cover"] {
+    --dp-h1-scale: clamp(3.6rem, 6.4vw + 1.6rem, 6.6rem);
+    --dp-h1-track: -0.06em;
   }
   
   *,
@@ -185,12 +225,17 @@
   }
   
   a:hover {
-    color: var(--color-accent);
+    color: var(--color-ink);
   }
 
   /* Links are intentionally not underlined site-wide. */
   main a:not(.site-nav__list a):not(.site-title a) {
     text-decoration: none;
+    border-bottom: var(--underline-w) solid var(--color-rule);
+  }
+
+  main a:not(.site-nav__list a):not(.site-title a):hover {
+    border-bottom-color: var(--color-accent);
   }
   
   /* Selected projects: no underlined links. */
@@ -243,8 +288,8 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid var(--color-ink);
+    background: var(--color-bg-glass);
+    border-bottom: var(--rule-w) solid var(--color-ink);
     backdrop-filter: blur(8px);
   }
   
@@ -261,14 +306,22 @@
   
   .site-title {
     display: none;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink);
   }
   
   .site-title a {
     color: inherit;
+    text-decoration: none;
   }
   
   .site-title a:hover {
-    color: var(--color-accent);
+    color: var(--color-ink);
   }
   
   .site-nav {
@@ -287,36 +340,47 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0 var(--space-3);
+    gap: 0.55rem var(--space-3);
   }
   
   .site-nav__list a {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.35rem 0;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-muted);
     border-bottom: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.1;
+    transition: color 0.15s ease, box-shadow 0.15s ease;
   }
   
   .site-nav__list a:hover {
-    color: var(--color-accent);
-    border-bottom-color: transparent;
+    color: var(--color-ink);
+    box-shadow: inset 0 -1px 0 var(--color-accent);
+  }
+
+  .site-nav__list a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    box-shadow: inset 0 -1px 0 var(--color-accent);
   }
   
   .site-nav__list a[aria-current="page"] {
     color: var(--color-ink);
-    border-bottom-color: var(--color-accent);
+    box-shadow: inset 0 -2px 0 var(--color-accent);
   }
+
+  /* Keep brand label hidden (redundant with nav items). */
   
   /* ---------- Language switch ---------- */
   
   .lang-switch {
     display: inline-flex;
     align-items: stretch;
-    border: 1px solid var(--color-ink);
+    border: var(--rule-w) solid var(--color-ink);
     background: var(--color-bg);
   }
   
@@ -346,7 +410,7 @@
   }
   
   .lang-switch button + button {
-    border-left: 1px solid var(--color-ink);
+    border-left: var(--rule-w) solid var(--color-ink);
   }
   
   .lang-switch button:hover {
@@ -378,6 +442,10 @@
       justify-content: space-between;
       padding-top: var(--space-2);
       border-top: 1px solid var(--color-rule);
+    }
+
+    .site-nav__list {
+      gap: 0.65rem var(--space-3);
     }
   }
   
@@ -421,11 +489,49 @@
     margin: 0 0 var(--space-2);
     max-width: 10ch;
     font-family: var(--font-display);
-    font-size: clamp(3.4rem, 6vw + 1.5rem, 6.3rem);
+    font-size: var(--dp-h1-scale, clamp(3.4rem, 6vw + 1.5rem, 6.3rem));
     font-weight: 700;
-    letter-spacing: -0.05em;
+    letter-spacing: var(--dp-h1-track, -0.05em);
     line-height: var(--lh-tight);
     color: var(--color-ink);
+  }
+
+  .front-masthead .hero h1 .dp-dot {
+    color: var(--color-accent);
+  }
+
+  .issue-line {
+    margin: 0 0 var(--space-2);
+    max-width: none;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .issue-line::after {
+    content: "";
+    height: 1px;
+    width: 2.5rem;
+    background: var(--color-accent);
+    flex: 0 0 auto;
+  }
+
+  /* Make the masthead feel more “ink” + attitude. */
+  .front-masthead {
+    position: relative;
+  }
+
+  .front-masthead::after {
+    content: "";
+    display: block;
+    height: var(--rule-strong-w);
+    background: var(--color-ink);
+    margin-top: var(--space-5);
   }
   
   .front-masthead .tagline {
@@ -436,50 +542,33 @@
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: var(--lh-relaxed);
-    color: var(--color-accent);
+    color: var(--color-accent-text);
   }
   
-  .front-masthead .lede {
-    margin: 0;
-    max-width: 34rem;
-    font-family: var(--font-ui);
-    font-size: clamp(1rem, 0.22vw + 0.95rem, 1.08rem);
-    font-weight: 400;
-    line-height: var(--lh-relaxed);
-    letter-spacing: 0;
-    color: var(--color-ink-body);
+  .front-intro {
+    margin: calc(var(--space-4) * -1) 0 var(--space-5);
+    max-width: var(--measure);
+    color: var(--color-accent-text);
+  }
+
+  /* Intro as editorial note: a quiet rule, then text. */
+  .front-intro::before {
+    content: "";
+    display: block;
+    width: 3.25rem;
+    height: var(--rule-w);
+    background: var(--color-rule);
+    margin: 0 0 var(--space-2);
   }
   
-  @media (min-width: 920px) {
-    .front-masthead {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.78fr);
-      column-gap: clamp(var(--space-4), 5vw, var(--space-6));
-      row-gap: var(--space-3);
-      align-items: start;
-    }
-  
-    .front-masthead .hero {
-      grid-column: 1;
-      grid-row: 1;
-    }
-  
-    .front-masthead .lede {
-      grid-column: 2;
-      grid-row: 1;
-      margin-top: 0.35rem;
-      max-width: none;
-      padding-left: calc(var(--space-4) + 0.6rem);
-      border-left: 1px solid var(--color-ink);
-    }
-  }
+  /* (Option C) Keep masthead single-column even on wide screens. */
   
   /* ---------- Generic hero ---------- */
   
   .hero:not(.front-masthead .hero) {
     margin-bottom: var(--space-4);
     padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--color-rule);
+    border-bottom: var(--rule-w) solid var(--color-rule);
   }
   
   .hero h1 {
@@ -551,9 +640,17 @@
 
   /* Home: featured strip sits right under masthead. */
   .section--featured-strip {
-    margin-top: calc(var(--space-3) * -1);
+    margin-top: calc(var(--space-4) * -1);
     position: relative;
-    padding: var(--space-4) 0 var(--space-5);
+    /* Break out of the main column while staying centred. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding:
+      var(--space-3)
+      calc(var(--gutter-end) + var(--featured-pad-extra))
+      var(--space-5)
+      calc(var(--gutter-start) + var(--featured-pad-extra));
   }
 
   /* Full-width soft background band (magazine section feel). */
@@ -565,7 +662,7 @@
     bottom: 0;
     width: 100vw;
     transform: translateX(-50%);
-    background: var(--color-bg-soft);
+    background: var(--color-band);
     z-index: -1;
   }
   
@@ -580,7 +677,7 @@
     gap: 0.65rem 1rem;
     margin: 0 0 var(--space-4);
     padding-bottom: var(--space-2);
-    border-bottom: 1px solid var(--color-ink);
+    border-bottom: var(--rule-w) solid var(--color-ink);
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 1vw + 1.2rem, 2.125rem);
     font-weight: 700;
@@ -623,13 +720,13 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     border-bottom: 1px solid var(--color-accent);
     padding-bottom: 0.15em;
   }
   
   .section__foot a:hover {
-    color: var(--color-accent-hover);
+    color: var(--color-accent-text-hover);
     border-bottom-color: var(--color-accent-hover);
   }
   
@@ -646,7 +743,7 @@
   }
   
   .section__continue a:hover {
-    color: var(--color-accent);
+    color: var(--color-ink);
     border-bottom-color: var(--color-accent);
   }
   
@@ -677,7 +774,7 @@
   
   .teaser-list {
     margin-top: var(--space-3);
-    border-top: 1px solid var(--color-ink);
+    border-top: var(--rule-w) solid var(--color-ink);
   }
 
   /* Avoid double rule: section heading already has a bottom rule. */
@@ -687,7 +784,7 @@
   }
   
   .teaser {
-    border-bottom: 1px solid var(--color-rule);
+    border-bottom: var(--rule-w) solid var(--color-rule);
   }
   
   .teaser__link {
@@ -715,11 +812,13 @@
     letter-spacing: -0.035em;
     line-height: 1.15;
     color: var(--color-ink);
-    transition: color 0.15s ease;
+    transition: border-color 0.15s ease;
+    border-bottom: var(--underline-w) solid transparent;
+    display: inline-block;
   }
   
   .teaser__link:hover .teaser__hed {
-    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
   }
   
   .teaser__deck {
@@ -740,13 +839,13 @@
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     transition: letter-spacing 0.15s ease, color 0.15s ease;
   }
   
   .teaser__link:hover .teaser__read {
     letter-spacing: 0.19em;
-    color: var(--color-accent-hover);
+    color: var(--color-accent-text-hover);
   }
   
   .teaser--linked .teaser__link {
@@ -761,7 +860,7 @@
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     text-decoration: none;
     border-bottom: 1px solid var(--color-rule);
     transition: color 0.15s ease, border-color 0.15s ease;
@@ -769,7 +868,7 @@
   
   .teaser__github:hover,
   .teaser__github:focus-visible {
-    color: var(--color-accent-hover);
+    color: var(--color-accent-text-hover);
     border-bottom-color: var(--color-accent);
     outline: none;
   }
@@ -849,6 +948,18 @@
     flex-shrink: 0;
     background: var(--color-bg-soft);
     border: 0;
+    filter: var(--thumb-filter);
+    transition: filter 0.2s ease;
+  }
+
+  .teaser__link:hover .teaser__thumb,
+  .teaser__link:focus-visible .teaser__thumb {
+    filter: var(--thumb-filter-hover);
+  }
+
+  /* Opt-out for “true” screenshots where colour fidelity matters. */
+  .teaser__thumb.thumb--raw {
+    filter: none;
   }
 
   /* Smooth thumbnail reveal (inherits reveal timing). */
@@ -941,7 +1052,9 @@
     }
 
     .teaser-list--grid .teaser__hed {
-      margin-bottom: var(--space-1);
+      /* Give the accent underline room so it doesn't crowd the deck. */
+      padding-bottom: 0.12em;
+      margin-bottom: var(--space-2);
     }
 
     .teaser-list--grid .teaser__deck {
@@ -962,19 +1075,18 @@
     grid-template-columns: 1fr;
     gap: var(--space-2) var(--space-3);
     align-items: stretch;
-    /* Break out of global width, but stay centred. */
-    width: var(--featured-max);
-    max-width: none;
-    margin: 0;
-    position: relative;
-    left: 0%;
-    /* Nudge a bit left to align visually with the page column */
-    transform: translateX(calc(-50%));
+    /* Wider than the main column, but always centred. */
+    width: 100%;
+    max-width: var(--featured-max);
+    margin: 0 auto;
   }
 
   /* Featured carousel on home: horizontal scroll with two “pages” (2+2). */
   .featured-carousel {
     position: relative;
+    width: 100%;
+    max-width: var(--featured-max);
+    margin: 0 auto;
   }
 
   .teaser-list--featured[data-featured-carousel] {
@@ -987,9 +1099,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    /* Keep the carousel framed inside the main page column.
-       The scroll viewport should span exactly the same width as the normal
-       2-up layout (no breakout sizing). */
+    /* Carousel spans the featured max width (centred by parent). */
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -1020,7 +1130,7 @@
 
   /* Slightly shorter images inside the home carousel. */
   .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
-    aspect-ratio: 21 / 10;
+    aspect-ratio: 16 / 9;
   }
 
   /* Mobile: keep featured images taller so they don't read as “tiny”. */
@@ -1160,17 +1270,15 @@
     z-index: 3;
     margin: 0;
     padding: 0.35rem 0.5rem;
-    background: rgba(255, 255, 255, 0.82);
+    background: var(--color-overlay);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 0 var(--shadow-hairline);
     color: var(--color-ink);
     text-align: right;
     width: fit-content;
     max-width: calc(100% - (2 * clamp(0.6rem, 1.1vw, 0.95rem)));
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
   }
 
   /* In featured cards, the title is over the image (not in the body). */
@@ -1322,12 +1430,12 @@
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     border-bottom: 1px solid var(--color-rule);
   }
 
   .embed-fallback a:hover {
-    color: var(--color-accent-hover);
+    color: var(--color-ink);
     border-bottom-color: var(--color-accent);
   }
 
@@ -1344,12 +1452,12 @@
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     border-bottom: 1px solid var(--color-rule);
   }
 
   .article-meta__link:hover {
-    color: var(--color-accent-hover);
+    color: var(--color-ink);
     border-bottom-color: var(--color-accent);
   }
 
@@ -1409,6 +1517,53 @@
   .article-figure {
     margin: var(--space-4) 0;
     max-width: min(var(--measure), 100%);
+  }
+
+  .article-figure--portrait {
+    max-width: min(17.5rem, 100%);
+    border: var(--rule-w) solid var(--color-ink);
+    background: var(--color-bg);
+    padding: var(--space-2);
+  }
+
+  .article-figure--portrait img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(1.02);
+  }
+
+  /* About: text left, portrait right */
+  .about-masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+    align-items: start;
+  }
+
+  /* About title should read as one unit (“Über mich”). */
+  .about-masthead .page-title {
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 420px) {
+    .about-masthead .page-title {
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 920px) {
+    .about-masthead {
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: clamp(var(--space-4), 5vw, var(--space-6));
+      align-items: start;
+    }
+
+    .about-masthead .article-figure--portrait {
+      margin-top: 0.35rem;
+      justify-self: end;
+      margin-right: clamp(0.75rem, 2vw, 1.5rem);
+    }
   }
   
   .article-figure img {
@@ -1584,7 +1739,7 @@
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     text-decoration: none;
     border-bottom: 1px solid var(--color-rule);
     transition: color 0.15s ease, border-color 0.15s ease;
@@ -1592,7 +1747,7 @@
   
   .project-github a:hover,
   .project-github a:focus-visible {
-    color: var(--color-accent-hover);
+    color: var(--color-ink);
     border-bottom-color: var(--color-accent);
     outline: none;
   }
@@ -1620,7 +1775,7 @@
   }
   
   .back-nav a:hover {
-    color: var(--color-accent);
+    color: var(--color-ink);
     border-bottom-color: var(--color-accent);
   }
   
@@ -1728,9 +1883,9 @@
     margin: 0 0 var(--space-2);
     font-family: var(--font-display);
     /* Match the brand masthead scale on the home page. */
-    font-size: clamp(3.4rem, 6vw + 1.5rem, 6.3rem);
+    font-size: var(--dp-h1-scale, clamp(3.4rem, 6vw + 1.5rem, 6.3rem));
     line-height: var(--lh-tight);
-    letter-spacing: -0.05em;
+    letter-spacing: var(--dp-h1-track, -0.05em);
     color: var(--color-ink);
   }
 
@@ -2152,8 +2307,8 @@
   }
 
   .embed-jump:hover {
-    color: var(--color-accent);
-    border-bottom-color: var(--color-rule);
+    color: var(--color-ink);
+    border-bottom-color: var(--color-accent);
   }
 
   /* ---------- Project tag filter (projects.html) ---------- */
