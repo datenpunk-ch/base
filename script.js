@@ -299,6 +299,27 @@
     });
   }
 
+  function accentHeroTitleDot() {
+    var el = document.getElementById("hero-title");
+    if (!el) return;
+
+    // i18n fills textContent; turn trailing "." into a stylable span.
+    var raw = String(el.textContent || "");
+    if (!raw || raw.length < 2) return;
+    if (raw[raw.length - 1] !== ".") return;
+
+    var base = raw.slice(0, -1);
+    el.textContent = "";
+
+    var textNode = document.createTextNode(base);
+    var dot = document.createElement("span");
+    dot.className = "dp-dot";
+    dot.textContent = ".";
+
+    el.appendChild(textNode);
+    el.appendChild(dot);
+  }
+
   function applyObfuscatedEmailLinks() {
     document.querySelectorAll("[data-email-link]").forEach(function (a) {
       var parent = a.parentElement || document;
@@ -491,6 +512,7 @@
           img.src = String(effectiveThumbSrc).trim();
           img.setAttribute("loading", "lazy");
           img.setAttribute("decoding", "async");
+          if (proj && proj.thumbRaw === true) img.classList.add("thumb--raw");
           var altVal = proj.thumbAlt;
           img.alt = isRenderableValue(altVal) ? String(altVal) : "";
           return img;
@@ -920,6 +942,7 @@
     applyHtmlLang(bundle);
     applyDocumentTitle(bundle);
     applyDataI18nNodes(bundle);
+    accentHeroTitleDot();
     applyDataI18nAttrs(bundle);
     sortProjectToolTags(bundle);
     renderProjectCards(bundle);

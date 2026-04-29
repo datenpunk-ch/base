@@ -478,6 +478,10 @@ HTML/CSS/JavaScript
 
 Introtext
 
+## `aboutPage.portraitCaption`
+
+Autorinnenfoto.
+
 ## `aboutPage.backgroundHeading`
 
 Hintergrund

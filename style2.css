@@ -107,17 +107,23 @@
     --color-bg-soft: #f4f4f4;
     /* Section bands (featured strip etc.) — keep neutral (no teal cast). */
     /* Featured strip band: light anthracite (neutral grey, no green/blue cast). */
-    --color-band: #e3e3e3;
+    --color-band: #ededed;
     --color-ink: #0b0d10;
     --color-ink-body: #12161b;
     --color-muted: #55606a;
     --color-rule: #d6d6d6;
-    /* Accent: punchy copper */
-    --color-accent: #c45a1a;
-    --color-accent-hover: #a84a14;
+    /* Accent: hair copper (warm, editorial, not neon) */
+    --color-accent: #b5542a;
+    --color-accent-hover: #944322;
     /* Use darker tones for accent-coloured text on white. */
-    --color-accent-text: #9a3f12;
-    --color-accent-text-hover: #7f320e;
+    --color-accent-text: #7a3418;
+    --color-accent-text-hover: #5c2712;
+
+    /* Image treatment: subtle cohesive warmth (project thumbs). */
+    --thumb-filter: saturate(0.96) contrast(1.03) brightness(0.99) sepia(0.08)
+      hue-rotate(-6deg);
+    --thumb-filter-hover: saturate(1) contrast(1.04) brightness(1)
+      sepia(0.08) hue-rotate(-6deg);
 
     /* Derived surfaces */
     --color-bg-glass: rgba(255, 255, 255, 0.96);
@@ -335,6 +341,7 @@
     text-transform: uppercase;
     color: var(--color-muted);
     border-bottom: 1px solid transparent;
+    white-space: nowrap;
   }
   
   .site-nav__list a:hover {
@@ -462,6 +469,10 @@
     letter-spacing: var(--dp-h1-track, -0.05em);
     line-height: var(--lh-tight);
     color: var(--color-ink);
+  }
+
+  .front-masthead .hero h1 .dp-dot {
+    color: var(--color-accent);
   }
 
   .issue-line {
@@ -904,6 +915,18 @@
     flex-shrink: 0;
     background: var(--color-bg-soft);
     border: 0;
+    filter: var(--thumb-filter);
+    transition: filter 0.2s ease;
+  }
+
+  .teaser__link:hover .teaser__thumb,
+  .teaser__link:focus-visible .teaser__thumb {
+    filter: var(--thumb-filter-hover);
+  }
+
+  /* Opt-out for “true” screenshots where colour fidelity matters. */
+  .teaser__thumb.thumb--raw {
+    filter: none;
   }
 
   /* Smooth thumbnail reveal (inherits reveal timing). */
@@ -1225,9 +1248,7 @@
     text-align: right;
     width: fit-content;
     max-width: calc(100% - (2 * clamp(0.6rem, 1.1vw, 0.95rem)));
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
   }
 
   /* In featured cards, the title is over the image (not in the body). */
@@ -1466,6 +1487,53 @@
   .article-figure {
     margin: var(--space-4) 0;
     max-width: min(var(--measure), 100%);
+  }
+
+  .article-figure--portrait {
+    max-width: min(17.5rem, 100%);
+    border: var(--rule-w) solid var(--color-ink);
+    background: var(--color-bg);
+    padding: var(--space-2);
+  }
+
+  .article-figure--portrait img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    filter: saturate(0.92) contrast(1.02);
+  }
+
+  /* About: text left, portrait right */
+  .about-masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+    align-items: start;
+  }
+
+  /* About title should read as one unit (“Über mich”). */
+  .about-masthead .page-title {
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 420px) {
+    .about-masthead .page-title {
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 920px) {
+    .about-masthead {
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: clamp(var(--space-4), 5vw, var(--space-6));
+      align-items: start;
+    }
+
+    .about-masthead .article-figure--portrait {
+      margin-top: 0.35rem;
+      justify-self: end;
+      margin-right: clamp(0.75rem, 2vw, 1.5rem);
+    }
   }
   
   .article-figure img {

@@ -478,6 +478,10 @@ About me
 
 Intro text
 
+## `aboutPage.portraitCaption`
+
+Author portrait.
+
 ## `aboutPage.backgroundHeading`
 
 Background
