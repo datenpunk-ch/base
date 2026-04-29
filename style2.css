@@ -1008,7 +1008,8 @@
     background: var(--color-rule);
   }
 
-  @media (min-width: 720px) {
+  /* On small screens keep the featured carousel to 1 card per viewport. */
+  @media (min-width: 960px) {
     .teaser-list--featured[data-featured-carousel] {
       /* Always show two cards in the viewport. */
       grid-auto-columns: calc((100% - var(--space-3)) / 2);

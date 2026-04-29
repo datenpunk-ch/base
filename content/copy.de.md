@@ -524,7 +524,7 @@ Kontakt
 
 ## `contactPage.intro`
 
-Für Rückfragen, Hinweise oder Zusammenarbeit: schreib mir.
+Ideen, Feedback oder Interesse an einer Zusammenarbeit?
 
 ## `contactPage.emailLabel`
 
