@@ -667,22 +667,6 @@
     var dotsRoot = document.querySelector("[data-featured-dots]");
     if (!dotsRoot) return;
 
-    function cardsPerPage() {
-      // Infer from actual layout instead of hardcoding breakpoints.
-      // If the carousel shows two cards in the viewport, the step size between
-      // cards will be roughly half the viewport (plus gap).
-      var step = cardStepPx();
-      var w = container.clientWidth || 0;
-      if (!step || !w) return 1;
-      var ratio = w / step;
-      return ratio >= 1.6 ? 2 : 1;
-    }
-
-    function pageCount() {
-      var per = cardsPerPage();
-      return Math.max(1, Math.ceil(articles.length / per));
-    }
-
     function cardStepPx() {
       if (!articles.length) return 0;
       var a0 = articles[0];
@@ -692,22 +676,75 @@
       return Math.max(0, a1.offsetLeft - a0.offsetLeft);
     }
 
-    function pageWidthPx() {
-      var per = cardsPerPage();
-      var step = cardStepPx();
-      if (step) return per * step;
-      return container.clientWidth || 0;
+    function cardsPerView() {
+      // Keep in sync with the CSS breakpoint for the 2-up carousel.
+      // style2.css: @media (min-width: 1200px) { grid-auto-columns: .../2 }
+      var mq = window.matchMedia && window.matchMedia("(min-width: 1200px)");
+      return mq && mq.matches ? 2 : 1;
     }
 
-    function scrollLeftForPage(idx) {
-      var width = pageWidthPx();
-      var left = Math.max(0, idx) * width;
+    function gapPx() {
+      try {
+        var g = window.getComputedStyle(container).columnGap || "0px";
+        var n = parseFloat(g);
+        return Number.isFinite(n) ? n : 0;
+      } catch (e) {
+        return 0;
+      }
+    }
+
+    function applyCarouselSizing() {
+      var w = container.clientWidth || 0;
+      if (!w) return;
+      var per = cardsPerView();
+      var gap = gapPx();
+      var cardW = per >= 2 ? Math.max(1, (w - gap) / 2) : w;
+
+      // Force stable geometry so the first card can't collapse to 0 width.
+      container.style.gridAutoColumns = cardW.toFixed(2) + "px";
+      articles.forEach(function (a) {
+        a.style.minWidth = cardW.toFixed(2) + "px";
+      });
+    }
+
+    function viewCount() {
+      // Views:
+      // - mobile (1-up): [1], [2], [3], [4] => N
+      // - desktop (2-up):
+      //   - 3 cards: [1+2], [2+3] => 2 views
+      //   - 4 cards: [1+2], [3+4] => 2 views
+      var per = cardsPerView();
+      if (per <= 1) return Math.max(1, articles.length);
+      if (articles.length <= 2) return 1;
+      if (articles.length === 3) return 2;
+      // For 4 cards (the home limit), show 1+2 then 3+4.
+      return Math.ceil(articles.length / 2);
+    }
+
+    function startIndexForView(viewIdx) {
+      var per = cardsPerView();
+      if (per <= 1) return viewIdx;
+
+      // 2-up special case for 3 cards: second view starts at card 2 (index 1).
+      if (articles.length === 3) return viewIdx === 0 ? 0 : 1;
+
+      // Default for 2-up: non-overlapping pages of 2.
+      return viewIdx * 2;
+    }
+
+    function scrollLeftForView(idx) {
+      // View index maps to the left-most card index.
+      var max = viewCount() - 1;
+      var safe = Math.max(0, Math.min(max, idx));
+      var startIdx = startIndexForView(safe);
+      var a = articles[startIdx];
+      var left = a ? a.offsetLeft : 0;
       var end = Math.max(0, container.scrollWidth - container.clientWidth);
       return Math.max(0, Math.min(end, left));
     }
 
     function rebuildDots() {
-      var pages = pageCount();
+      var pages = viewCount();
       dotsRoot.innerHTML = "";
 
       // Hide dots when there's only one page.
@@ -725,7 +762,7 @@
         btn.type = "button";
         btn.className = "featured-dot";
         btn.setAttribute("data-featured-dot", String(i));
-        btn.setAttribute("aria-label", "Scroll to page " + (i + 1) + " of " + pages);
+        btn.setAttribute("aria-label", "Scroll to view " + (i + 1) + " of " + pages);
         btn.setAttribute("aria-current", i === 0 ? "true" : "false");
         dotsRoot.appendChild(btn);
       }
@@ -742,7 +779,7 @@
     }
 
     function scrollLeftForEnd() {
-      return scrollLeftForPage(pageCount() - 1);
+      return scrollLeftForView(viewCount() - 1);
     }
 
     // (Re)build dots now that we know how many pages exist.
@@ -756,7 +793,7 @@
         if (raw == null) return;
         var idx = parseInt(raw, 10);
         if (isNaN(idx)) return;
-        var left = scrollLeftForPage(idx);
+        var left = scrollLeftForView(idx);
         container.scrollTo({ left: left, behavior: "smooth" });
       });
 
@@ -766,20 +803,30 @@
         ticking = true;
         window.requestAnimationFrame(function () {
           ticking = false;
-          var width = pageWidthPx();
-          if (!width) {
+          // Pick the nearest view to the current scroll position.
+          var maxIdx = viewCount() - 1;
+          if (maxIdx <= 0) {
             setActive(0);
             return;
           }
-          var idx = Math.round(container.scrollLeft / width);
-          var maxIdx = pageCount() - 1;
-          idx = Math.max(0, Math.min(maxIdx, idx));
-          setActive(idx);
+          var pos = container.scrollLeft;
+          var bestIdx = 0;
+          var bestDist = Infinity;
+          for (var i = 0; i <= maxIdx; i++) {
+            var left = scrollLeftForView(i);
+            var d = Math.abs(left - pos);
+            if (d < bestDist) {
+              bestDist = d;
+              bestIdx = i;
+            }
+          }
+          setActive(bestIdx);
         });
       }
 
       container.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener("resize", function () {
+        applyCarouselSizing();
         rebuildDots();
         onScroll();
       }, { passive: true });
@@ -788,6 +835,17 @@
 
     // Initial state
     setActive(0);
+
+    // Ensure the carousel starts at the first card after layout (avoid stale
+    // scroll restoration / snap landing on later cards after CSS changes).
+    window.requestAnimationFrame(function () {
+      applyCarouselSizing();
+      try {
+        container.scrollTo({ left: 0, behavior: "auto" });
+      } catch (e) {
+        container.scrollLeft = 0;
+      }
+    });
   }
 
   function initEuropeMap() {

@@ -1008,12 +1008,12 @@
     background: var(--color-rule);
   }
 
-  /* On smaller screens keep the featured carousel to 1 card per viewport. */
+  /* Featured carousel: 1 card per viewport on smaller screens. */
+
   @media (min-width: 1200px) {
     .teaser-list--featured[data-featured-carousel] {
-      /* Always show two cards in the viewport. */
+      /* Show two cards in the viewport on large screens. */
       grid-auto-columns: calc((100% - var(--space-3)) / 2);
-      /* Prevent grid-template-columns rules from the non-carousel layout. */
       grid-template-columns: none;
     }
   }
@@ -1031,8 +1031,16 @@
   }
 
   .teaser-list--featured[data-featured-carousel] > article {
+    /* Prevent any card from collapsing to 0 width. */
+    min-width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+  }
+
+  @media (min-width: 1200px) {
+    .teaser-list--featured[data-featured-carousel] > article {
+      min-width: calc((100% - var(--space-3)) / 2);
+    }
   }
 
   .featured-dots {
