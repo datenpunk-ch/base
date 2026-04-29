@@ -668,10 +668,14 @@
     if (!dotsRoot) return;
 
     function cardsPerPage() {
-      // Keep in sync with the CSS breakpoint that switches the carousel to 2-up.
-      // style2.css: @media (min-width: 1200px) { grid-auto-columns: .../2 }
-      var mq = window.matchMedia && window.matchMedia("(min-width: 1200px)");
-      return mq && mq.matches ? 2 : 1;
+      // Infer from actual layout instead of hardcoding breakpoints.
+      // If the carousel shows two cards in the viewport, the step size between
+      // cards will be roughly half the viewport (plus gap).
+      var step = cardStepPx();
+      var w = container.clientWidth || 0;
+      if (!step || !w) return 1;
+      var ratio = w / step;
+      return ratio >= 1.6 ? 2 : 1;
     }
 
     function pageCount() {
