@@ -107,7 +107,7 @@
     --color-bg-soft: #f4f4f4;
     /* Section bands (featured strip etc.) — keep neutral (no teal cast). */
     /* Featured strip band: light anthracite (neutral grey, no green/blue cast). */
-    --color-band: #ededed;
+    --color-band: #f2f2f2;
     --color-ink: #0b0d10;
     --color-ink-body: #12161b;
     --color-muted: #55606a;
@@ -156,12 +156,15 @@
     --page-max: 78rem;
     /* Featured strip width (selected projects) */
     --featured-max: min(
-      120rem,
+      132rem,
       calc(100dvw - var(--gutter-start) - var(--gutter-end))
     );
     /* Global gutters: symmetric so content is centred */
     --gutter-start: clamp(0.95rem, 3.1vw, 2.4rem);
     --gutter-end: clamp(0.95rem, 3.1vw, 2.4rem);
+
+    /* Featured strip: add a bit more side air than the global gutter. */
+    --featured-pad-extra: clamp(3.25rem, 9vw, 11rem);
   
     --lh-tight: 1.02;
     --lh-head: 1.08;
@@ -639,7 +642,15 @@
   .section--featured-strip {
     margin-top: calc(var(--space-4) * -1);
     position: relative;
-    padding: var(--space-3) 0 var(--space-5);
+    /* Break out of the main column while staying centred. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding:
+      var(--space-3)
+      calc(var(--gutter-end) + var(--featured-pad-extra))
+      var(--space-5)
+      calc(var(--gutter-start) + var(--featured-pad-extra));
   }
 
   /* Full-width soft background band (magazine section feel). */
@@ -1064,19 +1075,18 @@
     grid-template-columns: 1fr;
     gap: var(--space-2) var(--space-3);
     align-items: stretch;
-    /* Break out of global width, but stay centred. */
-    width: var(--featured-max);
-    max-width: none;
-    margin: 0;
-    position: relative;
-    left: 0%;
-    /* Nudge a bit left to align visually with the page column */
-    transform: translateX(calc(-50%));
+    /* Wider than the main column, but always centred. */
+    width: 100%;
+    max-width: var(--featured-max);
+    margin: 0 auto;
   }
 
   /* Featured carousel on home: horizontal scroll with two “pages” (2+2). */
   .featured-carousel {
     position: relative;
+    width: 100%;
+    max-width: var(--featured-max);
+    margin: 0 auto;
   }
 
   .teaser-list--featured[data-featured-carousel] {
@@ -1089,9 +1099,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    /* Keep the carousel framed inside the main page column.
-       The scroll viewport should span exactly the same width as the normal
-       2-up layout (no breakout sizing). */
+    /* Carousel spans the featured max width (centred by parent). */
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -1122,7 +1130,7 @@
 
   /* Slightly shorter images inside the home carousel. */
   .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
-    aspect-ratio: 21 / 10;
+    aspect-ratio: 16 / 9;
   }
 
   /* Mobile: keep featured images taller so they don't read as “tiny”. */
