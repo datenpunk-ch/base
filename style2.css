@@ -303,10 +303,18 @@
   
   .site-title {
     display: none;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink);
   }
   
   .site-title a {
     color: inherit;
+    text-decoration: none;
   }
   
   .site-title a:hover {
@@ -329,12 +337,12 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0 var(--space-3);
+    gap: 0.55rem var(--space-3);
   }
   
   .site-nav__list a {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.35rem 0;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -342,17 +350,27 @@
     color: var(--color-muted);
     border-bottom: 1px solid transparent;
     white-space: nowrap;
+    line-height: 1.1;
+    transition: color 0.15s ease, box-shadow 0.15s ease;
   }
   
   .site-nav__list a:hover {
     color: var(--color-ink);
-    border-bottom-color: var(--color-accent);
+    box-shadow: inset 0 -1px 0 var(--color-accent);
+  }
+
+  .site-nav__list a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    box-shadow: inset 0 -1px 0 var(--color-accent);
   }
   
   .site-nav__list a[aria-current="page"] {
     color: var(--color-ink);
-    border-bottom-color: var(--color-accent);
+    box-shadow: inset 0 -2px 0 var(--color-accent);
   }
+
+  /* Keep brand label hidden (redundant with nav items). */
   
   /* ---------- Language switch ---------- */
   
@@ -421,6 +439,10 @@
       justify-content: space-between;
       padding-top: var(--space-2);
       border-top: 1px solid var(--color-rule);
+    }
+
+    .site-nav__list {
+      gap: 0.65rem var(--space-3);
     }
   }
   
