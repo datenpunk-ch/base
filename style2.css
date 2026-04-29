@@ -1008,8 +1008,8 @@
     background: var(--color-rule);
   }
 
-  /* On small screens keep the featured carousel to 1 card per viewport. */
-  @media (min-width: 960px) {
+  /* On smaller screens keep the featured carousel to 1 card per viewport. */
+  @media (min-width: 1200px) {
     .teaser-list--featured[data-featured-carousel] {
       /* Always show two cards in the viewport. */
       grid-auto-columns: calc((100% - var(--space-3)) / 2);
@@ -1021,6 +1021,13 @@
   /* Slightly shorter images inside the home carousel. */
   .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
     aspect-ratio: 21 / 10;
+  }
+
+  /* Mobile: keep featured images taller so they don't read as “tiny”. */
+  @media (max-width: 520px) {
+    .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
+      aspect-ratio: 16 / 9;
+    }
   }
 
   .teaser-list--featured[data-featured-carousel] > article {

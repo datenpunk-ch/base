@@ -664,23 +664,19 @@
     var articles = Array.prototype.slice.call(container.querySelectorAll(":scope > article"));
     if (!articles.length) return;
 
-    // Only “carousel mode” when scrolling is possible (3+ cards).
-    if (articles.length <= 2) {
-      container.removeAttribute("data-featured-ready");
-      return;
-    }
-    container.setAttribute("data-featured-ready", "true");
-
     var dotsRoot = document.querySelector("[data-featured-dots]");
     if (!dotsRoot) return;
 
-    var dots = Array.prototype.slice.call(dotsRoot.querySelectorAll("[data-featured-dot]"));
-    if (dots.length < 2) return;
+    function cardsPerPage() {
+      // Keep in sync with the CSS breakpoint that switches the carousel to 2-up.
+      // style2.css: @media (min-width: 1200px) { grid-auto-columns: .../2 }
+      var mq = window.matchMedia && window.matchMedia("(min-width: 1200px)");
+      return mq && mq.matches ? 2 : 1;
+    }
 
-    function setActive(idx) {
-      dots.forEach(function (d, i) {
-        d.setAttribute("aria-current", i === idx ? "true" : "false");
-      });
+    function pageCount() {
+      var per = cardsPerPage();
+      return Math.max(1, Math.ceil(articles.length / per));
     }
 
     function cardStepPx() {
@@ -692,24 +688,72 @@
       return Math.max(0, a1.offsetLeft - a0.offsetLeft);
     }
 
-    function scrollLeftForEnd() {
-      // Desired “end” view:
-      // - 3 cards: show (2,3) => left at 1 step
-      // - 4 cards: show (3,4) => left at 2 steps
-      var steps = Math.max(0, Math.min(2, articles.length - 2));
-      var stepPx = cardStepPx();
-      if (!stepPx) return container.scrollWidth - container.clientWidth;
-      return steps * stepPx;
+    function pageWidthPx() {
+      var per = cardsPerPage();
+      var step = cardStepPx();
+      if (step) return per * step;
+      return container.clientWidth || 0;
     }
 
+    function scrollLeftForPage(idx) {
+      var width = pageWidthPx();
+      var left = Math.max(0, idx) * width;
+      var end = Math.max(0, container.scrollWidth - container.clientWidth);
+      return Math.max(0, Math.min(end, left));
+    }
+
+    function rebuildDots() {
+      var pages = pageCount();
+      dotsRoot.innerHTML = "";
+
+      // Hide dots when there's only one page.
+      if (pages <= 1) {
+        dotsRoot.hidden = true;
+        container.removeAttribute("data-featured-ready");
+        return;
+      }
+
+      dotsRoot.hidden = false;
+      container.setAttribute("data-featured-ready", "true");
+
+      for (var i = 0; i < pages; i++) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "featured-dot";
+        btn.setAttribute("data-featured-dot", String(i));
+        btn.setAttribute("aria-label", "Scroll to page " + (i + 1) + " of " + pages);
+        btn.setAttribute("aria-current", i === 0 ? "true" : "false");
+        dotsRoot.appendChild(btn);
+      }
+    }
+
+    function dots() {
+      return Array.prototype.slice.call(dotsRoot.querySelectorAll("[data-featured-dot]"));
+    }
+
+    function setActive(idx) {
+      dots().forEach(function (d, i) {
+        d.setAttribute("aria-current", i === idx ? "true" : "false");
+      });
+    }
+
+    function scrollLeftForEnd() {
+      return scrollLeftForPage(pageCount() - 1);
+    }
+
+    // (Re)build dots now that we know how many pages exist.
+    rebuildDots();
+
     if (container.getAttribute("data-featured-bound") !== "true") {
-      dots.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var idx = parseInt(btn.getAttribute("data-featured-dot"), 10);
-          if (isNaN(idx)) return;
-          var left = idx === 0 ? 0 : scrollLeftForEnd();
-          container.scrollTo({ left: left, behavior: "smooth" });
-        });
+      dotsRoot.addEventListener("click", function (ev) {
+        var target = ev.target;
+        if (!target || !target.getAttribute) return;
+        var raw = target.getAttribute("data-featured-dot");
+        if (raw == null) return;
+        var idx = parseInt(raw, 10);
+        if (isNaN(idx)) return;
+        var left = scrollLeftForPage(idx);
+        container.scrollTo({ left: left, behavior: "smooth" });
       });
 
       var ticking = false;
@@ -718,14 +762,23 @@
         ticking = true;
         window.requestAnimationFrame(function () {
           ticking = false;
-          var endLeft = scrollLeftForEnd();
-          var atEnd = endLeft > 0 && container.scrollLeft >= endLeft * 0.5;
-          setActive(atEnd ? 1 : 0);
+          var width = pageWidthPx();
+          if (!width) {
+            setActive(0);
+            return;
+          }
+          var idx = Math.round(container.scrollLeft / width);
+          var maxIdx = pageCount() - 1;
+          idx = Math.max(0, Math.min(maxIdx, idx));
+          setActive(idx);
         });
       }
 
       container.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", onScroll, { passive: true });
+      window.addEventListener("resize", function () {
+        rebuildDots();
+        onScroll();
+      }, { passive: true });
       container.setAttribute("data-featured-bound", "true");
     }
 
