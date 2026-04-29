@@ -561,7 +561,10 @@
           appendTeaserTextNodes(article);
         }
 
-        if (layout !== "featured") appendProjectGithubLink(article, proj, bundle);
+        var hideGithub = container.hasAttribute("data-project-hide-github");
+        if (layout !== "featured" && !hideGithub) {
+          appendProjectGithubLink(article, proj, bundle);
+        }
         container.appendChild(article);
       });
     });
