@@ -2,11 +2,7 @@
   "name": "datenpunk-base",
   "private": true,
   "type": "module",
-  "scripts": {
-    "spellcheck:en": "node scripts/spellcheck-en.mjs"
-  },
-  "devDependencies": {
-    "cspell": "^8.19.4"
-  }
+  "scripts": {},
+  "devDependencies": {}
 }
 
