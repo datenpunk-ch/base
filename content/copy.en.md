@@ -74,6 +74,10 @@ Language
 
 Main navigation
 
+## `common.kickerLine`
+
+Datenpunk · Zurich
+
 ## `footer.note`
 
 Datenpunk — stories and numbers.
@@ -85,6 +89,10 @@ Legal notice
 ## `home.hero.title`
 
 Datenpunk
+
+## `home.kickerLine`
+
+Stories & numbers
 
 ## `home.hero.tagline`
 

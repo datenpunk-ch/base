@@ -1031,6 +1031,20 @@
   }
 
   function init() {
+    // Styling test switches (for the `styling` branch).
+    // Usage:
+    // - ?accent=blue|red
+    // - ?mood=calm|cover
+    (function applyStyleParams() {
+      try {
+        var params = new URLSearchParams(window.location.search || "");
+        var mood = params.get("mood");
+        if (mood) document.documentElement.setAttribute("data-mood", String(mood));
+      } catch (e) {
+        /* ignore */
+      }
+    })();
+
     if (!ENABLE_LANG_SWITCH) {
       document.documentElement.classList.add("lang-switch-off");
     }
