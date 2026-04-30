@@ -201,7 +201,7 @@ Zürich
 
 ## `projects[0].tags[1]`
 
-Web Crawl
+Web Scrape
 
 ## `projects[0].tags[2]`
 
