@@ -498,7 +498,15 @@ Mein Weg
 
 ## `aboutPage.background`
 
-Hintergrundtext
+**Mediendesign** — Visuelles Denken, Gestaltung, und wie man Dinge verständlich darstellt.
+
+**Forensic Psychology & Criminology** — Menschliches Verhalten, Mustererkennung, und warum Daten ohne Kontext gefährlich sind.
+
+**Game Development** —  Frontendentwicklung, UI/UX und wie Zusammenarbeit in agilen, interdisziplinären Teams gelingt. 
+
+**Cognitive Science** — Sprache, Kognition und was menschliches vom maschinellem Denken unterscheidet.
+
+**Verhaltensbiologie** — Bayes'sche Statistik, wissenschaftliche Publikation und wie man Forschung professionell vermittelt.
 
 ## `aboutPage.mapAlt`
 
@@ -507,6 +515,35 @@ Landkarte meiner Stationen bisher.
 ## `aboutPage.mapCaption`
 
 Meine Stationen.
+
+## `aboutPage.mapTooltip.melle`
+
+Melle (1986-2002)
+
+## `aboutPage.mapTooltip.moniave`
+
+Moniave (2002-2004)
+
+## `aboutPage.mapTooltip.munich`
+
+München (2004-2006) — Digital Media Design, macromedia Akademie
+
+## `aboutPage.mapTooltip.liverpool`
+
+Liverpool (2006-2009) — BSc Forensic Psychology & Criminal Justice, LJMU
+
+## `aboutPage.mapTooltip.hamburg`
+
+Hamburg (2009-2017) — Game Developer, Bigpoint GmbH
+
+## `aboutPage.mapTooltip.osnabrueck`
+
+Osnabrück (2017-2019) — MSc Cognitive Science, Universität Osnabrück
+
+## `aboutPage.mapTooltip.zurich`
+
+Zürich (seit 2019) — PhD Evolutionsbiologie, Universität Zürich
+                             — Datenpunk.
 
 ## `aboutPage.skillsHeading`
 

@@ -1603,6 +1603,33 @@
     background: var(--color-bg-soft);
   }
 
+  body.about .article-figure--map {
+    max-width: min(32rem, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.about .about-bg {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+    align-items: start;
+  }
+
+  @media (min-width: 920px) {
+    body.about .about-bg {
+      grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
+      column-gap: clamp(var(--space-4), 4vw, var(--space-6));
+    }
+
+    body.about .about-bg .article-figure--map {
+      margin: 0;
+      margin-top: 1.1rem;
+      margin-right: clamp(0.75rem, 2vw, 1.5rem);
+      justify-self: end;
+    }
+  }
+
   .europe-map .bg {
     fill: var(--color-bg-soft);
   }

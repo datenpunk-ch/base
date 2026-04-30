@@ -498,6 +498,34 @@ Map of my bases so far.
 
 My bases.
 
+## `aboutPage.mapTooltip.melle`
+
+Melle ([timeframe]) — [degree/job], [job]
+
+## `aboutPage.mapTooltip.moniave`
+
+Moniave ([timeframe]) — [degree/job], [job]
+
+## `aboutPage.mapTooltip.munich`
+
+Munich ([timeframe]) — [degree/job], [job]
+
+## `aboutPage.mapTooltip.liverpool`
+
+Liverpool ([timeframe]) — [degree/job], [job]
+
+## `aboutPage.mapTooltip.hamburg`
+
+Hamburg ([timeframe]) — [degree/job], [job]
+
+## `aboutPage.mapTooltip.osnabrueck`
+
+Osnabrueck ([timeframe]) — [degree/job], [job]
+
+## `aboutPage.mapTooltip.zurich`
+
+Zurich ([timeframe]) — [degree/job], [job]
+
 ## `aboutPage.skillsHeading`
 
 Tools & focus
