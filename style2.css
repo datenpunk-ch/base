@@ -1542,6 +1542,7 @@
 
   body.about {
     --measure-about: 60rem;
+    --about-text-max: min(var(--measure-about), 100%);
   }
 
   body.about .about-masthead__text {
@@ -1549,7 +1550,7 @@
   }
 
   body.about .about-masthead .lede {
-    max-width: min(var(--measure-about), 100%);
+    max-width: var(--about-text-max);
     text-align: justify;
     text-justify: inter-word;
     text-align-last: left;
@@ -1557,11 +1558,15 @@
   }
 
   body.about main .section > p {
-    max-width: min(var(--measure-about), 100%);
+    max-width: var(--about-text-max);
+  }
+
+  body.about main .section.section--narrow > p {
+    max-width: var(--about-text-max);
   }
 
   body.about .about-masthead__text .section__continue {
-    margin-top: var(--space-2);
+    margin-top: 0.25rem;
     margin-bottom: var(--space-4);
   }
 
@@ -1620,9 +1625,13 @@
     align-items: start;
   }
 
+  body.about .about-bg > p {
+    max-width: var(--about-text-max);
+  }
+
   @media (min-width: 920px) {
     body.about .about-bg {
-      grid-template-columns: minmax(0, 1.2fr) minmax(26rem, 36rem);
+      grid-template-columns: minmax(0, 1fr) minmax(22rem, 28rem);
       column-gap: clamp(var(--space-4), 4vw, var(--space-6));
     }
 

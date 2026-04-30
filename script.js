@@ -133,14 +133,22 @@
 
   /**
    * Minimal inline formatting for copy strings.
-   * - Supports **bold** only.
+   * - Supports **bold** and *italic* / _italic_.
    * - Escapes everything else (no raw HTML).
    */
   function formatCopyInline(val) {
     var raw = String(val);
-    if (raw.indexOf("**") === -1) return { isHtml: false, text: raw };
+    var hasBold = raw.indexOf("**") !== -1;
+    var hasAsteriskItalic = raw.indexOf("*") !== -1;
+    var hasUnderscoreItalic = raw.indexOf("_") !== -1;
+    if (!hasBold && !hasAsteriskItalic && !hasUnderscoreItalic) {
+      return { isHtml: false, text: raw };
+    }
     var safe = escapeHtml(raw);
     var html = safe.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    // Avoid matching **bold** as *italic*.
+    html = html.replace(/(^|[^*])\*(?!\s)([^*]+?)(?!\s)\*(?!\*)/g, "$1<em>$2</em>");
+    html = html.replace(/(^|[^_])_(?!\s)([^_]+?)(?!\s)_/g, "$1<em>$2</em>");
     return { isHtml: true, html: html };
   }
 

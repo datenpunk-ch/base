@@ -551,7 +551,15 @@ Mein Werkzeugkasten
 
 ## `aboutPage.skills`
 
-Skills und Tools
+**Daten & Methoden** — Bayes'sche Statistik, Statistische Modellierung, Machine Learning, Web Scraping, Experimentdesign, OSINT, Audioanalyse & -verarbeitung
+
+**Code** — Python, R, SQL, C#, JavaScript, MATLAB, Java
+
+**Recherche & Kommunikation** — Wissenschaftliches Schreiben, Datenstorytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
+
+**Tools** — Cursor, Git, Adobe Audition, PRAAT
+
+**Sprachen** — Deutsch (Muttersprache), Englisch (Fliessend)
 
 ## `aboutPage.motivationHeading`
 
@@ -559,7 +567,15 @@ Meine schlaflosen Nächte
 
 ## `aboutPage.motivation`
 
-Motivationstext
+Ich schlafe schlecht wenn ich eine Frage nicht loswerde. Zum Glück passiert das ständig. 
+
+*Haben Algorithmen eigentlich Lieblingsdinosaurier?* 
+*Was steckt hinter einer Zahl die in einer Schlagzeile auftaucht?*
+*Wieso ist das Gehirn manchmal so dramatisch?* 
+
+Wieso. Weshalb. Warum. Die Sesamstrasse hat ganze Arbeit geleistet.
+
+Als Tellerranddauercamper ist Wissensdurst mein Feuerholz. Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED Talk drüber. Um meine Freunde zu entlasten sollte ich das beruflich machen.
 
 ## `aboutPage.contactHeading`
 
