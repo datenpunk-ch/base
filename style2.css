@@ -1540,6 +1540,22 @@
     align-items: start;
   }
 
+  body.about {
+    --measure-about: 60rem;
+  }
+
+  body.about .about-masthead__text {
+    max-width: none;
+  }
+
+  body.about .about-masthead .lede {
+    max-width: min(var(--measure-about), 100%);
+  }
+
+  body.about main .section > p {
+    max-width: min(var(--measure-about), 100%);
+  }
+
   /* About title should read as one unit (“Über mich”). */
   .about-masthead .page-title {
     max-width: none;
@@ -1553,13 +1569,14 @@
   }
 
   @media (min-width: 920px) {
-    .about-masthead {
-      grid-template-columns: minmax(0, 1fr) auto;
+    body.about .about-masthead {
+      grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
       column-gap: clamp(var(--space-4), 5vw, var(--space-6));
       align-items: start;
     }
 
-    .about-masthead .article-figure--portrait {
+    body.about .about-masthead .article-figure--portrait {
+      max-width: min(22rem, 100%);
       margin-top: 0.35rem;
       justify-self: end;
       margin-right: clamp(0.75rem, 2vw, 1.5rem);
