@@ -1550,6 +1550,10 @@
 
   body.about .about-masthead .lede {
     max-width: min(var(--measure-about), 100%);
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
   }
 
   body.about main .section > p {
@@ -1604,7 +1608,7 @@
   }
 
   body.about .article-figure--map {
-    max-width: min(32rem, 100%);
+    max-width: min(44rem, 100%);
     margin-left: auto;
     margin-right: auto;
   }
@@ -1618,7 +1622,7 @@
 
   @media (min-width: 920px) {
     body.about .about-bg {
-      grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
+      grid-template-columns: minmax(0, 1.2fr) minmax(26rem, 36rem);
       column-gap: clamp(var(--space-4), 4vw, var(--space-6));
     }
 
@@ -1626,7 +1630,7 @@
       margin: 0;
       margin-top: 1.1rem;
       margin-right: clamp(0.75rem, 2vw, 1.5rem);
-      justify-self: end;
+      justify-self: stretch;
     }
   }
 
