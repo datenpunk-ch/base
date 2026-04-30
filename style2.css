@@ -1556,6 +1556,11 @@
     max-width: min(var(--measure-about), 100%);
   }
 
+  body.about .about-masthead__text .section__continue {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
   /* About title should read as one unit (“Über mich”). */
   .about-masthead .page-title {
     max-width: none;

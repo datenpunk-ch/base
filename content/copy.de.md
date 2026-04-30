@@ -494,7 +494,7 @@ Autorinnenfoto.
 
 ## `aboutPage.backgroundHeading`
 
-Hintergrund
+Mein Weg
 
 ## `aboutPage.background`
 
@@ -510,7 +510,7 @@ Meine Stationen.
 
 ## `aboutPage.skillsHeading`
 
-Werkzeuge & Schwerpunkte
+Mein Werkzeugkasten
 
 ## `aboutPage.skills`
 
@@ -518,7 +518,7 @@ Skills und Tools
 
 ## `aboutPage.motivationHeading`
 
-Warum?
+Meine schlaflosen Nächte
 
 ## `aboutPage.motivation`
 
