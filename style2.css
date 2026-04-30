@@ -549,6 +549,10 @@
     margin: calc(var(--space-4) * -1) 0 var(--space-5);
     max-width: var(--measure);
     color: var(--color-accent-text);
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
   }
 
   /* Intro as editorial note: a quiet rule, then text. */
@@ -600,6 +604,10 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
   }
   
   /* ---------- Home: unnumbered preface (above 01) ---------- */
@@ -628,6 +636,10 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
   }
   
   /* ---------- Sections ---------- */
@@ -703,6 +715,10 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
   }
   
   .section > p:last-child {
@@ -1383,6 +1399,10 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
   }
 
   .embed-frame {
