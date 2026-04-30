@@ -481,7 +481,12 @@ HTML/CSS/JavaScript
 
 ## `aboutPage.intro`
 
-Introtext
+Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage.
+Das ist mein **Portfolio**.
+
+Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: Daten, Muster, die Geschichten die dahinter stecken und vor allem extreme **Neugier**. 
+
+Jetzt mache ich das öffentlich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder wo auch immer jemand gebraucht wird, der komplexe Dinge wirklich versteht und sie trotzdem erklären kann. Gerne auch in bunt und zum draufklicken.
 
 ## `aboutPage.portraitCaption`
 
@@ -525,7 +530,7 @@ Kontakt
 
 ## `aboutPage.contact`
 
-Für Rückfragen oder Zusammenarbeit bin ich immer offen.
+Ideen, Feedback oder Interesse an einer Zusammenarbeit?
 
 ## `aboutPage.githubPlaceholder`
 
