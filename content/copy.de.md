@@ -16,7 +16,7 @@ de
 
 ## `meta.documentTitle.index`
 
-Datenpunk — Stories und Zahlen
+Datenpunk — Zahlen. Stories. Gegen den Strich.
 
 ## `meta.documentTitle.projects`
 
@@ -80,7 +80,7 @@ Datenpunk · Zürich
 
 ## `footer.note`
 
-Datenpunk — Stories und Zahlen.
+Datenpunk — Zahlen. Stories. Gegen den Strich.
 
 ## `footer.impressumLink`
 
@@ -92,11 +92,11 @@ Datenpunk.
 
 ## `home.kickerLine`
 
-Stories & Zahlen
+Zahlen. Stories. Gegen den Strich.
 
 ## `home.hero.tagline`
 
-Stories und Zahlen. Meistens gleichzeitig.
+Zahlen. Stories. Gegen den Strich.
 
 ## `home.intro`
 
@@ -121,6 +121,11 @@ Kurz zu mir
 ## `home.aboutTeaser`
 
 Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage.
+Das ist mein **Portfolio**.
+
+Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: Daten, Muster, die Geschichten die dahinter stecken und vor allem extreme **Neugier**. 
+
+Jetzt mache ich das öffentlich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder wo auch immer jemand gebraucht wird, der komplexe Dinge wirklich versteht und sie trotzdem erklären kann. Gerne auch in bunt und zum draufklicken.
 
 ## `home.aboutTeaserLink`
 

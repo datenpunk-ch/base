@@ -122,6 +122,28 @@
     return typeof val === "string" || typeof val === "number";
   }
 
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  /**
+   * Minimal inline formatting for copy strings.
+   * - Supports **bold** only.
+   * - Escapes everything else (no raw HTML).
+   */
+  function formatCopyInline(val) {
+    var raw = String(val);
+    if (raw.indexOf("**") === -1) return { isHtml: false, text: raw };
+    var safe = escapeHtml(raw);
+    var html = safe.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    return { isHtml: true, html: html };
+  }
+
   function getStoredLang() {
     try {
       var stored = localStorage.getItem(STORAGE_KEY);
@@ -273,7 +295,9 @@
       var key = el.getAttribute("data-i18n");
       var val = getByPath(bundle, key);
       if (isRenderableValue(val)) {
-        el.textContent = String(val);
+        var rendered = formatCopyInline(val);
+        if (rendered.isHtml) el.innerHTML = rendered.html;
+        else el.textContent = rendered.text;
       } else {
         el.textContent = missingText(key);
       }

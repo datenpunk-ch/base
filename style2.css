@@ -147,7 +147,7 @@
     --space-6: 5rem;
     --space-7: 7rem;
   
-    --measure: 42rem;
+    --measure: 52rem;
     /*
       Wider editorial canvas: close to the viewport width (like the old featured "breakout"),
       but capped so it doesn't become ridiculous on ultra-wide screens.
@@ -2178,6 +2178,10 @@
   }
   
   .impressum-lines {
+    white-space: pre-line;
+  }
+
+  p[data-i18n] {
     white-space: pre-line;
   }
   
