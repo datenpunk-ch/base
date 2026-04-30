@@ -654,6 +654,8 @@
   .section--featured-strip {
     margin-top: calc(var(--space-4) * -1);
     position: relative;
+    /* Make featured content read wider (less side padding). */
+    --featured-pad-extra: clamp(1.5rem, 4vw, 5rem);
     /* Break out of the main column while staying centred. */
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -663,6 +665,23 @@
       calc(var(--gutter-end) + var(--featured-pad-extra))
       var(--space-5)
       calc(var(--gutter-start) + var(--featured-pad-extra));
+  }
+
+  /* Mobile: let the featured carousel go edge-to-edge. */
+  @media (max-width: 520px) {
+    .section--featured-strip {
+      padding-left: 0;
+      padding-right: 0;
+      --featured-max: 100vw;
+    }
+
+    .featured-carousel {
+      max-width: 100vw;
+    }
+
+    .teaser-list--featured {
+      max-width: 100vw;
+    }
   }
 
   /* Full-width soft background band (magazine section feel). */
@@ -1136,6 +1155,36 @@
 
   /* Featured carousel: 1 card per viewport on smaller screens. */
 
+  /* When the carousel effectively has one page, full-bleed the image. */
+  .teaser-list--featured[data-featured-carousel][data-featured-pages="1"] {
+    overflow-x: hidden;
+    scroll-snap-type: none;
+  }
+
+  .teaser-list--featured[data-featured-carousel][data-featured-pages="1"] .teaser--featured .teaser__media {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0;
+    z-index: 2;
+  }
+
+  .teaser-list--featured[data-featured-carousel][data-featured-pages="1"] .teaser--featured .teaser__thumb {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-height: clamp(18rem, 60vh, 34rem);
+    object-fit: contain;
+  }
+
+  /* Keep the over-image title aligned with featured-strip gutters. */
+  .teaser-list--featured[data-featured-carousel][data-featured-pages="1"] .teaser--featured .teaser__media .teaser__hed {
+    right: calc(var(--gutter-end) + var(--featured-pad-extra));
+    bottom: clamp(0.6rem, 1.1vw, 0.95rem);
+  }
+
   @media (min-width: 1200px) {
     .teaser-list--featured[data-featured-carousel] {
       /* Show two cards in the viewport on large screens. */
@@ -1146,7 +1195,8 @@
 
   /* Slightly shorter images inside the home carousel. */
   .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
+    height: clamp(15rem, 24vw, 22rem);
   }
 
   /* Mobile: keep featured images taller so they don't read as “tiny”. */
@@ -1247,7 +1297,8 @@
     width: 100%;
     max-width: 100%;
     /* Slightly taller than 16:9 to read more like a magazine image. */
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
+    height: clamp(16rem, 26vw, 24rem);
     flex: 0 0 auto;
   }
 
@@ -1265,7 +1316,7 @@
     padding-left: clamp(0.7rem, 1vw, 1.05rem);
     padding-right: clamp(0.9rem, 1.2vw, 1.25rem);
     /* Slightly narrower text column than the image */
-    max-width: 92%;
+    max-width: 100%;
     margin-left: 0;
     margin-right: auto;
     width: 100%;

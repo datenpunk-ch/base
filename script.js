@@ -751,9 +751,11 @@
     }
 
     function applyCarouselSizing() {
+      var per = cardsPerView();
+      container.setAttribute("data-featured-per", String(per));
+
       var w = container.clientWidth || 0;
       if (!w) return;
-      var per = cardsPerView();
       var gap = gapPx();
       var cardW = per >= 2 ? Math.max(1, (w - gap) / 2) : w;
 
@@ -803,6 +805,7 @@
     function rebuildDots() {
       var pages = viewCount();
       dotsRoot.innerHTML = "";
+      container.setAttribute("data-featured-pages", String(pages));
 
       // Hide dots when there's only one page.
       if (pages <= 1) {
