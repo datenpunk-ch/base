@@ -125,7 +125,7 @@ Das ist mein **Portfolio**.
 
 Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: Daten, Muster, die Geschichten die dahinter stecken und vor allem extreme **Neugier**. 
 
-Jetzt mache ich das öffentlich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder wo auch immer jemand gebraucht wird, der komplexe Dinge wirklich versteht und sie trotzdem erklären kann. Gerne auch in bunt und zum draufklicken.
+Jetzt mache ich das öffentlich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder wo auch immer jemand gebraucht wird, der komplexe Dinge wirklich versteht und sie trotzdem erklären kann. Gerne auch in bunt und zum Draufklicken.
 
 ## `home.aboutTeaserLink`
 
@@ -373,7 +373,7 @@ Kurzbeschreibung
 
 ## `project1.sections.question.body`
 
-MicZH beantwortet die Frage, wo und wann man in Zürich Open‑Mic‑Comedy sehen (oder selbst auftreten) kann. Dafür werden Termine aus mehreren Quellen gesammelt, vereinheitlicht und als wiederkehrende Events strukturiert. Das Ergebnis ist eine filterbare Übersicht mit Karte, Liste und Detailinfos.
+Wo und wann kann man in Zürich Open‑Mic‑Comedy sehen, oder selbst auftreten? MicZH sammelt Termine aus mehreren Quellen, vereinheitlicht sie und strukturiert sie als wiederkehrende Events. Das Ergebnis ist eine filterbare Übersicht mit Karte, Liste und Detailinfos.
 
 ## `project1.sections.data.heading`
 
@@ -385,7 +385,7 @@ Daten
 
 ## `project1.sections.data.bullets[1]`
 
-Erfasst werden u. a. Wochentag, Uhrzeit, Ort, Kosten und Bühnen‑Sprache (On‑Stage‑Sprache).
+Erfasst werden u. a. Wochentag, Uhrzeit, Ort, Kosten und Bühnen‑Sprache.
 
 ## `project1.sections.data.bullets[2]`
 
@@ -417,7 +417,7 @@ Output
 
 ## `project1.sections.visualisation.bullets[0]`
 
-Statische Website auf GitHub Pages (HTML/CSS/JavaScript) — ohne Backend.
+Statische Website auf GitHub Pages (HTML/CSS/JavaScript) ohne Backend.
 
 ## `project1.sections.visualisation.bullets[1]`
 
@@ -486,7 +486,7 @@ Das ist mein **Portfolio**.
 
 Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: Daten, Muster, die Geschichten die dahinter stecken und vor allem extreme **Neugier**. 
 
-Jetzt mache ich das öffentlich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder wo auch immer jemand gebraucht wird, der komplexe Dinge wirklich versteht und sie trotzdem erklären kann. Gerne auch in bunt und zum draufklicken.
+Jetzt mache ich das öffentlich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder wo auch immer jemand gebraucht wird, der komplexe Dinge wirklich versteht und sie trotzdem erklären kann. Gerne auch in bunt und zum Draufklicken.
 
 ## `aboutPage.portraitCaption`
 
@@ -506,7 +506,7 @@ Mein Weg
 
 **Cognitive Science** — Sprache, Kognition und was menschliches vom maschinellem Denken unterscheidet.
 
-**Verhaltensbiologie** — Bayes'sche Statistik, wissenschaftliche Publikation und wie man Forschung professionell vermittelt.
+**Verhaltensbiologie** — Evolution, Statistik, wissenschaftliche Publikation und wie man Forschung professionell vermittelt.
 
 ## `aboutPage.mapAlt`
 
@@ -551,7 +551,7 @@ Mein Werkzeugkasten
 
 ## `aboutPage.skills`
 
-**Daten & Methoden** — Bayes'sche Statistik, Statistische Modellierung, Machine Learning, Web Scraping, Experimentdesign, OSINT, Audioanalyse & -verarbeitung
+**Daten & Methoden** — Bayes'sche Statistik, Modellierung, Machine Learning, Web Scraping, Experimentdesign, OSINT, Audioanalyse & -verarbeitung
 
 **Code** — Python, R, SQL, C#, JavaScript, MATLAB, Java
 
@@ -575,7 +575,7 @@ Ich schlafe schlecht wenn ich eine Frage nicht loswerde. Zum Glück passiert das
 
 Wieso. Weshalb. Warum. Die Sesamstrasse hat ganze Arbeit geleistet.
 
-Als Tellerranddauercamper ist Wissensdurst mein Feuerholz. Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED Talk drüber. Um meine Freunde zu entlasten sollte ich das beruflich machen.
+Als Tellerranddauercamperin ist Wissensdurst mein Feuerholz. Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED Talk drüber. Um meine Freunde zu entlasten sollte ich das beruflich machen.
 
 ## `aboutPage.contactHeading`
 
