@@ -292,7 +292,7 @@ GitHub project (code, issues, history)
 
 ## `project1.embedUrl`
 
-https://datenpunk-ch.github.io/open_mics_ZH/
+https://datenpunk-ch.github.io/open_mics_ZH/index.html?embed=1
 
 ## `project1.embedTitle`
 
@@ -301,6 +301,18 @@ Open Mics Zurich — project page
 ## `project1.embedOpenLabel`
 
 Open external project site
+
+## `project1.jumpNavAria`
+
+Jump links on this page
+
+## `project1.jumpToDescription`
+
+↓ Overview
+
+## `project1.jumpToSocial`
+
+↓ Social Content
 
 ## `project1.intro`
 
@@ -469,6 +481,18 @@ GitHub Pages
 ## `project1.techTags.web`
 
 HTML/CSS/JavaScript
+
+## `project1.social.heading`
+
+Social Content
+
+## `project1.socialEmbedUrl`
+
+https://datenpunk-ch.github.io/open_mics_ZH/social-content.html?embed=1
+
+## `project1.socialEmbedTitle`
+
+Open MicZH — Social Content (embedded)
 
 ## `aboutPage.title`
 

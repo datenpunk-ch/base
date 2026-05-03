@@ -470,6 +470,23 @@
   main.main--project .embed-frame {
     margin-top: var(--space-1);
   }
+
+  /* Social preview: full-bleed band (same tone as embed chrome). */
+  main.main--project > .project-social-section {
+    background: var(--color-bg-soft);
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0 var(--gutter-start) 0 var(--gutter-end);
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+
+  main.main--project > .project-social-section .embed-frame {
+    background: var(--color-bg-soft);
+    margin-top: 0;
+  }
   
   /* ---------- Front masthead ---------- */
   
@@ -2433,9 +2450,25 @@
     );
   }
 
+  .embed-jumps {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+    margin: 0 0 var(--space-2);
+    max-width: 100%;
+  }
+
+  .embed-jumps__sep {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-rule);
+    user-select: none;
+  }
+
   .embed-jump {
     display: inline-block;
-    margin: 0 0 var(--space-2);
+    margin: 0;
     font-family: var(--font-mono);
     font-size: 0.72rem;
     letter-spacing: 0.04em;
