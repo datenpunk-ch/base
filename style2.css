@@ -471,21 +471,15 @@
     margin-top: var(--space-1);
   }
 
-  /* Social preview: full-bleed band (same tone as embed chrome). */
+  /* Social preview: full-bleed gray band; gutters match main (L/R same as article). */
   main.main--project > .project-social-section {
     background: var(--color-bg-soft);
     width: 100vw;
     max-width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    padding: 0 var(--gutter-start) 0 var(--gutter-end);
+    padding: 0 var(--gutter-end) 0 var(--gutter-start);
     box-sizing: border-box;
-    margin-bottom: 0;
-  }
-
-  main.main--project > .project-social-section .embed-frame {
-    background: var(--color-bg-soft);
-    margin-top: 0;
   }
   
   /* ---------- Front masthead ---------- */
@@ -1498,6 +1492,36 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+  }
+
+  /* Project1: social — measure column centred; height follows column width (aspect-ratio). */
+  html[data-i18n-document-title="meta.documentTitle.project1"]
+    main.main--project
+    > .project-social-section
+    > .project-social-section__inner {
+    max-width: var(--measure);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html[data-i18n-document-title="meta.documentTitle.project1"]
+    main.main--project
+    > .project-social-section
+    .project-social-section__inner
+    .embed-frame {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    background: var(--color-bg-soft);
+    /* Binds height to .measure width; cap keeps it modest. True doc-height needs embed postMessage. */
+    height: auto;
+    /* ~+5% vs 10/9 at same width. */
+    aspect-ratio: 20 / 19;
+    max-height: min(74dvh, 51.5rem);
+    min-height: 28rem;
   }
 
   /* When a wide embed is followed by the divider, make it flush + full width. */
