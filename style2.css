@@ -736,7 +736,60 @@
     letter-spacing: 0.18em;
     color: var(--color-accent);
   }
-  
+
+  /* Home “Kurz zu mir” / about teaser: silhouette hangs from the H2 ink rule (same rhythm as other section H2s). */
+  .section--about-teaser h2.section__h2--punk-hang {
+    position: relative;
+    isolation: isolate;
+    padding-bottom: var(--space-2);
+    margin: 0 0 var(--space-4);
+    /* Keep layout border; draw visible rule in ::after so it stacks above the dingbat. */
+    border-bottom-color: transparent;
+  }
+
+  .section--about-teaser h2.section__h2--punk-hang::before {
+    z-index: 2;
+  }
+
+  .section--about-teaser h2.section__h2--punk-hang > span {
+    z-index: 2;
+  }
+
+  .section--about-teaser h2.section__h2--punk-hang::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--rule-w);
+    background: var(--color-ink);
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .section--about-teaser h2 .section__h2-dangle {
+    position: absolute;
+    left: auto;
+    /* Right edge lines up with .section > p max-width (--measure), same as body text cap. */
+    right: max(0px, calc(100% - var(--measure)));
+    top: calc(100% + var(--rule-w) * 0.5);
+    width: clamp(1.9rem, 5.5vw, 2.5rem);
+    height: auto;
+    opacity: 0.8;
+    /* Nudge so PNG bar meets the rule; z-index tucks figure under the ::after ink line. */
+    transform: translateY(calc(-7% - 2px)) scale(0.85);
+    transform-origin: 50% 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (max-width: 28rem) {
+    .section--about-teaser h2 .section__h2-dangle {
+      width: 1.75rem;
+      transform: translateY(calc(-5% - 2px)) scale(0.85);
+    }
+  }
+
   .section > p {
     margin: 0 0 var(--space-3);
     max-width: var(--measure);
