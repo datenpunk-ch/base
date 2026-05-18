@@ -2179,6 +2179,10 @@
     white-space: nowrap;
   }
 
+  .cv__pubs span {
+    color: var(--color-muted);
+  }
+
   .cv__grid {
     display: grid;
     grid-template-columns: 1fr;

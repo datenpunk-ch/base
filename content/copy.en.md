@@ -566,6 +566,10 @@ Why?
 
 Motivation text
 
+## `aboutPage.motivationContactLink`
+
+Curious? Me too.
+
 ## `aboutPage.contactHeading`
 
 Contact
