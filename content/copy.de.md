@@ -137,7 +137,7 @@ Projekte
 
 ## `projectsPage.intro`
 
-Bunte Mischung.
+Bunte Mischung. Aber noch im Aufbau.
 
 ## `projectsPage.cardsHeading`
 
@@ -177,7 +177,7 @@ Open MicZH
 
 ## `projects[0].teaser`
 
-Ein erstes Projekt um Open Mic Comedy Events in Zürich zu finden und zu visualisieren. Mit Filterfunktion.
+Ein erstes Projekt um Open-Mic Events in Zürich automatisch zu finden und zu visualisieren. Mit Filterfunktion.
 
 ## `projects[0].cta`
 
@@ -221,7 +221,7 @@ Erdmännosphere
 
 ## `projects[1].teaser`
 
-In Vorbereitung — bleibt neugierig.
+Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
 
 ## `projects[1].cta`
 
@@ -257,7 +257,7 @@ Platzhalter-Projekt
 
 ## `projects[2].teaser`
 
-In Vorbereitung — folgt bald.
+In Vorbereitung — bleibt neugierig.
 
 ## `projects[2].cta`
 
