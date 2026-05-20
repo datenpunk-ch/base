@@ -718,10 +718,6 @@ React + Recharts for interactive iframe embeds.
 
 Static site on GitHub Pages (HTML/CSS/JavaScript).
 
-## `project2.techBullets.analysis`
-
-analysis_report.json as the bridge between Python models and frontend charts.
-
 ## `project2.techTags.python`
 
 Python
@@ -733,14 +729,6 @@ PyMC
 ## `project2.techTags.react`
 
 React
-
-## `project2.techTags.bfs`
-
-BFS PX/P4
-
-## `project2.techTags.ghPages`
-
-GitHub Pages
 
 ## `project2.techTags.web`
 

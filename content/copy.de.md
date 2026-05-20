@@ -653,7 +653,7 @@ Kurzbeschreibung
 
 ## `project2.sections.question.body`
 
-Wie steht es um den Schweizer Film am Kino — und wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive Auswertungen der [BFS](https://www.bfs.admin.ch/bfs/de/home/statistiken/kultur-medien-informationsgesellschaft-sport/kultur/film-kino.html)-Daten [PX](https://www.bfs.admin.ch/bfs/de/home/statistiken/katalog.assetdetail.36476429.html) und [P4](https://www.bfs.admin.ch/bfs/de/home/statistiken/katalog.assetdetail.36596835.html) (Besuche, Programm, Saison) mit sieben Bayes-Modellen zu Trend, Herkunft, Genre und Programm-Lücke. Der Artikel erzählt die Story; interaktive Grafiken und eine Jahresansicht laden zum Vertiefen ein.
+Wie steht es um den Schweizer Film am Kino — und wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive Auswertungen der BFS Daten (Besuche, Programm, Saison) mit Informationen zu Trends, Herkunft, Genre und Programm-Lücke.
 
 ## `project2.sections.data.heading`
 
@@ -681,11 +681,11 @@ Sieben Bayes Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison,
 
 ## `project2.sections.method.bullets[1]`
 
-MCMC mit PyMC; Posterior-Prognosen und 95 %-HDI für Einordnung statt Punktprognosen.
+MCMC mit PyMC; Posterior-Prognosen und Credible Intervals für Einordnung statt Punktprognosen.
 
 ## `project2.sections.method.bullets[2]`
 
-Export statischer Site: Artikel, Analyse-Report, unified.json und interaktive React-Embeds.
+Export statischer Site: Artikel, Analyse-Report, zusammengefasster Daten und interaktive React-Embeds.
 
 ## `project2.sections.method.bullets[3]`
 
@@ -705,7 +705,7 @@ Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (
 
 ## `project2.sections.visualisation.bullets[2]`
 
-Analyse-Report mit Methodik und Figuren als Hintergrundinformation.
+Analyse-Report mit Methodik und Grafiken als Hintergrundinformation.
 
 ## `project2.sections.conclusion.heading`
 
@@ -717,7 +717,7 @@ Python/Pixi für Datenpipeline, Modellierung und Site-Export.
 
 ## `project2.techBullets.pymc`
 
-PyMC für Bayesianische Schätzung und Prognose (95 %-HDI).
+PyMC für statistische Modellierung und Prognose (95 %-HDI).
 
 ## `project2.techBullets.react`
 
@@ -726,10 +726,6 @@ React + Recharts für interaktive Embeds in iframes.
 ## `project2.techBullets.staticSite`
 
 Statische Website auf GitHub Pages (HTML/CSS/JavaScript).
-
-## `project2.techBullets.analysis`
-
-analysis_report.json als Brücke zwischen Python-Modellen und Frontend-Grafiken.
 
 ## `project2.techTags.python`
 
@@ -742,14 +738,6 @@ PyMC
 ## `project2.techTags.react`
 
 React
-
-## `project2.techTags.bfs`
-
-BFS PX/P4
-
-## `project2.techTags.ghPages`
-
-GitHub Pages
 
 ## `project2.techTags.web`
 
