@@ -617,7 +617,7 @@ Methoden
 
 ## `project2.specs.methods.value`
 
-Bayesianische Zeitreihen- und Anteilsmodelle (PyMC), explorative PX-Auswertung, statische Site-Generierung
+Bayesian Models (PyMC), explorative Rohdatenauswertung, statische Site-Generierung
 
 ## `project2.specs.tech.label`
 
@@ -625,7 +625,7 @@ Tools/Tech
 
 ## `project2.specs.tech.value`
 
-Python (Pixi), PyMC, React/Recharts, GitHub Pages
+Python (Pixi), PyMC, React/Recharts
 
 ## `project2.specs.output.label`
 
@@ -633,7 +633,7 @@ Output
 
 ## `project2.specs.output.value`
 
-Artikel mit interaktiven Embeds + Analyse-Report + GitHub-Repository
+Artikel mit interaktiven Embeds + Analyse-Report
 
 ## `project2.backLink`
 
@@ -661,15 +661,15 @@ Daten
 
 ## `project2.sections.data.bullets[0]`
 
-[PX](https://www.bfs.admin.ch/bfs/de/home/statistiken/katalog.assetdetail.36476429.html) — Kinostatistik des [Bundesamts für Statistik (BFS)](https://www.bfs.admin.ch/bfs/de/home/statistiken/kultur-medien-informationsgesellschaft-sport/kultur/film-kino.html): jährliche Aggregate zu Filmen im Programm und Kinobesuchen (Gesamtmarkt und Schweizer Film).
+BFS PX: jährliche Aggregate zu Filmen im Programm und Kinobesuchen (Gesamtmarkt und Schweizer Film).
 
 ## `project2.sections.data.bullets[1]`
 
-[P4](https://www.bfs.admin.ch/bfs/de/home/statistiken/katalog.assetdetail.36596835.html) — Kinostatistik des BFS nach Kinowochen: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Rohdaten).
+BFS P4: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Rohdaten).
 
 ## `project2.sections.data.bullets[2]`
 
-Harmonisierte Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg.
+Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg.
 
 ## `project2.sections.method.heading`
 
@@ -677,7 +677,7 @@ Methoden
 
 ## `project2.sections.method.bullets[0]`
 
-Sieben Bayesianische Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
+Sieben Bayes Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
 
 ## `project2.sections.method.bullets[1]`
 
@@ -697,15 +697,15 @@ Output
 
 ## `project2.sections.visualisation.bullets[0]`
 
-Narrativer Artikel (index.html) mit KPI-Karten und eingebetteten Bayes- und PX-Grafiken.
+Narrativer Artikel mit KPIs, interaktiven Grafiken und eingebetteter deskriptiver Jahresübersicht.
 
 ## `project2.sections.visualisation.bullets[1]`
 
-Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (Dropdown).
+Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (filterbar).
 
 ## `project2.sections.visualisation.bullets[2]`
 
-Analyse-Report (analysis.html) mit Methodik und Figuren für vertiefte Leser:innen.
+Analyse-Report mit Methodik und Figuren als Hintergrundinformation.
 
 ## `project2.sections.conclusion.heading`
 
