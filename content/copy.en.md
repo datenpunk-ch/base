@@ -518,10 +518,6 @@ Nominatim
 
 Streamlit
 
-## `project1.techTags.ghPages`
-
-GitHub Pages
-
 ## `project1.techTags.web`
 
 HTML/CSS/JavaScript

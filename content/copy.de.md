@@ -229,7 +229,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Datenjournalistische Kurzstory: Wie steht es um den Schweizer Film am Kino? Bayes-Modelle auf BFS-Daten (PX/P4), Artikel mit interaktiven Grafiken.
+Wie steht es um den Schweizer Film im Kino? Und wann ist es besonders voll?
 
 ## `projects[1].cta`
 
@@ -527,10 +527,6 @@ Nominatim
 
 Streamlit
 
-## `project1.techTags.ghPages`
-
-GitHub Pages
-
 ## `project1.techTags.web`
 
 HTML/CSS/JavaScript
@@ -589,7 +585,7 @@ Sprungmarken auf dieser Seite
 
 ## `project2.intro`
 
-Datenjournalistische Auswertung des Schweizer Kinomarkts: Wie hat sich der Gesamtmarkt nach der Pandemie erholt — und gewinnt der Schweizer Film an Besuchsanteil? Sieben Bayes-Modelle auf BFS-Daten, eingebettet in einen erzählenden Artikel mit interaktiven Grafiken.
+Auswertung des Schweizer Kinomarkts basierend auf den Daten des Bundesamts für Statistik (BFS). Deskriptive Statistik sowie modellierung in einem Bayesian Framework, inklusive Artikel und Dashboards.
 
 ## `project2.specs.heading`
 
@@ -665,11 +661,11 @@ Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle
 
 ## `project2.sections.data.bullets[0]`
 
-BFS PX: jährliche Aggregate zu Filmen im Programm und Kinobesuchen (Gesamtmarkt und Schweizer Film).
+[PX](https://www.bfs.admin.ch/bfs/de/home/statistiken/katalog.assetdetail.36476429.html) — [BFS](https://www.bfs.admin.ch/bfs/de/home/statistiken/kultur-medien-informationsgesellschaft-sport/kultur/film-kino.html) Kinostatistik: jährliche Aggregate zu Filmen im Programm und Kinobesuchen (Gesamtmarkt und Schweizer Film).
 
 ## `project2.sections.data.bullets[1]`
 
-BFS P4: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Rohdaten).
+[P4](https://www.bfs.admin.ch/bfs/de/home/statistiken/katalog.assetdetail.36596835.html) — BFS Kinostatistik nach Kinowochen: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Rohdaten).
 
 ## `project2.sections.method.heading`
 
