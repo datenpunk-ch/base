@@ -246,10 +246,6 @@ Switzerland
 
 Culture
 
-## `projects[1].tags[2]`
-
-Bayes
-
 ## `projects[2].id`
 
 project_placeholder

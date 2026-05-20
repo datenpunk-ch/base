@@ -255,10 +255,6 @@ Schweiz
 
 Kultur
 
-## `projects[1].tags[2]`
-
-Bayes
-
 ## `projects[2].id`
 
 project_placeholder
