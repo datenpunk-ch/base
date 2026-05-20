@@ -1475,8 +1475,9 @@
     overflow: hidden;
   }
 
-  /* Project1: make the embed a bit taller. */
-  html[data-i18n-document-title="meta.documentTitle.project1"] .embed-frame {
+  /* Project embeds: make the main iframe a bit taller. */
+  html[data-i18n-document-title="meta.documentTitle.project1"] .embed-frame,
+  html[data-i18n-document-title="meta.documentTitle.project2"] .embed-frame {
     height: clamp(56rem, 102vh, 110rem);
   }
 
@@ -1494,8 +1495,12 @@
     margin-right: calc(50% - 50vw);
   }
 
-  /* Project1: social — measure column centred; height follows column width (aspect-ratio). */
+  /* Project social embeds — measure column centred; height follows column width. */
   html[data-i18n-document-title="meta.documentTitle.project1"]
+    main.main--project
+    > .project-social-section
+    > .project-social-section__inner,
+  html[data-i18n-document-title="meta.documentTitle.project2"]
     main.main--project
     > .project-social-section
     > .project-social-section__inner {
@@ -1506,6 +1511,11 @@
   }
 
   html[data-i18n-document-title="meta.documentTitle.project1"]
+    main.main--project
+    > .project-social-section
+    .project-social-section__inner
+    .embed-frame,
+  html[data-i18n-document-title="meta.documentTitle.project2"]
     main.main--project
     > .project-social-section
     .project-social-section__inner

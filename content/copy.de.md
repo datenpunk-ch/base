@@ -26,6 +26,10 @@ Datenpunk — Projekte
 
 Datenpunk — Open MicZH
 
+## `meta.documentTitle.project2`
+
+Datenpunk — Swiss Film
+
 ## `meta.documentTitle.about`
 
 Datenpunk — Über mich
@@ -213,43 +217,51 @@ Kultur
 
 ## `projects[1].id`
 
-project_placeholder
+project2
 
 ## `projects[1].href`
 
-
+project2.html
 
 ## `projects[1].title`
 
-Erdmännosphere
+Swiss Film
 
 ## `projects[1].teaser`
 
-Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
+Wie steht es um den Schweizer Film am Kino? Bayes-Modelle basierend auf BFS-DatenArtikel mit interaktiven Grafiken.
 
 ## `projects[1].cta`
 
-Demnächst
+Zum Projekt
 
 ## `projects[1].thumb`
 
-assets/images/meerkats.jpg
+assets/images/swissfilm.jpg
 
 ## `projects[1].thumbAlt`
 
-Erdmännchen
+Swiss Film — Kinomarkt Schweiz
+
+## `projects[1].github`
+
+https://github.com/datenpunk-ch/swiss_film_vod
 
 ## `projects[1].tags[0]`
 
-In Vorbereitung
+Schweiz
 
 ## `projects[1].tags[1]`
 
-Wissenschaft
+Kultur
+
+## `projects[1].tags[2]`
+
+BFS
 
 ## `projects[2].id`
 
-project_placeholder_2
+project_placeholder
 
 ## `projects[2].href`
 
@@ -257,11 +269,11 @@ project_placeholder_2
 
 ## `projects[2].title`
 
-Platzhalter-Projekt
+Erdmännosphere
 
 ## `projects[2].teaser`
 
-In Vorbereitung — bleibt neugierig.
+Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
 
 ## `projects[2].cta`
 
@@ -269,11 +281,11 @@ Demnächst
 
 ## `projects[2].thumb`
 
-assets/images/testimg.jpg
+assets/images/meerkats.jpg
 
 ## `projects[2].thumbAlt`
 
-Testbild
+Erdmännchen
 
 ## `projects[2].tags[0]`
 
@@ -281,7 +293,7 @@ In Vorbereitung
 
 ## `projects[2].tags[1]`
 
-Kolumne
+Wissenschaft
 
 ## `project1.title`
 
@@ -502,6 +514,230 @@ https://datenpunk-ch.github.io/open_mics_ZH/social-content.html?embed=1
 ## `project1.socialEmbedTitle`
 
 Open MicZH — Social Content (eingebettet)
+
+## `project2.title`
+
+Swiss Film
+
+## `project2.standfirst`
+
+Schweizer Film am Kino — Daten, Modelle, Story
+
+## `project2.githubHref`
+
+https://github.com/datenpunk-ch/swiss_film_vod
+
+## `project2.githubLinkLabel`
+
+GitHub-Projekt (Code, Issues, Verlauf)
+
+## `project2.embedUrl`
+
+https://datenpunk-ch.github.io/swiss_film_vod/index.html
+
+## `project2.embedIframeUrl`
+
+https://datenpunk-ch.github.io/swiss_film_vod/index.html?embed=1
+
+## `project2.embedTitle`
+
+Swiss Film — Artikel
+
+## `project2.embedOpenLabel`
+
+Externe Projektseite öffnen
+
+## `project2.jumpNavAria`
+
+Sprungmarken auf dieser Seite
+
+## `project2.jumpToDescription`
+
+↓ Kurzbeschreibung
+
+## `project2.jumpToSocial`
+
+↓ Interaktiv
+
+## `project2.intro`
+
+Auswertung des Schweizer Kinomarkts: Wie hat sich der Gesamtmarkt nach der Pandemie erholt — und gewinnt der Schweizer Film an Besuchsanteil?
+
+## `project2.specs.heading`
+
+Projekt Beschreibung
+
+## `project2.specs.role.label`
+
+Rolle
+
+## `project2.specs.role.value`
+
+Konzept, Analyse, Story, Umsetzung (End-to-End)
+
+## `project2.specs.data.label`
+
+Daten
+
+## `project2.specs.data.value`
+
+BFS Kinostatistik PX (jährlich) und P4 (Kinowochen), harmonisierte Herkunfts- und Genre-Aufteilungen
+
+## `project2.specs.methods.label`
+
+Methoden
+
+## `project2.specs.methods.value`
+
+Bayesian Zeitreihen- und Anteilsmodelle (PyMC), explorative Rohdatenauswertung, statische Site-Generierung
+
+## `project2.specs.tech.label`
+
+Tools/Tech
+
+## `project2.specs.tech.value`
+
+Python (Pixi), PyMC, React/Recharts, GitHub Pages
+
+## `project2.specs.output.label`
+
+Output
+
+## `project2.specs.output.value`
+
+Artikel mit interaktiven Embeds + Analyse-Report + GitHub-Repository
+
+## `project2.backLink`
+
+Zurück zur Projektübersicht
+
+## `project2.imageAlt`
+
+Grafik zum Projekt Swiss Film
+
+## `project2.imageCaption`
+
+Projektgrafik (Thumbnail).
+
+## `project2.sections.question.heading`
+
+Kurzbeschreibung
+
+## `project2.sections.question.body`
+
+Wie steht es um den Schweizer Film am Kino? Wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive BFS-Auswertungen (Besuche, Programm, Saison) mit sieben Bayes-Modellen zu Trend, Herkunft, Genre und Programm-Lücke.
+
+## `project2.sections.data.heading`
+
+Daten
+
+## `project2.sections.data.bullets[0]`
+
+BFS PX: jährliche Aggregate zu Filmen im Programm und Kinobesuchen (Gesamtmarkt und Schweizer Film).
+
+## `project2.sections.data.bullets[1]`
+
+BFS P4: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Rohdaten).
+
+## `project2.sections.data.bullets[2]`
+
+Harmonisierte Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg.
+
+## `project2.sections.method.heading`
+
+Methoden
+
+## `project2.sections.method.bullets[0]`
+
+Sieben Bayesian Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
+
+## `project2.sections.method.bullets[1]`
+
+MCMC mit PyMC; Posterior-Prognosen und 95 %-HDI für Einordnung statt Punktprognosen.
+
+## `project2.sections.method.bullets[2]`
+
+Export statischer Site: Artikel, Analyse-Report, unified.json und interaktive React-Embeds.
+
+## `project2.sections.method.bullets[3]`
+
+Reproduzierbare Pipeline über Pixi-Tasks (Daten → Analyse → Site-Build).
+
+## `project2.sections.visualisation.heading`
+
+Output
+
+## `project2.sections.visualisation.bullets[0]`
+
+Narrativer Artikel (index.html) mit KPI-Karten und eingebetteten Modell- und Rohdaten-Grafiken.
+
+## `project2.sections.visualisation.bullets[1]`
+
+Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (Dropdown).
+
+## `project2.sections.visualisation.bullets[2]`
+
+Analyse-Report (analysis.html) mit Methodik und Figuren für vertiefte Leser:innen.
+
+## `project2.sections.conclusion.heading`
+
+Tools/Tech
+
+## `project2.techBullets.python`
+
+Python/Pixi für Datenpipeline, Modellierung und Site-Export.
+
+## `project2.techBullets.pymc`
+
+PyMC für Bayesianische Schätzung und Prognose (95 %-HDI).
+
+## `project2.techBullets.react`
+
+React + Recharts für interaktive Embeds in iframes.
+
+## `project2.techBullets.staticSite`
+
+Statische Website auf GitHub Pages (HTML/CSS/JavaScript).
+
+## `project2.techBullets.analysis`
+
+analysis_report.json als Brücke zwischen Python-Modellen und Frontend-Grafiken.
+
+## `project2.techTags.python`
+
+Python
+
+## `project2.techTags.pymc`
+
+PyMC
+
+## `project2.techTags.react`
+
+React
+
+## `project2.techTags.bfs`
+
+BFS PX/P4
+
+## `project2.techTags.ghPages`
+
+GitHub Pages
+
+## `project2.techTags.web`
+
+HTML/CSS/JavaScript
+
+## `project2.social.heading`
+
+Interaktiv
+
+## `project2.socialEmbedUrl`
+
+https://datenpunk-ch.github.io/swiss_film_vod/unified.html?embed=1&panel=year
+
+## `project2.socialEmbedTitle`
+
+Swiss Film — Jahresansicht (eingebettet)
 
 ## `aboutPage.title`
 
