@@ -229,7 +229,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Datenjournalistische Kurzstory: Wie steht es um den Schweizer Film am Kino? Bayes-Modelle auf BFS-Daten (PX/P4), Artikel mit interaktiven Grafiken.
+Wie steht es um den Schweizer Film im Kino? Basierend auf den Daten des Bundesamt für Statistik.
 
 ## `projects[1].cta`
 
@@ -254,6 +254,10 @@ Schweiz
 ## `projects[1].tags[1]`
 
 Kultur
+
+## `projects[1].tags[2]`
+
+BFS
 
 ## `projects[2].id`
 
@@ -589,7 +593,7 @@ Sprungmarken auf dieser Seite
 
 ## `project2.intro`
 
-Datenjournalistische Auswertung des Schweizer Kinomarkts: Wie hat sich der Gesamtmarkt nach der Pandemie erholt — und gewinnt der Schweizer Film an Besuchsanteil? Sieben Bayes-Modelle auf BFS-Daten, eingebettet in einen erzählenden Artikel mit interaktiven Grafiken.
+Auswertung des Schweizer Kinomarkts: Wann geht die Schweiz ins Kino und gewinnt der Schweizer Film an Besuchsanteil? Welche Genres sind besonders stark und wie entwickelt sich das Interesse am Schweizer Film?
 
 ## `project2.specs.heading`
 
@@ -617,7 +621,7 @@ Methoden
 
 ## `project2.specs.methods.value`
 
-Bayesianische Zeitreihen- und Anteilsmodelle (PyMC), explorative PX-Auswertung, statische Site-Generierung
+Bayesian Models (PyMC), explorative Rohdatenauswertung, statische Site-Generierung
 
 ## `project2.specs.tech.label`
 
@@ -653,7 +657,7 @@ Kurzbeschreibung
 
 ## `project2.sections.question.body`
 
-Wie steht es um den Schweizer Film am Kino — und wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive BFS-Auswertungen (Besuche, Programm, Saison) mit sieben Bayes-Modellen zu Trend, Herkunft, Genre und Programm-Lücke. Der Artikel erzählt die Story; interaktive Grafiken und eine Jahresansicht laden zum Vertiefen ein.
+Wie steht es um den Schweizer Film im Kino — und wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive Rohdatenauswertung vom BFS(Besuche, Programm, Saison) mit sieben Modellen zu Trend, Herkunft, Genre und Programm-Lücke.
 
 ## `project2.sections.data.heading`
 
@@ -669,7 +673,7 @@ BFS P4: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Ro
 
 ## `project2.sections.data.bullets[2]`
 
-Harmonisierte Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg.
+Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg.
 
 ## `project2.sections.method.heading`
 
@@ -677,7 +681,7 @@ Methoden
 
 ## `project2.sections.method.bullets[0]`
 
-Sieben Bayesianische Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
+Sieben Bayes Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
 
 ## `project2.sections.method.bullets[1]`
 
@@ -697,15 +701,15 @@ Output
 
 ## `project2.sections.visualisation.bullets[0]`
 
-Narrativer Artikel (index.html) mit KPI-Karten und eingebetteten Bayes- und PX-Grafiken.
+Narrativer Artikel mit KPIs, interaktiven Grafiken und eingebetteter deskriptiver Jahresübersicht.
 
 ## `project2.sections.visualisation.bullets[1]`
 
-Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (Dropdown).
+Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (filterbar).
 
 ## `project2.sections.visualisation.bullets[2]`
 
-Analyse-Report (analysis.html) mit Methodik und Figuren für vertiefte Leser:innen.
+Analyse-Report mit Methodik und Figuren als Hintergrundinformation.
 
 ## `project2.sections.conclusion.heading`
 
@@ -717,7 +721,7 @@ Python/Pixi für Datenpipeline, Modellierung und Site-Export.
 
 ## `project2.techBullets.pymc`
 
-PyMC für Bayesianische Schätzung und Prognose (95 %-HDI).
+PyMC für statistische Modellierung.
 
 ## `project2.techBullets.react`
 
@@ -745,7 +749,7 @@ React
 
 ## `project2.techTags.bfs`
 
-BFS PX/P4
+BFS
 
 ## `project2.techTags.ghPages`
 
