@@ -259,10 +259,6 @@ Kultur
 
 Bayes
 
-## `projects[1].tags[3]`
-
-Datenjournalismus
-
 ## `projects[2].id`
 
 project_placeholder

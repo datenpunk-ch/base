@@ -250,10 +250,6 @@ Culture
 
 Bayes
 
-## `projects[1].tags[3]`
-
-Data journalism
-
 ## `projects[2].id`
 
 project_placeholder
