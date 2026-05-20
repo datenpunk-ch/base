@@ -1047,41 +1047,62 @@
   @media (min-width: 720px) {
     .teaser-list--grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       column-gap: var(--space-5);
+      row-gap: 0;
       border-top: 1px solid var(--color-ink);
+      align-items: stretch;
     }
-  
+
     .teaser-list--grid .teaser {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      height: 100%;
       border-bottom: 1px solid var(--color-rule);
     }
 
     /*
-      Projects page: give the grid a more “magazine” feel.
-      Make thumbnails larger and stack them above the text (similar spirit to
-      the featured strip on the home page, but within the normal page column).
+      Projects page: magazine grid — thumb above text, equal cell size.
     */
     .teaser-list--grid .teaser--has-thumb .teaser__link {
+      flex: 1 1 auto;
       flex-direction: column;
       align-items: stretch;
       gap: var(--space-2);
+      height: 100%;
     }
 
     .teaser-list--grid .teaser__row {
+      flex: 1 1 auto;
       flex-direction: column;
       align-items: stretch;
       gap: var(--space-2);
+      height: 100%;
     }
 
-    .teaser-list--grid .teaser--has-thumb .teaser__thumb {
+    .teaser-list--grid .teaser--has-thumb .teaser__thumb,
+    .teaser-list--grid .teaser__row .teaser__thumb {
       width: 100%;
       max-width: 100%;
       aspect-ratio: 16 / 9;
+      height: auto;
+    }
+
+    .teaser-list--grid .teaser__body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
     }
 
     .teaser-list--grid .teaser__deck,
     .teaser-list--grid .teaser__tags {
       max-width: none;
+    }
+
+    .teaser-list--grid .teaser__deck {
+      flex: 1 1 auto;
     }
 
     /* Denser grid rhythm: less padding/margin inside cards. */
@@ -1094,7 +1115,9 @@
     }
 
     .teaser-list--grid .teaser--static {
+      flex: 1 1 auto;
       padding: var(--space-3) 0 var(--space-4);
+      height: 100%;
     }
 
     .teaser-list--grid .teaser__hed {
@@ -1108,6 +1131,7 @@
     }
 
     .teaser-list--grid .teaser__github {
+      margin-top: auto;
       margin-bottom: var(--space-4);
     }
   }
@@ -1495,12 +1519,8 @@
     margin-right: calc(50% - 50vw);
   }
 
-  /* Project social embeds — measure column centred; height follows column width. */
+  /* Project1 social embed — measure column centred; height follows column width. */
   html[data-i18n-document-title="meta.documentTitle.project1"]
-    main.main--project
-    > .project-social-section
-    > .project-social-section__inner,
-  html[data-i18n-document-title="meta.documentTitle.project2"]
     main.main--project
     > .project-social-section
     > .project-social-section__inner {
@@ -1511,11 +1531,6 @@
   }
 
   html[data-i18n-document-title="meta.documentTitle.project1"]
-    main.main--project
-    > .project-social-section
-    .project-social-section__inner
-    .embed-frame,
-  html[data-i18n-document-title="meta.documentTitle.project2"]
     main.main--project
     > .project-social-section
     .project-social-section__inner

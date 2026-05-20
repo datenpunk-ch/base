@@ -229,7 +229,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Wie steht es um den Schweizer Film am Kino? Bayes-Modelle basierend auf BFS-DatenArtikel mit interaktiven Grafiken.
+Datenjournalistische Kurzstory: Wie steht es um den Schweizer Film am Kino? Bayes-Modelle auf BFS-Daten (PX/P4), Artikel mit interaktiven Grafiken.
 
 ## `projects[1].cta`
 
@@ -257,7 +257,11 @@ Kultur
 
 ## `projects[1].tags[2]`
 
-BFS
+Bayes
+
+## `projects[1].tags[3]`
+
+Datenjournalismus
 
 ## `projects[2].id`
 
@@ -294,6 +298,42 @@ In Vorbereitung
 ## `projects[2].tags[1]`
 
 Wissenschaft
+
+## `projects[3].id`
+
+project_placeholder_2
+
+## `projects[3].href`
+
+
+
+## `projects[3].title`
+
+Platzhalter-Projekt
+
+## `projects[3].teaser`
+
+In Vorbereitung — bleibt neugierig.
+
+## `projects[3].cta`
+
+Demnächst
+
+## `projects[3].thumb`
+
+assets/images/testimg.jpg
+
+## `projects[3].thumbAlt`
+
+Testbild
+
+## `projects[3].tags[0]`
+
+In Vorbereitung
+
+## `projects[3].tags[1]`
+
+Kolumne
 
 ## `project1.title`
 
@@ -555,13 +595,9 @@ Sprungmarken auf dieser Seite
 
 ↓ Kurzbeschreibung
 
-## `project2.jumpToSocial`
-
-↓ Interaktiv
-
 ## `project2.intro`
 
-Auswertung des Schweizer Kinomarkts: Wie hat sich der Gesamtmarkt nach der Pandemie erholt — und gewinnt der Schweizer Film an Besuchsanteil?
+Datenjournalistische Auswertung des Schweizer Kinomarkts: Wie hat sich der Gesamtmarkt nach der Pandemie erholt — und gewinnt der Schweizer Film an Besuchsanteil? Sieben Bayes-Modelle auf BFS-Daten, eingebettet in einen erzählenden Artikel mit interaktiven Grafiken.
 
 ## `project2.specs.heading`
 
@@ -589,7 +625,7 @@ Methoden
 
 ## `project2.specs.methods.value`
 
-Bayesian Zeitreihen- und Anteilsmodelle (PyMC), explorative Rohdatenauswertung, statische Site-Generierung
+Bayesianische Zeitreihen- und Anteilsmodelle (PyMC), explorative PX-Auswertung, statische Site-Generierung
 
 ## `project2.specs.tech.label`
 
@@ -625,7 +661,7 @@ Kurzbeschreibung
 
 ## `project2.sections.question.body`
 
-Wie steht es um den Schweizer Film am Kino? Wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive BFS-Auswertungen (Besuche, Programm, Saison) mit sieben Bayes-Modellen zu Trend, Herkunft, Genre und Programm-Lücke.
+Wie steht es um den Schweizer Film am Kino — und wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive BFS-Auswertungen (Besuche, Programm, Saison) mit sieben Bayes-Modellen zu Trend, Herkunft, Genre und Programm-Lücke. Der Artikel erzählt die Story; interaktive Grafiken und eine Jahresansicht laden zum Vertiefen ein.
 
 ## `project2.sections.data.heading`
 
@@ -649,7 +685,7 @@ Methoden
 
 ## `project2.sections.method.bullets[0]`
 
-Sieben Bayesian Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
+Sieben Bayesianische Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
 
 ## `project2.sections.method.bullets[1]`
 
@@ -669,7 +705,7 @@ Output
 
 ## `project2.sections.visualisation.bullets[0]`
 
-Narrativer Artikel (index.html) mit KPI-Karten und eingebetteten Modell- und Rohdaten-Grafiken.
+Narrativer Artikel (index.html) mit KPI-Karten und eingebetteten Bayes- und PX-Grafiken.
 
 ## `project2.sections.visualisation.bullets[1]`
 
@@ -726,18 +762,6 @@ GitHub Pages
 ## `project2.techTags.web`
 
 HTML/CSS/JavaScript
-
-## `project2.social.heading`
-
-Interaktiv
-
-## `project2.socialEmbedUrl`
-
-https://datenpunk-ch.github.io/swiss_film_vod/unified.html?embed=1&panel=year
-
-## `project2.socialEmbedTitle`
-
-Swiss Film — Jahresansicht (eingebettet)
 
 ## `aboutPage.title`
 

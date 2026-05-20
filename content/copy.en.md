@@ -290,6 +290,42 @@ In progress
 
 Science
 
+## `projects[3].id`
+
+project_placeholder_2
+
+## `projects[3].href`
+
+
+
+## `projects[3].title`
+
+Placeholder project
+
+## `projects[3].teaser`
+
+In progress — more soon.
+
+## `projects[3].cta`
+
+Coming soon
+
+## `projects[3].thumb`
+
+assets/images/testimg.jpg
+
+## `projects[3].thumbAlt`
+
+Test image
+
+## `projects[3].tags[0]`
+
+In progress
+
+## `projects[3].tags[1]`
+
+Column
+
 ## `project1.title`
 
 Test1
@@ -550,10 +586,6 @@ Jump links on this page
 
 ↓ Overview
 
-## `project2.jumpToSocial`
-
-↓ Interactive
-
 ## `project2.intro`
 
 A data journalism piece on the Swiss cinema market: how has the overall market recovered after the pandemic — and is Swiss film gaining audience share? Seven Bayesian models on Swiss Federal Statistical Office data, embedded in a narrative article with interactive charts.
@@ -721,18 +753,6 @@ GitHub Pages
 ## `project2.techTags.web`
 
 HTML/CSS/JavaScript
-
-## `project2.social.heading`
-
-Interactive
-
-## `project2.socialEmbedUrl`
-
-https://datenpunk-ch.github.io/swiss_film_vod/unified.html?embed=1&panel=year
-
-## `project2.socialEmbedTitle`
-
-Swiss Film — year view (embedded)
 
 ## `aboutPage.title`
 
