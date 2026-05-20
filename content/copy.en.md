@@ -650,6 +650,10 @@ How is Swiss film doing at the cinema — and how does that differ from the over
 
 Data
 
+## `project2.sections.data.intro`
+
+Harmonised origin and genre splits for comparable shares across years and models:
+
 ## `project2.sections.data.bullets[0]`
 
 [PX](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36476429.html) — [Federal Statistical Office (FSO)](https://www.bfs.admin.ch/bfs/en/home/statistiken/kultur-medien-informationsgesellschaft-sport/culture/film-cinema.html) cinema statistics: annual aggregates on films in release and cinema admissions (overall market and Swiss film).
@@ -657,10 +661,6 @@ Data
 ## `project2.sections.data.bullets[1]`
 
 [P4](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36596835.html) — FSO cinema statistics by cinema week: admissions and films per week for seasonal profiles (no genre in raw data).
-
-## `project2.sections.data.bullets[2]`
-
-Harmonised origin and genre splits for comparable shares across years and models.
 
 ## `project2.sections.method.heading`
 

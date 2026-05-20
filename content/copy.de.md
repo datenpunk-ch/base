@@ -653,11 +653,15 @@ Kurzbeschreibung
 
 ## `project2.sections.question.body`
 
-Wie steht es um den Schweizer Film am Kino — und wie unterscheidet sich das vom Gesamtmarkt? Swiss Film verbindet deskriptive Auswertungen der BFS Daten (Besuche, Programm, Saison) mit Informationen zu Trends, Herkunft, Genre und Programm-Lücke.
+Wie steht es um den Schweizer Film im Kino? Das Projekt verbindet deskriptive Auswertungen offizieller BFS Daten (Besuche, Programm, Saison) mit Informationen zu Trends, Herkunft, Genre und potentieller Programm-Lücke.
 
 ## `project2.sections.data.heading`
 
 Daten
+
+## `project2.sections.data.intro`
+
+Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg:
 
 ## `project2.sections.data.bullets[0]`
 
@@ -666,10 +670,6 @@ BFS PX: jährliche Aggregate zu Filmen im Programm und Kinobesuchen (Gesamtmarkt
 ## `project2.sections.data.bullets[1]`
 
 BFS P4: Besuche und Filme pro Kinowoche für Saisonprofile (ohne Genre in den Rohdaten).
-
-## `project2.sections.data.bullets[2]`
-
-Herkunfts- und Genre-Schnitte für vergleichbare Anteile über Jahre und Modelle hinweg.
 
 ## `project2.sections.method.heading`
 
@@ -725,7 +725,7 @@ React + Recharts für interaktive Embeds in iframes.
 
 ## `project2.techBullets.staticSite`
 
-Statische Website auf GitHub Pages (HTML/CSS/JavaScript).
+Statische Website (HTML/CSS/JavaScript).
 
 ## `project2.techTags.python`
 
