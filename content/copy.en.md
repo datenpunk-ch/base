@@ -600,7 +600,7 @@ Data
 
 ## `project2.specs.data.value`
 
-BFS cinema statistics PX (annual) and P4 (cinema weeks), harmonised origin and genre splits
+[PX](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36476429.html) (annual) and [P4](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36596835.html) (cinema weeks), [Federal Statistical Office (FSO)](https://www.bfs.admin.ch/bfs/en/home/statistiken/kultur-medien-informationsgesellschaft-sport/culture/film-cinema.html) cinema statistics; harmonised origin and genre splits
 
 ## `project2.specs.methods.label`
 
@@ -644,7 +644,7 @@ Overview
 
 ## `project2.sections.question.body`
 
-How is Swiss film doing at the cinema — and how does that differ from the overall market? Swiss Film combines descriptive BFS analysis (admissions, programming, seasonality) with seven Bayesian models on trends, origin countries, genres, and the programming gap. The article tells the story; interactive charts and a year-by-year view invite deeper exploration.
+How is Swiss film doing at the cinema — and how does that differ from the overall market? Swiss Film combines descriptive analysis of [FSO](https://www.bfs.admin.ch/bfs/en/home/statistiken/kultur-medien-informationsgesellschaft-sport/culture/film-cinema.html) data [PX](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36476429.html) and [P4](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36596835.html) (admissions, programming, seasonality) with seven Bayesian models on trends, origin countries, genres, and the programming gap. The article tells the story; interactive charts and a year-by-year view invite deeper exploration.
 
 ## `project2.sections.data.heading`
 
@@ -652,11 +652,11 @@ Data
 
 ## `project2.sections.data.bullets[0]`
 
-BFS PX: annual aggregates on films in release and cinema admissions (overall market and Swiss film).
+[PX](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36476429.html) — [Federal Statistical Office (FSO)](https://www.bfs.admin.ch/bfs/en/home/statistiken/kultur-medien-informationsgesellschaft-sport/culture/film-cinema.html) cinema statistics: annual aggregates on films in release and cinema admissions (overall market and Swiss film).
 
 ## `project2.sections.data.bullets[1]`
 
-BFS P4: admissions and films per cinema week for seasonal profiles (no genre in raw data).
+[P4](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36596835.html) — FSO cinema statistics by cinema week: admissions and films per week for seasonal profiles (no genre in raw data).
 
 ## `project2.sections.data.bullets[2]`
 

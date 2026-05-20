@@ -138,14 +138,29 @@
    */
   function formatCopyInline(val) {
     var raw = String(val);
+    var hasLink = /\[[^\]]+\]\([^)]+\)/.test(raw);
     var hasBold = raw.indexOf("**") !== -1;
     var hasAsteriskItalic = raw.indexOf("*") !== -1;
     var hasUnderscoreItalic = raw.indexOf("_") !== -1;
-    if (!hasBold && !hasAsteriskItalic && !hasUnderscoreItalic) {
+    if (!hasLink && !hasBold && !hasAsteriskItalic && !hasUnderscoreItalic) {
       return { isHtml: false, text: raw };
     }
     var safe = escapeHtml(raw);
-    var html = safe.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    var html = safe.replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      function (_m, label, url) {
+        var href = String(url).trim();
+        if (!/^https?:\/\//i.test(href)) return _m;
+        return (
+          '<a href="' +
+          escapeHtml(href) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          label +
+          "</a>"
+        );
+      }
+    );
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     // Avoid matching **bold** as *italic*.
     html = html.replace(/(^|[^*])\*(?!\s)([^*]+?)(?!\s)\*(?!\*)/g, "$1<em>$2</em>");
     html = html.replace(/(^|[^_])_(?!\s)([^_]+?)(?!\s)_/g, "$1<em>$2</em>");
