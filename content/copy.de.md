@@ -207,6 +207,10 @@ Web Scrape
 
 Geo
 
+## `projects[0].tags[3]`
+
+Kultur
+
 ## `projects[1].id`
 
 project_placeholder
@@ -281,7 +285,7 @@ Kolumne
 
 ## `project1.title`
 
-Test1
+OpenMicZH
 
 ## `project1.standfirst`
 
