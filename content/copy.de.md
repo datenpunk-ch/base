@@ -100,7 +100,6 @@ Zahlen. Stories. Gegen den Strich.
 
 ## `home.intro`
 
-Datenjournalismus und interaktive Auswertungen — von Kulturstatistik bis Kino: Stories, die aus offiziellen Zahlen, Karten und Modellen lesbar werden, ohne Buzzword-Bingo. Hier sammle ich laufende Projekte; der Einstieg bleibt bewusst kurz, damit auf einen Blick klar ist, wie viel Text die Startseite neben Titel und Projektteasern noch trägt.
 
 ## `home.aboutTeaserHeading`
 

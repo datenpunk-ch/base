@@ -1087,6 +1087,7 @@
       max-width: 100%;
       aspect-ratio: 16 / 9;
       height: auto;
+      object-position: center bottom;
     }
 
     .teaser-list--grid .teaser__body {
@@ -1212,6 +1213,7 @@
     height: auto;
     max-height: clamp(18rem, 60vh, 34rem);
     object-fit: contain;
+    object-position: center bottom;
   }
 
   /* Keep the over-image title aligned with featured-strip gutters. */
@@ -1335,6 +1337,8 @@
     aspect-ratio: auto;
     height: clamp(16rem, 26vw, 24rem);
     flex: 0 0 auto;
+    /* Keep lower frame (e.g. audience) visible; size unchanged, only crop anchor. */
+    object-position: center bottom;
   }
 
   .teaser--featured .teaser__media {
