@@ -297,11 +297,11 @@
     max-width: var(--page-max);
     margin: 0 auto;
     padding: var(--space-3) var(--gutter-end) var(--space-3) var(--gutter-start);
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2) var(--space-3);
+    column-gap: var(--space-3);
+    row-gap: var(--space-2);
   }
   
   .site-title {
@@ -325,21 +325,23 @@
   }
   
   .site-nav {
+    grid-column: 2;
+    justify-self: end;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
     gap: var(--space-2) var(--space-4);
-    flex: 1 1 auto;
     min-width: min(100%, 14rem);
   }
   
   .site-nav__list {
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 0.55rem var(--space-3);
   }
   
@@ -434,12 +436,13 @@
   
   @media (max-width: 640px) {
     .site-header__inner {
-      flex-direction: column;
-      align-items: stretch;
+      grid-template-columns: 1fr;
     }
-  
+
     .site-nav {
-      justify-content: space-between;
+      grid-column: 1;
+      justify-self: stretch;
+      justify-content: flex-end;
       padding-top: var(--space-2);
       border-top: 1px solid var(--color-rule);
     }
@@ -560,9 +563,7 @@
     margin: calc(var(--space-4) * -1) 0 var(--space-5);
     max-width: var(--measure);
     color: var(--color-accent-text);
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
+    text-align: left;
     hyphens: auto;
   }
 
@@ -615,9 +616,7 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
+    text-align: left;
     hyphens: auto;
   }
   
@@ -647,9 +646,7 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
+    text-align: left;
     hyphens: auto;
   }
   
@@ -745,9 +742,7 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
+    text-align: left;
     hyphens: auto;
   }
   
@@ -1489,9 +1484,7 @@
     line-height: var(--lh-relaxed);
     letter-spacing: 0;
     color: var(--color-ink-body);
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
+    text-align: left;
     hyphens: auto;
   }
 
@@ -1718,9 +1711,7 @@
 
   body.about .about-masthead .lede {
     max-width: var(--about-text-max);
-    text-align: justify;
-    text-justify: inter-word;
-    text-align-last: left;
+    text-align: left;
     hyphens: auto;
   }
 
@@ -2040,9 +2031,6 @@
 
   /* ---------- CV ---------- */
 
-  body.cv .site-header__inner {
-    justify-content: space-between;
-  }
 
   .cv__main {
     padding-top: clamp(var(--space-4), 6vw, var(--space-5));
@@ -2364,20 +2352,17 @@
   .site-footer__inner {
     max-width: var(--page-max);
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: var(--space-2) var(--space-3);
+    column-gap: var(--space-3);
+    row-gap: var(--space-2);
   }
 
   .site-footer__meta {
+    grid-column: 1;
     margin: 0;
     max-width: 42rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.35rem 0.85rem;
     font-family: var(--font-ui);
     font-size: 0.75rem;
     font-weight: 400;
@@ -2386,21 +2371,81 @@
     color: var(--color-muted);
   }
 
-  .site-footer__meta a {
-    font-size: inherit;
+  /* Mirror header nav width so Impressum ends where Kontakt ends. */
+  .site-footer__nav {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .site-footer__nav-ghost {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .site-footer__impressum-slot {
+    position: relative;
+  }
+
+  .site-footer__impressum-slot > .site-footer__nav-ghost {
+    display: inline-block;
+  }
+
+  .site-footer__impressum-slot > .site-footer__impressum {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .site-footer__lang-spacer {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  html.lang-switch-off .site-footer__lang-spacer {
+    display: none;
+  }
+
+  .site-footer__impressum {
+    display: inline-block;
+    padding: 0.35rem 0;
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    line-height: 1.1;
     color: var(--color-muted);
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    line-height: inherit;
+    white-space: nowrap;
+    transition: color 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .site-footer__meta a:hover,
-  .site-footer__meta a:focus-visible {
+  .site-footer__impressum:hover,
+  .site-footer__impressum:focus-visible {
     color: var(--color-ink);
-    border-bottom-color: var(--color-accent);
+    box-shadow: inset 0 -1px 0 var(--color-accent);
+  }
+
+  .site-footer__impressum:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 640px) {
+    .site-footer__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .site-footer__meta {
+      grid-column: 1;
+    }
+
+    .site-footer__nav {
+      grid-column: 1;
+      justify-self: stretch;
+      justify-content: flex-end;
+    }
   }
   
   .impressum-lines {

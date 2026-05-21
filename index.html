@@ -93,8 +93,35 @@
       <div class="site-footer__inner">
         <p class="site-footer__meta">
           <span data-i18n="footer.note"></span>
-          <a href="impressum.html" data-i18n="footer.impressumLink"></a>
         </p>
+        <nav class="site-footer__nav site-nav" role="presentation">
+          <ul class="site-nav__list">
+            <li class="site-footer__nav-ghost" aria-hidden="true">
+              <a href="index.html" tabindex="-1" data-i18n="nav.home"></a>
+            </li>
+            <li class="site-footer__nav-ghost" aria-hidden="true">
+              <a href="projects.html" tabindex="-1" data-i18n="nav.projects"></a>
+            </li>
+            <li class="site-footer__nav-ghost" aria-hidden="true">
+              <a href="about.html" tabindex="-1" data-i18n="nav.about"></a>
+            </li>
+            <li class="site-footer__impressum-slot">
+              <a
+                class="site-footer__nav-ghost"
+                href="kontakt.html"
+                tabindex="-1"
+                aria-hidden="true"
+                data-i18n="nav.contact"
+              ></a>
+              <a class="site-footer__impressum" href="impressum.html" data-i18n="footer.impressumLink"></a>
+            </li>
+          </ul>
+          <div class="lang-switch site-footer__lang-spacer" aria-hidden="true">
+            <button type="button" tabindex="-1" disabled aria-hidden="true">DE</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" tabindex="-1" disabled aria-hidden="true">EN</button>
+          </div>
+        </nav>
       </div>
     </footer>
 

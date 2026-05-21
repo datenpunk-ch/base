@@ -107,12 +107,16 @@ Kurz zu mir
 
 ## `home.aboutTeaser`
 
-Zu punk fürs Amt, zu story-driven für die Uni, zu nerdig für die Teppichetage.
+Zu punk fürs Amt
+Zu story-driven für die Uni
+Zu nerdig für die Teppichetage
+
 Das ist mein **Portfolio**.
 
 Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: extreme **Neugier**, ein Faible für Daten, ein gesunder Detektivsinn und ein Ohr für Geschichten. 
 
-Genug geübt, jetzt mach ich das beruflich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder überall dort, wo jemand komplexe Dinge auch dem Hund erklären können muss. Gerne auch in bunt und zum Draufklicken.
+Genug geübt, jetzt mach ich das beruflich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder überall dort, wo jemand komplexe Dinge auch dem Hund erklären können muss.
+Gerne auch in bunt und zum Draufklicken.
 
 ## `home.aboutTeaserLink`
 
@@ -212,7 +216,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Wie steht es um den Schweizer Film im Kino? Acht Bayesianische Modelle auf BFS-Daten (PX/P4), Artikel und interaktive Charts.
+Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten (PX/P4), Artikel und interaktive Charts.
 
 ## `projects[1].cta`
 
@@ -224,7 +228,7 @@ assets/images/swissfilm.jpg
 
 ## `projects[1].thumbAlt`
 
-Modernes Kino mit Panoramablick auf die Alpen, Filmrolle und dezente Schweizer Flagge — Swiss Film
+Bild zum Swiss Film Artikel
 
 ## `projects[1].thumbRaw`
 
@@ -740,9 +744,11 @@ HTML/CSS/JavaScript
 
 ## `aboutPage.intro`
 
-Recruiter bekommen bei meinem Lebenslauf Schnappatmung. Ich passe in keine Schublade, ich brauch die ganze Schrankwand. Als Wissenschaftlerin mit interdisziplinärem Hintergrund, technischer Expertise und kreativem Fundament fühle ich mich am Tellerrand am wohlsten.
+Recruiter bekommen bei meinem Lebenslauf Schnappatmung.
+Ich passe in keine Schublade, ich brauche die ganze Schrankwand.
+Als Wissenschaftlerin mit interdisziplinärem Hintergrund, breiter technischer Expertise und kreativem Fundament fühle ich mich am Tellerrand am wohlsten.
 
-Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED Talk drüber. Um meine Freunde zu entlasten mache ich das jetzt beruflich.
+Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED-Talk darüber. Um meine Freunde zu entlasten, mache ich das jetzt beruflich.
 
 ## `aboutPage.portraitCaption`
 
@@ -754,15 +760,20 @@ Mein Weg
 
 ## `aboutPage.background`
 
-**Mediendesign** — Visuelles Denken, Gestaltung, und wie man Dinge verständlich darstellt.
+**Mediendesign**
+Visuelles Denken, Gestaltung und wie man Dinge verständlich darstellt.
 
-**Forensic Psychology & Criminology** — Menschliches Verhalten, Mustererkennung, und warum Daten ohne Kontext gefährlich sind.
+**Forensic Psychology & Criminology**
+Menschliches Verhalten, Mustererkennung und warum Daten ohne Kontext gefährlich sind.
 
-**Game Development** —  Frontendentwicklung, UI/UX und wie Zusammenarbeit in agilen, interdisziplinären Teams gelingt. 
+**Game Development**
+Frontendentwicklung, UI/UX und wie Zusammenarbeit in agilen, interdisziplinären Teams gelingt. 
 
-**Cognitive Science** — Sprache, Kognition und was menschliches vom maschinellem Denken unterscheidet.
+**Cognitive Science**
+Sprache, Kognition und was menschliches vom maschinellem Denken unterscheidet.
 
-**Verhaltensbiologie** — Evolution, Statistik, wissenschaftliche Publikation und wie man Forschung professionell vermittelt.
+**Verhaltensbiologie**
+Evolution, Statistik, wissenschaftliche Publikation und wie man Forschung professionell vermittelt.
 
 ## `aboutPage.mapAlt`
 
@@ -807,15 +818,20 @@ Mein Werkzeugkasten
 
 ## `aboutPage.skills`
 
-**Daten & Methoden** — Bayes'sche Statistik, Modellierung, Machine Learning, Web Scraping, Experimentdesign, OSINT, Audioanalyse & -verarbeitung
+**Daten & Methoden**
+Bayes'sche Statistik, Modellierung, Machine Learning, Web Scraping, Experimentdesign, OSINT, Audioanalyse & -verarbeitung
 
-**Code** — Python, R, SQL, C#, JavaScript, MATLAB, Java
+**Code**
+Python, R, SQL, C#, JavaScript, MATLAB, Java
 
-**Recherche & Kommunikation** — Wissenschaftliches Schreiben, Datenstorytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
+**Recherche & Kommunikation**
+Wissenschaftliches Schreiben, Datenstorytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
 
-**Tools** — Cursor, Git, Adobe Audition, PRAAT
+**Tools**
+Cursor, Git, Adobe Audition, PRAAT
 
-**Sprachen** — Deutsch (Muttersprache), Englisch (Fliessend)
+**Sprachen**
+Deutsch (Muttersprache), Englisch (Fliessend)
 
 ## `aboutPage.motivationHeading`
 
@@ -823,14 +839,14 @@ Meine schlaflosen Nächte
 
 ## `aboutPage.motivation`
 
-Ich schlafe schlecht wenn ich eine Frage nicht loswerde. Zum Glück passiert das ständig. 
+Ich schlafe schlecht, wenn ich eine Frage nicht loswerde. Zum Glück passiert das ständig: 
 
-*Haben Algorithmen eigentlich Lieblingsdinosaurier?* 
+*Haben Algorithmen eigentlich Lieblingsdinosaurier?*
 *Wer dreht an der Kreislaufwirtschaft?*
-*Wieso ist das Gehirn manchmal so dramatisch?* 
+*Wieso ist das Gehirn manchmal so dramatisch?*
 *Und wo sind eigentlich jetzt all die Labubus?*
 
-In den meisten Fällen schalte ich dann den Rechner ein und fange an zu recherchieren. Muster im Datendschungel des Internets zu finden, Berichte zu überprüfen und Detektiv zu spielen macht mich glücklich. Wenn ich dann am nächsten Tag noch jemanden berichten kann, was ich herausgefunden habe, ist der Schlafmangel nur fair.
+In den meisten Fällen schalte ich dann den Rechner ein und fange an zu recherchieren. Muster im Datendschungel des Internets zu finden, Berichte zu überprüfen und Detektiv zu spielen, macht mich glücklich. Wenn ich dann am nächsten Tag noch jemandem berichten kann, was ich herausgefunden habe, ist der Schlafmangel nur fair.
 
 ## `aboutPage.motivationContactLink`
 
