@@ -1562,6 +1562,20 @@
     margin-right: calc(50% - 50vw);
   }
 
+  main.main--project .article-section--wide .embed-frame {
+    border: var(--rule-w) solid var(--color-rule);
+    box-shadow: 0 1px 0 var(--color-ink);
+  }
+
+  main.main--project .article-section--wide + .article-divider {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+
+  main.main--project #project-description {
+    padding-top: var(--space-1);
+  }
+
   .embed-fallback {
     margin-top: var(--space-2);
   }
