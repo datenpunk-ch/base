@@ -98,25 +98,9 @@ Datenpunk
 
 Stories & numbers
 
-## `home.hero.tagline`
-
-Stories and numbers. Usually at the same time.
-
 ## `home.intro`
 
-Intro text
-
-## `home.prefaceHeading`
-
-More context
-
-## `home.prefaceBody`
-
-Curious and sticky.
-
-## `home.featuredHeading`
-
-Featured projects
+Data journalism and interactive analysis — from cultural statistics to cinema: stories that make official figures, maps and models readable, without buzzword bingo. This is where ongoing projects live; the opening stays deliberately short so you can see how much copy the home page still has room for beside the title and project teasers.
 
 ## `home.aboutTeaserHeading`
 
@@ -232,7 +216,7 @@ assets/images/swissfilm.jpg
 
 ## `projects[1].thumbAlt`
 
-Swiss Film — Swiss cinema market
+Modern cinema with alpine panorama, film reel and subtle Swiss flag — Swiss Film
 
 ## `projects[1].github`
 

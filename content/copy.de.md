@@ -98,25 +98,9 @@ Datenpunk.
 
 Zahlen. Stories. Gegen den Strich.
 
-## `home.hero.tagline`
-
-Zahlen. Stories. Gegen den Strich.
-
 ## `home.intro`
 
-Introtext, und noch ein bisschen mehr Text um zu sehen wieviel es hier verträgt und welches Layout Sinn ergibt. Vielleicht noch ein paar Worte mehr. Eventuell noch eine Zeile?
-
-## `home.prefaceHeading`
-
-Mehr Kontext
-
-## `home.prefaceBody`
-
-Gwunderig und klebrig.
-
-## `home.featuredHeading`
-
-Ausgewählte Projekte
+Datenjournalismus und interaktive Auswertungen — von Kulturstatistik bis Kino: Stories, die aus offiziellen Zahlen, Karten und Modellen lesbar werden, ohne Buzzword-Bingo. Hier sammle ich laufende Projekte; der Einstieg bleibt bewusst kurz, damit auf einen Blick klar ist, wie viel Text die Startseite neben Titel und Projektteasern noch trägt.
 
 ## `home.aboutTeaserHeading`
 
@@ -241,7 +225,11 @@ assets/images/swissfilm.jpg
 
 ## `projects[1].thumbAlt`
 
-Swiss Film — Kinomarkt Schweiz
+Modernes Kino mit Panoramablick auf die Alpen, Filmrolle und dezente Schweizer Flagge — Swiss Film
+
+## `projects[1].thumbRaw`
+
+true
 
 ## `projects[1].github`
 
@@ -301,7 +289,7 @@ project_placeholder_2
 
 ## `projects[3].title`
 
-Platzhalter-Projekt
+Etwas Neues
 
 ## `projects[3].teaser`
 
