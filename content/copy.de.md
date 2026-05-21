@@ -828,7 +828,7 @@ Python, R, SQL, C#, JavaScript, MATLAB, Java
 Wissenschaftliches Schreiben, Datenstorytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
 
 **Tools**
-Cursor, Git, Adobe Audition, PRAAT
+Cursor, Git, Adobe Audition, Praat, Prefrontaler Cortex
 
 **Sprachen**
 Deutsch (Muttersprache), Englisch (Fliessend)
