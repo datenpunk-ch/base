@@ -573,7 +573,7 @@ Sprungmarken auf dieser Seite
 
 ## `project2.intro`
 
-Datenjournalismus zum Schweizer Kinomarkt (BFS PX/P4): acht Bayesianische Modelle mit PyMC (MCMC, 95 %-HDI), ergänzt um deskriptive Jahresverläufe — eingebettet in einen narrativen Artikel mit interaktiven Dashboards.
+Analyse des Schweizer Kinomarkts (BFS): statistische Modellierung (Bayes, Python) eingebettet in einen narrativen Artikel mit interaktiven Plots und Dashboard (React).
 
 ## `project2.specs.heading`
 
@@ -601,7 +601,7 @@ Methoden
 
 ## `project2.specs.methods.value`
 
-Acht Bayesianische Modelle (PyMC/NUTS, 95 %-HDI, Pd), deskriptive PX-Zeitreihen (Länder), explorative Change-Point-Schätzung
+Acht Bayes Modelle (PyMC/NUTS), deskriptive Rohdatenzusammenfassung, explorative Change-Point-Schätzung
 
 ## `project2.specs.tech.label`
 
@@ -609,7 +609,7 @@ Tools/Tech
 
 ## `project2.specs.tech.value`
 
-Python (Pixi), PyMC, React/Recharts (esbuild), statische Site (GitHub Pages); Fliesstext in Markdown
+Python (Pixi), PyMC, React/Recharts (esbuild), statische Site; Fliesstext in Markdown
 
 ## `project2.specs.output.label`
 
@@ -617,7 +617,7 @@ Output
 
 ## `project2.specs.output.value`
 
-Artikel mit interaktiven Embeds + Analyse-Report
+Artikel mit interaktiven Grafiken als Embeds + Analyse-Report
 
 ## `project2.backLink`
 
@@ -637,7 +637,7 @@ Kurzbeschreibung
 
 ## `project2.sections.question.body`
 
-Wie steht es um den Schweizer Film im Kino — und wie unterscheidet sich das vom Gesamtmarkt? Das Projekt verbindet deskriptive BFS-Auswertungen (PX/P4: Besuche, Programm, Kinosaison) mit acht Bayesianischen Modellen zu Genre, Ländern, Programm-Lücke, absoluten Besuchen und Prognose; ein deskriptiver Länder-Zeitverlauf ergänzt die Posterior-Bänder. Der Artikel führt durch die Story, interaktive Embeds und die filterbare Jahresübersicht erlauben Vertiefung.
+Wie steht es um den Schweizer Film im Kino? Das Projekt verbindet deskriptive Auswertungen zugänglicher Rohdaten (Bundesamt für Statistik): Besuche, Programm, Kinosaison) mit statistischer Modellierung zu Genre, Ländern, Programm-Lücke, absoluten Besuchen und Prognose. Zusammengefasst in einem kurzen Artikel und einem zusätzlichem Dashboards für die Jahreszahlen (filterbar/deskriptiv).
 
 ## `project2.sections.data.heading`
 
@@ -661,15 +661,15 @@ Methoden
 
 ## `project2.sections.method.bullets[0]`
 
-Acht Bayesianische Modelle: Genre-Erfolg, Genre-Mix, Change-Point (explorativ), absolute CH-Besuche, Programm-Lücke, Kinosaison (P4), Prognose CH-Anteil, Länder (hierarchisch); plus deskriptiver Länder-Zeitverlauf (PX).
+Acht Modelle (Bayes): Genre-Erfolg, Genre-Mix, Change-Point (explorativ), absolute CH-Besuche, Programm-Lücke, Kinobesuche (nach Woche), Prognose CH-Anteil, Länder (hierarchisch); deskriptiver Länder-Zeitverlauf.
 
 ## `project2.sections.method.bullets[1]`
 
-MCMC (NUTS) mit PyMC; Posterior-Schätzungen mit 95 %-HDI und Richtungswahrscheinlichkeit (Pd) — nicht nur Punktwerte.
+MCMC (NUTS) mit PyMC; Posterior-Schätzungen mit Credible Intervals (CrI; 95 %-HDI) und Richtungswahrscheinlichkeit (probability of direction / PD).
 
 ## `project2.sections.method.bullets[2]`
 
-Statische Site: Artikel und Analyse-Report (Markdown + eingespielte Zahlen/Grafiken aus `analysis_report.json`), React-Embeds via `unified.json`.
+Statische Site: Artikel und Analyse-Report (Markdown + eingespielte Zahlen/Grafiken via json), React-Embeds via json.
 
 ## `project2.sections.method.bullets[3]`
 
@@ -689,7 +689,7 @@ Interaktive Jahresansicht: Kennzahlen, Herkunft, Top-Länder und Genre je Jahr (
 
 ## `project2.sections.visualisation.bullets[2]`
 
-Analyse-Report mit Methodik und Grafiken als Hintergrundinformation.
+Analyse-Report inkl. Methodik und Grafiken als Hintergrundinformation.
 
 ## `project2.sections.conclusion.heading`
 
@@ -701,11 +701,11 @@ Python/Pixi: Rohdaten → `unified.json`, MCMC-Analysen → `analysis_report.jso
 
 ## `project2.techBullets.pymc`
 
-PyMC für statistische Modellierung und Prognose (95 %-HDI).
+PyMC für statistische Modellierung und Prognosen.
 
 ## `project2.techBullets.react`
 
-React + Recharts für interaktive Embeds in iframes.
+React + Recharts für interaktive Embeds in iframes des Artikels.
 
 ## `project2.techBullets.staticSite`
 
