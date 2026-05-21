@@ -2512,6 +2512,37 @@
     );
   }
 
+  .project-figure {
+    width: 100%;
+    max-width: var(--featured-max);
+    margin: var(--space-3) auto var(--space-4);
+    border: var(--rule-w) solid var(--color-rule);
+    background: var(--color-bg);
+  }
+
+  .project-figure__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: clamp(14rem, 28vw, 22rem);
+    object-fit: cover;
+    object-position: center bottom;
+    filter: var(--thumb-filter);
+  }
+
+  .project-figure__img--raw {
+    filter: none;
+  }
+
+  .project-figure figcaption {
+    margin: 0;
+    padding: 0.45rem clamp(0.7rem, 1vw, 1rem) 0.55rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--color-muted);
+    font-style: italic;
+  }
+
   .embed-jumps {
     display: flex;
     flex-wrap: wrap;

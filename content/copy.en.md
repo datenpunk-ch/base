@@ -394,6 +394,10 @@ Interactive project page (map + filters) + GitHub repository
 
 Back to project overview
 
+## `project1.imageSrc`
+
+assets/images/openmicZH.jpg
+
 ## `project1.imageAlt`
 
 Graphic for the Open MicZH project
@@ -609,6 +613,10 @@ Article with interactive embeds + analysis report + GitHub repository
 ## `project2.backLink`
 
 Back to project overview
+
+## `project2.imageSrc`
+
+assets/images/swissfilm.jpg
 
 ## `project2.imageAlt`
 
