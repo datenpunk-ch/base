@@ -204,7 +204,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Data story: How is Swiss cinema doing at the box office? Bayesian models on Swiss Federal Statistical Office data (PX/P4), with an article and interactive charts.
+How is Swiss film doing at the cinema? Eight Bayesian models on Federal Statistical Office data (PX/P4), with an article and interactive charts.
 
 ## `projects[1].cta`
 
@@ -560,7 +560,7 @@ Jump links on this page
 
 ## `project2.intro`
 
-A data journalism piece on the Swiss cinema market: how has the overall market recovered after the pandemic — and is Swiss film gaining audience share? Seven Bayesian models on Swiss Federal Statistical Office data, embedded in a narrative article with interactive charts.
+Data journalism on the Swiss cinema market (FSO PX/P4): eight Bayesian models with PyMC (MCMC, 95% HDI), plus descriptive year-on-year views — in a narrative article with interactive dashboard embeds.
 
 ## `project2.specs.heading`
 
@@ -588,7 +588,7 @@ Methods
 
 ## `project2.specs.methods.value`
 
-Bayesian time-series and share models (PyMC), exploratory PX analysis, static site generation
+Eight Bayesian models (PyMC/NUTS, 95% HDI, Pd), descriptive PX time series (countries), exploratory change-point fit
 
 ## `project2.specs.tech.label`
 
@@ -596,7 +596,7 @@ Tools/Tech
 
 ## `project2.specs.tech.value`
 
-Python (Pixi), PyMC, React/Recharts, GitHub Pages
+Python (Pixi), PyMC, React/Recharts (esbuild), static site (GitHub Pages); prose in Markdown
 
 ## `project2.specs.output.label`
 
@@ -624,7 +624,7 @@ Overview
 
 ## `project2.sections.question.body`
 
-How is Swiss film doing at the cinema — and how does that differ from the overall market? Swiss Film combines descriptive analysis of [FSO](https://www.bfs.admin.ch/bfs/en/home/statistiken/kultur-medien-informationsgesellschaft-sport/culture/film-cinema.html) data [PX](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36476429.html) and [P4](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36596835.html) (admissions, programming, seasonality) with seven Bayesian models on trends, origin countries, genres, and the programming gap. The article tells the story; interactive charts and a year-by-year view invite deeper exploration.
+How is Swiss film doing at the cinema — and how does that differ from the overall market? Swiss Film combines descriptive [FSO](https://www.bfs.admin.ch/bfs/en/home/statistiken/kultur-medien-informationsgesellschaft-sport/culture/film-cinema.html) analysis ([PX](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36476429.html) / [P4](https://www.bfs.admin.ch/bfs/en/home/statistiken/katalog.assetdetail.36596835.html): admissions, programming, seasonality) with eight Bayesian models on genres, countries, the programming gap, absolute visits, and forecasts; a descriptive country time series complements the posterior bands. The article carries the story; interactive embeds and a filterable year overview allow deeper exploration.
 
 ## `project2.sections.data.heading`
 
@@ -648,15 +648,15 @@ Methods
 
 ## `project2.sections.method.bullets[0]`
 
-Seven Bayesian models (trend, CH share, countries, genre, programming gap, season, VoD supplement).
+Eight Bayesian models: genre success, genre mix, change-point (exploratory), absolute CH admissions, programming gap, cinema season (P4), CH share forecast, countries (hierarchical); plus a descriptive country time series (PX).
 
 ## `project2.sections.method.bullets[1]`
 
-MCMC with PyMC; posterior forecasts and 95% HDI for uncertainty, not point estimates alone.
+MCMC (NUTS) with PyMC; posterior estimates with 95% HDI and probability of direction (Pd) — not point estimates alone.
 
 ## `project2.sections.method.bullets[2]`
 
-Static site export: article, analysis report, unified.json, and interactive React embeds.
+Static site: article and analysis report (Markdown prose + injected figures/tables from `analysis_report.json`), React embeds via `unified.json`.
 
 ## `project2.sections.method.bullets[3]`
 
@@ -684,7 +684,7 @@ Tools/Tech
 
 ## `project2.techBullets.python`
 
-Python/Pixi for the data pipeline, modelling, and site export.
+Python/Pixi: raw data → `unified.json`, MCMC analyses → `analysis_report.json`, UI bundle.
 
 ## `project2.techBullets.pymc`
 

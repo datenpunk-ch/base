@@ -213,7 +213,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Wie steht es um den Schweizer Film im Kino? Und wann ist es besonders voll?
+Wie steht es um den Schweizer Film im Kino? Acht Bayesianische Modelle auf BFS-Daten (PX/P4), Artikel und interaktive Charts.
 
 ## `projects[1].cta`
 
@@ -573,7 +573,7 @@ Sprungmarken auf dieser Seite
 
 ## `project2.intro`
 
-Auswertung des Schweizer Kinomarkts basierend auf den Daten des Bundesamts für Statistik (BFS). Deskriptive Statistik sowie modellierung in einem Bayesian Framework, inklusive Artikel und Dashboards.
+Datenjournalismus zum Schweizer Kinomarkt (BFS PX/P4): acht Bayesianische Modelle mit PyMC (MCMC, 95 %-HDI), ergänzt um deskriptive Jahresverläufe — eingebettet in einen narrativen Artikel mit interaktiven Dashboards.
 
 ## `project2.specs.heading`
 
@@ -601,7 +601,7 @@ Methoden
 
 ## `project2.specs.methods.value`
 
-Bayesian Models (PyMC), explorative Rohdatenauswertung, statische Site-Generierung
+Acht Bayesianische Modelle (PyMC/NUTS, 95 %-HDI, Pd), deskriptive PX-Zeitreihen (Länder), explorative Change-Point-Schätzung
 
 ## `project2.specs.tech.label`
 
@@ -609,7 +609,7 @@ Tools/Tech
 
 ## `project2.specs.tech.value`
 
-Python (Pixi), PyMC, React/Recharts
+Python (Pixi), PyMC, React/Recharts (esbuild), statische Site (GitHub Pages); Fliesstext in Markdown
 
 ## `project2.specs.output.label`
 
@@ -637,7 +637,7 @@ Kurzbeschreibung
 
 ## `project2.sections.question.body`
 
-Wie steht es um den Schweizer Film im Kino? Das Projekt verbindet deskriptive Auswertungen offizieller BFS Daten (Besuche, Programm, Saison) mit Informationen zu Trends, Herkunft, Genre und potentieller Programm-Lücke.
+Wie steht es um den Schweizer Film im Kino — und wie unterscheidet sich das vom Gesamtmarkt? Das Projekt verbindet deskriptive BFS-Auswertungen (PX/P4: Besuche, Programm, Kinosaison) mit acht Bayesianischen Modellen zu Genre, Ländern, Programm-Lücke, absoluten Besuchen und Prognose; ein deskriptiver Länder-Zeitverlauf ergänzt die Posterior-Bänder. Der Artikel führt durch die Story, interaktive Embeds und die filterbare Jahresübersicht erlauben Vertiefung.
 
 ## `project2.sections.data.heading`
 
@@ -661,15 +661,15 @@ Methoden
 
 ## `project2.sections.method.bullets[0]`
 
-Sieben Bayes Modelle (Trend, CH-Anteil, Länder, Genre, Programm-Lücke, Saison, VoD-Ergänzung).
+Acht Bayesianische Modelle: Genre-Erfolg, Genre-Mix, Change-Point (explorativ), absolute CH-Besuche, Programm-Lücke, Kinosaison (P4), Prognose CH-Anteil, Länder (hierarchisch); plus deskriptiver Länder-Zeitverlauf (PX).
 
 ## `project2.sections.method.bullets[1]`
 
-MCMC mit PyMC; Posterior-Prognosen und Credible Intervals für Einordnung statt Punktprognosen.
+MCMC (NUTS) mit PyMC; Posterior-Schätzungen mit 95 %-HDI und Richtungswahrscheinlichkeit (Pd) — nicht nur Punktwerte.
 
 ## `project2.sections.method.bullets[2]`
 
-Export statischer Site: Artikel, Analyse-Report, zusammengefasster Daten und interaktive React-Embeds.
+Statische Site: Artikel und Analyse-Report (Markdown + eingespielte Zahlen/Grafiken aus `analysis_report.json`), React-Embeds via `unified.json`.
 
 ## `project2.sections.method.bullets[3]`
 
@@ -697,7 +697,7 @@ Tools/Tech
 
 ## `project2.techBullets.python`
 
-Python/Pixi für Datenpipeline, Modellierung und Site-Export.
+Python/Pixi: Rohdaten → `unified.json`, MCMC-Analysen → `analysis_report.json`, UI-Bundle.
 
 ## `project2.techBullets.pymc`
 
