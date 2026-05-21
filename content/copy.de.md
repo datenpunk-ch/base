@@ -107,16 +107,16 @@ Kurz zu mir
 
 ## `home.aboutTeaser`
 
-Zu punk fürs Amt
-Zu story-driven für die Uni
-Zu nerdig für die Teppichetage
+*Zu punk fürs Amt.*
+*Zu story-driven für die Uni.*
+*Zu nerdig für die Teppichetage.*
 
-Das ist mein **Portfolio**.
+Genau richtig für **Datenjournalismus**.
 
-Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: extreme **Neugier**, ein Faible für Daten, ein gesunder Detektivsinn und ein Ohr für Geschichten. 
+Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: extreme **Neugier**, ein Faible für **Daten**, ein gesunder **Detektivsinn** und ein Ohr für **Geschichten**. 
 
-Genug geübt, jetzt mach ich das beruflich. Als **Datenjournalistin**, Wissenschaftskommunikatorin, oder überall dort, wo jemand komplexe Dinge auch dem Hund erklären können muss.
-Gerne auch in bunt und zum Draufklicken.
+Genug geübt, jetzt mach ich das beruflich. Das ist mein **Portfolio**.
+Als Journalistin, Wissenschaftskommunikatorin, oder überall dort, wo jemand komplexe Dinge auch dem Hund erklären können muss. Gerne auch in bunt und zum Draufklicken.
 
 ## `home.aboutTeaserLink`
 
@@ -828,7 +828,7 @@ Python, R, SQL, C#, JavaScript, MATLAB, Java
 Wissenschaftliches Schreiben, Datenstorytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
 
 **Tools**
-Cursor, Git, Adobe Audition, Praat, Prefrontaler Cortex
+RStudio, Cursor, Git, Adobe Audition, Praat
 
 **Sprachen**
 Deutsch (Muttersprache), Englisch (Fliessend)
