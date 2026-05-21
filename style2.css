@@ -560,22 +560,13 @@
   }
   
   .front-intro {
-    margin: calc(var(--space-4) * -1) 0 var(--space-5);
+    margin: var(--space-3) 0 var(--space-5);
     max-width: var(--measure);
     color: var(--color-accent-text);
     text-align: left;
     hyphens: auto;
   }
 
-  /* Intro as editorial note: a quiet rule, then text. */
-  .front-intro::before {
-    content: "";
-    display: block;
-    width: 3.25rem;
-    height: var(--rule-w);
-    background: var(--color-rule);
-    margin: 0 0 var(--space-2);
-  }
   
   /* (Option C) Keep masthead single-column even on wide screens. */
   
