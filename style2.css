@@ -119,10 +119,10 @@
     --color-accent-text: #7a3418;
     --color-accent-text-hover: #5c2712;
 
-    /* Image treatment: subtle cohesive warmth (project thumbs). */
-    --thumb-filter: saturate(0.96) contrast(1.03) brightness(0.99) sepia(0.08)
+    /* Image treatment: cohesive warmth + a touch more punch (project thumbs). */
+    --thumb-filter: saturate(1.02) contrast(1.1) brightness(0.97) sepia(0.08)
       hue-rotate(-6deg);
-    --thumb-filter-hover: saturate(1) contrast(1.04) brightness(1)
+    --thumb-filter-hover: saturate(1.05) contrast(1.12) brightness(1)
       sepia(0.08) hue-rotate(-6deg);
 
     /* Derived surfaces */
@@ -980,6 +980,7 @@
     flex-shrink: 0;
     background: var(--color-bg-soft);
     border: 0;
+    box-shadow: 0 1px 0 var(--shadow-hairline), 0 12px 22px rgba(0, 0, 0, 0.06);
     filter: var(--thumb-filter);
     transition: filter 0.2s ease;
   }
