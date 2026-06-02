@@ -168,7 +168,7 @@ Open MicZH
 
 ## `projects[0].teaser`
 
-Ein erstes Projekt um Open-Mic Events in Zürich automatisch zu finden und zu visualisieren. Mit Filterfunktion.
+Ein erstes Projekt um Open-Mic Events in Zürich automatisch zu finden und auf einer Karte zu visualisieren. Mit Filterfunktion.
 
 ## `projects[0].cta`
 
@@ -245,6 +245,10 @@ Schweiz
 ## `projects[1].tags[1]`
 
 Kultur
+
+## `projects[1].tags[2]`
+
+BFS
 
 ## `projects[2].id`
 
@@ -844,7 +848,7 @@ Ich schlafe schlecht, wenn ich eine Frage nicht loswerde. Zum Glück passiert da
 *Haben Algorithmen eigentlich Lieblingsdinosaurier?*
 *Wer dreht an der Kreislaufwirtschaft?*
 *Wieso ist das Gehirn manchmal so dramatisch?*
-*Und wo sind eigentlich jetzt all die Labubus?*
+*Und wo sind jetzt eigentlich all die Labubus?*
 
 In den meisten Fällen schalte ich dann den Rechner ein und fange an zu recherchieren. Muster im Datendschungel des Internets zu finden, Berichte zu überprüfen und Detektiv zu spielen, macht mich glücklich. Wenn ich dann am nächsten Tag noch jemandem berichten kann, was ich herausgefunden habe, ist der Schlafmangel nur fair.
 
