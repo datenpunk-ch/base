@@ -749,10 +749,9 @@ HTML/CSS/JavaScript
 ## `aboutPage.intro`
 
 Recruiter bekommen bei meinem Lebenslauf Schnappatmung.
-Ich passe in keine Schublade, ich brauche die ganze Schrankwand.
-Als Wissenschaftlerin mit interdisziplinärem Hintergrund, breiter technischer Expertise und kreativem Fundament fühle ich mich am Tellerrand am wohlsten.
+Als Wissenschaftlerin mit interdisziplinärem Hintergrund, breiter technischer Expertise und kreativem Fundament fühle ich mich am Tellerrand am wohlsten. Ich passe in keine Schublade, ich brauche wohl die ganze Schrankwand.
 
-Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED-Talk darüber. Um meine Freunde zu entlasten, mache ich das jetzt beruflich.
+Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED-Talk darüber. Absurdes bringt mich in den Hyperfocus. Um meine Freunde zu entlasten, mache ich das jetzt beruflich.
 
 ## `aboutPage.portraitCaption`
 
@@ -843,14 +842,14 @@ Meine schlaflosen Nächte
 
 ## `aboutPage.motivation`
 
-Ich schlafe schlecht, wenn ich eine Frage nicht loswerde. Zum Glück passiert das ständig: 
+Ich schlafe schlecht, wenn mich eine Frage nicht loslässt. Zum Glück passiert das ständig: 
 
 *Haben Algorithmen eigentlich Lieblingsdinosaurier?*
 *Wer dreht an der Kreislaufwirtschaft?*
 *Wieso ist das Gehirn manchmal so dramatisch?*
 *Und wo sind jetzt eigentlich all die Labubus?*
 
-In den meisten Fällen schalte ich dann den Rechner ein und fange an zu recherchieren. Muster im Datendschungel des Internets zu finden, Berichte zu überprüfen und Detektiv zu spielen, macht mich glücklich. Wenn ich dann am nächsten Tag noch jemandem berichten kann, was ich herausgefunden habe, ist der Schlafmangel nur fair.
+In den meisten Fällen schalte ich dann den Rechner ein und fange an zu recherchieren. Muster im Datendschungel des Internets zu finden, Berichte zu überprüfen und generell Detektiv zu spielen, macht mich glücklich. Ob durch statistische Auswertung, OSINT oder einfach viel Literatur, ich verknüpfe, was auf den ersten Blick nicht zusammenhängt. 
 
 ## `aboutPage.motivationContactLink`
 
