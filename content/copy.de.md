@@ -216,7 +216,7 @@ Swiss Film
 
 ## `projects[1].teaser`
 
-Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten (PX/P4), Artikel und interaktive Charts.
+Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten, kurzem Artikel und interaktive Charts.
 
 ## `projects[1].cta`
 
@@ -292,19 +292,19 @@ project_placeholder_2
 
 ## `projects[3].href`
 
-
+kolumne.html
 
 ## `projects[3].title`
 
-Etwas Neues
+Kolumne
 
 ## `projects[3].teaser`
 
-In Vorbereitung — bleibt neugierig.
+Eine Kolumne über Daten, Beobachtungen und kleine Aha-Momente.
 
 ## `projects[3].cta`
 
-Demnächst
+Artikel lesen
 
 ## `projects[3].thumb`
 
@@ -316,7 +316,7 @@ Testbild
 
 ## `projects[3].tags[0]`
 
-In Vorbereitung
+
 
 ## `projects[3].tags[1]`
 

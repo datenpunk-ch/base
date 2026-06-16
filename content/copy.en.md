@@ -276,19 +276,19 @@ project_placeholder_2
 
 ## `projects[3].href`
 
-
+kolumne.html
 
 ## `projects[3].title`
 
-Placeholder project
+Column
 
 ## `projects[3].teaser`
 
-In progress — more soon.
+A short column about data, observations, and small aha-moments.
 
 ## `projects[3].cta`
 
-Coming soon
+Read
 
 ## `projects[3].thumb`
 
@@ -300,7 +300,7 @@ Test image
 
 ## `projects[3].tags[0]`
 
-In progress
+
 
 ## `projects[3].tags[1]`
 
