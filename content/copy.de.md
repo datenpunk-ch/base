@@ -220,7 +220,7 @@ Schöner Wohnen
 
 ## `projects[1].teaser`
 
-Handwerkstermine und wohnliche Ausnahmezustände.
+Handwerkstermine, wohnliche Ausnahmezustände oder wie ich meinen Frust in einen Text verwandelt habe.
 
 ## `projects[1].cta`
 
