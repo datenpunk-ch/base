@@ -367,6 +367,78 @@
     el.appendChild(dot);
   }
 
+  /**
+   * Kolumnen page: render one article at a time (default index 0).
+   * Optional ?art=1 for older pieces; only that article is shown.
+   */
+  function applyKolumnenArticle(bundle) {
+    var root = document.querySelector("[data-kolumnen-page]");
+    if (!root) return;
+
+    var params = new URLSearchParams(window.location.search);
+    var index = 0;
+    if (params.has("art")) {
+      var parsed = parseInt(params.get("art"), 10);
+      if (!isNaN(parsed) && parsed >= 0) index = parsed;
+    }
+
+    var titleEl = root.querySelector("[data-kolumnen-title]");
+    var deckEl = root.querySelector("[data-kolumnen-deck]");
+    var bodyEl = root.querySelector("[data-kolumnen-body]");
+    var tagsEl = root.querySelector("[data-kolumnen-tags]");
+    if (!titleEl || !deckEl || !bodyEl) return;
+
+    var base = "kolumnen.articles[" + index + "]";
+
+    var titleVal = getByPath(bundle, base + ".title");
+    var deckVal = getByPath(bundle, base + ".deck");
+    var tagVal = getByPath(bundle, base + ".tag");
+
+    titleEl.textContent = isRenderableValue(titleVal)
+      ? String(titleVal)
+      : missingText(base + ".title");
+    deckEl.textContent = isRenderableValue(deckVal)
+      ? String(deckVal)
+      : missingText(base + ".deck");
+
+    if (tagsEl) {
+      tagsEl.innerHTML = "";
+      if (isRenderableValue(tagVal)) {
+        var tagLi = document.createElement("li");
+        tagLi.className = "teaser__tag";
+        tagLi.textContent = String(tagVal);
+        tagsEl.appendChild(tagLi);
+      }
+    }
+
+    bodyEl.innerHTML = "";
+    var pi = 0;
+    while (true) {
+      var pKey = base + ".paragraphs[" + pi + "]";
+      var pVal = getByPath(bundle, pKey);
+      if (!isRenderableValue(pVal)) break;
+      var p = document.createElement("p");
+      p.className = "reveal";
+      var rendered = formatCopyInline(pVal);
+      if (rendered.isHtml) p.innerHTML = rendered.html;
+      else p.textContent = rendered.text;
+      bodyEl.appendChild(p);
+      pi++;
+    }
+    if (pi === 0) {
+      var empty = document.createElement("p");
+      empty.className = "reveal";
+      empty.textContent = missingText(base + ".paragraphs[0]");
+      bodyEl.appendChild(empty);
+    }
+
+    if (isRenderableValue(titleVal)) {
+      var siteTitle = getByPath(bundle, "meta.siteTitle");
+      var suffix = isRenderableValue(siteTitle) ? String(siteTitle) : "Datenpunk";
+      document.title = String(titleVal) + " — " + suffix;
+    }
+  }
+
   function applyObfuscatedEmailLinks() {
     document.querySelectorAll("[data-email-link]").forEach(function (a) {
       var parent = a.parentElement || document;
@@ -995,6 +1067,7 @@
     applyHtmlLang(bundle);
     applyDocumentTitle(bundle);
     applyDataI18nNodes(bundle);
+    applyKolumnenArticle(bundle);
     accentHeroTitleDot();
     applyDataI18nAttrs(bundle);
     sortProjectToolTags(bundle);

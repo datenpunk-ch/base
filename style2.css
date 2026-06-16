@@ -1496,6 +1496,52 @@
     scroll-margin-top: 6.5rem;
   }
   
+  .kolumnen-series {
+    margin: 0 0 var(--space-1);
+    max-width: var(--measure);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .kolumnen-masthead {
+    max-width: var(--measure);
+  }
+
+  main.main--project[data-kolumnen-page] .page-title {
+    margin-bottom: var(--space-2);
+    max-width: var(--measure);
+  }
+
+  main.main--project[data-kolumnen-page] .kolumnen-tags {
+    margin: 0 0 var(--space-3);
+    max-width: var(--measure);
+  }
+
+  main.main--project[data-kolumnen-page] .kolumnen-tags:empty {
+    display: none;
+  }
+
+  main.main--project[data-kolumnen-page] .standfirst {
+    margin-bottom: 0;
+  }
+
+  main.main--project[data-kolumnen-page] .article-divider {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  main.main--project[data-kolumnen-page] [data-kolumnen-body] {
+    padding-top: var(--space-1);
+  }
+
+  [data-kolumnen-body] p + p {
+    margin-top: 1.2rem;
+  }
+
   .article-section p {
     margin: 0;
     font-family: var(--font-ui);
@@ -2672,6 +2718,12 @@
     color: var(--color-muted);
     font-family: var(--font-mono);
     font-size: 0.78rem;
+  }
+
+  /* Tag filter sets [hidden] on cards; grid layout uses display:flex which
+     otherwise overrides the hidden attribute (no effect). */
+  .teaser-list .teaser[hidden] {
+    display: none !important;
   }
 
   .pull-quote {

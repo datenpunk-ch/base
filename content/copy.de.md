@@ -46,6 +46,10 @@ Datenpunk — Kontakt
 
 Datenpunk — CV
 
+## `meta.documentTitle.kolumnen`
+
+Datenpunk — Kolumnen
+
 ## `nav.home`
 
 Datenpunk
@@ -204,123 +208,167 @@ Kultur
 
 ## `projects[1].id`
 
-project2
+kolumnen
 
 ## `projects[1].href`
 
-project2.html
+kolumnen.html
 
 ## `projects[1].title`
 
-Swiss Film
+Schöner Wohnen
 
 ## `projects[1].teaser`
 
-Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten, kurzem Artikel und interaktive Charts.
+Handwerkstermine und wohnliche Ausnahmezustände.
 
 ## `projects[1].cta`
 
-Zum Projekt
+Artikel lesen
 
 ## `projects[1].thumb`
 
-assets/images/swissfilm.jpg
+assets/images/testimg.jpg
 
 ## `projects[1].thumbAlt`
 
-Bild zum Swiss Film Artikel
-
-## `projects[1].thumbRaw`
-
-true
-
-## `projects[1].github`
-
-https://github.com/datenpunk-ch/swiss_film_vod
+Schöner Wohnen
 
 ## `projects[1].tags[0]`
 
-Schweiz
-
-## `projects[1].tags[1]`
-
-Kultur
-
-## `projects[1].tags[2]`
-
-BFS
+Kolumne
 
 ## `projects[2].id`
 
-project_placeholder
+project2
 
 ## `projects[2].href`
 
-
+project2.html
 
 ## `projects[2].title`
 
-Erdmännosphere
+Swiss Film
 
 ## `projects[2].teaser`
 
-Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
+Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten, kurzem Artikel und interaktive Charts.
 
 ## `projects[2].cta`
 
-Demnächst
+Zum Projekt
 
 ## `projects[2].thumb`
 
-assets/images/meerkats.jpg
+assets/images/swissfilm.jpg
 
 ## `projects[2].thumbAlt`
 
-Erdmännchen
+Bild zum Swiss Film Artikel
+
+## `projects[2].thumbRaw`
+
+true
+
+## `projects[2].github`
+
+https://github.com/datenpunk-ch/swiss_film_vod
 
 ## `projects[2].tags[0]`
 
-In Vorbereitung
+Schweiz
 
 ## `projects[2].tags[1]`
 
-Wissenschaft
+Kultur
+
+## `projects[2].tags[2]`
+
+BFS
 
 ## `projects[3].id`
 
-project_placeholder_2
+project_placeholder
 
 ## `projects[3].href`
 
-kolumne.html
+
 
 ## `projects[3].title`
 
-Kolumne
+Erdmännosphere
 
 ## `projects[3].teaser`
 
-Eine Kolumne über Daten, Beobachtungen und kleine Aha-Momente.
+Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
 
 ## `projects[3].cta`
 
-Artikel lesen
+Demnächst
 
 ## `projects[3].thumb`
 
-assets/images/testimg.jpg
+assets/images/meerkats.jpg
 
 ## `projects[3].thumbAlt`
 
-Testbild
+Erdmännchen
 
 ## `projects[3].tags[0]`
 
-
+In Vorbereitung
 
 ## `projects[3].tags[1]`
 
+Wissenschaft
+
+## `kolumnenPage.seriesLabel`
+
+Über-Leben
+
+## `kolumnenPage.backLink`
+
+Zurück zur Projektübersicht
+
+## `kolumnenPage.tagsAria`
+
+Rubrik
+
+## `kolumnen.articles[0].tag`
+
 Kolumne
+
+## `kolumnen.articles[0].title`
+
+Schöner Wohnen
+
+## `kolumnen.articles[0].deck`
+
+Wenn in der Wohnung Handwerksarbeiten anstehen, ist das anstrengend. Der Tagesablauf, die Einrichtung und die Freizeit werden rund um den Termin organisiert und angepasst, Urlaubstage umgeplant. Wenn zusätzlich auch noch vor dem Haus, im Garten oder an den angrenzenden Aussenwänden gearbeitet wird, fühlt es sich schnell so an, als bestünde ein akuter Belagerungszustand. Das Zuhause eine Notunterkunft, der Garten ein Truppenübungsplatz. Eine Abhandlung.
+
+## `kolumnen.articles[0].paragraphs[0]`
+
+Seit Jahren schöpfe ich bei Starkregen eimerweise Wasser aus meinem Kellerabteil. Wortwörtlich. Das Haus liegt am Hang, meine Wohnung im Souterrain und das Grundwasser presst sich durch die marode Wand. Da der Keller ein Abstellraum ist, der als Hundeutensilienraum zweckentfremdet wurde, stehe ich dann bis zu den Knöcheln im eisenverfärbten Abwasser und stapfe auf der Suche nach Aufnehmer und Eimer durch die Plörre, die mir am frühen Morgen entgegenschwappt. Das Haus ist alt, die Vermieter informiert. Innerhalb der letzten Monate wurde das Problem dann forciert und ich hatte immer wieder eine Handvoll verschiedener Ingenieure in Küche und Wohnzimmer, um die Feuchtigkeitswerte zu überprüfen und eine Lösung zu erarbeiten. Dann endlich der Start der Bauarbeiten, bei dem zwei Wochen lang Noise-Cancelling-Headphones Pflicht waren und meine Wohnung gefühlt die Notunterkunft bei Bergsprengungen. Soweit, so gut. Die Hangseite war also abgedeckt. Nun standen noch die Schönheitsbehandlungen an: Wasserflecken innerhalb des Wohnraums sollten schliesslich auch noch verschwinden.
+
+## `kolumnen.articles[0].paragraphs[1]`
+
+Nach Terminabsprache räumte ich also am Sonntag das Kellerabteil leer, verteilte alles auf Schlaf- und Badezimmer und verrückte die Wohnzimmermöbel, um den optimalen Platz herauszuholen. Wohnen? Eher umzugsbereit. Montagmorgen, beim Frühstück im Stehen und eingeengt vom Sessel der Sitzecke dann: Nichts. Hatte ich mich beim Termin geirrt? Vielleicht ja doch am Dienstag? Wieder nichts. Da ich keinerlei Kontaktdaten der Maler hatte, hiess es also abwarten. Wie die Möbel waren schliesslich auch alle Termine der Woche verschoben. Sie könnten jederzeit auftauchen.
+
+## `kolumnen.articles[0].paragraphs[2]`
+
+Zwei Wochen später treffe ich den Vorarbeiter wieder am Haus bei anderen Arbeiten. Notfallmässig waren sie abgezogen worden und könnten stattdessen in der nächsten Woche kommen. Ok, die Wohnung war ja weiterhin parat. Am Sonntag also wieder die grosse Putzroutine und das Warten am Montagmorgen. Immer in Lauerstellung, bloss nicht die Klingel überhören. Jedoch wieder nichts. Verwirrt entschied ich mich dazu, zumindest das Sofa wieder in eine Position zu rücken, von der aus der Fernseher ohne längerfristige Nackenverdrehung erreichbar war. Im Badezimmer presste ich mich weiter an dem Kleiderständer vorbei, belagert mit Hundemänteln und Outdoor-Ausrüstung. Im Schlafzimmer streifte mich beim Zubettgehen jedes Mal der Ärmel meiner Winterjacke. Sie werden sich wohl melden.
+
+## `kolumnen.articles[0].paragraphs[3]`
+
+In der darauffolgenden Woche rufe ich dann doch die Vermieterin an und sie leitet meine Nummer zwecks Terminabsprache weiter. Mein Handy blieb still, aber nach einer Woche ist der Vorarbeiter vor Ort und wir planen einen neuen Versuch inklusive dem Versprechen einer vorherigen Whatsapp-Nachricht. Gleichzeitig erreicht mich eine Mail, welche die Flachdachsanierung in der nächsten Woche ankündigt. Ablauf: Mein Garten wird erst entfernt, das Dach freigelegt, neu isoliert und dann wieder bepflanzt. Zeitplan: ungewiss.
+
+## `kolumnen.articles[0].paragraphs[4]`
+
+Inzwischen ist es Juni und der Sommer nimmt Fahrt auf. Der Sitzplatz fällt also in den nächsten Wochen aus, vor meiner Terrassentür stehen Holzabsperrungen, die mir den Zutritt verwehren. Die Arbeiter sind fleissig: Punkt 7 Uhr werden diverse laute Maschinen angeschmissen, der Garten gerodet, die Erde abgetragen, Hecken herausgerissen und der Baum gefällt. Eine Woche lang. Mit konstantem Blick durch all meine Fenster und mir unter ständiger Beobachtung. Ab Woche 2 folgen Presslufthammer, Betonschleifer und Teer. Beim Fensteröffnen nach Feierabend um 18 Uhr weht der Lösungsmittelgeruch eines Eddingfachgeschäfts in meine bis dahin völlig sauerstofffreie Wohnung. Ein Glück waren die Maler nicht da.
+
+## `kolumnen.articles[0].paragraphs[5]`
+
+In Woche 3 taucht der Chef dann direkt um 7.30 Uhr persönlich an meiner Terrassentür auf. Morgen würden sie die Wand streichen. Und am Donnerstag. Um halb 7 am Abend gibt er mir noch eine exakte Uhrzeit. Am Dienstagmorgen wuchte ich also das Sofa wieder an die Seite und ziehe mir direkt einen Hexenschuss zu. Damit fällt das Wischen zumindest aus, denn der Aufnehmer ist am Boden unerreichbar. Zur vereinbarten Uhrzeit dann wieder: Nichts. Dafür ist der Mann im Garten weiterhin enorm lautstark und geruchsintensiv beschäftigt. Eine halbe Stunde später dann doch die Ansage, dass sie in 10 Minuten kommen. Nach einer weiteren stehen sie tatsächlich vor meiner Tür. Ich ziehe mich wieder in mein verdunkeltes Schlafzimmer zurück. Der Hund, gerade im Fellwechsel, und ich, allergisch, sind uns jetzt besonders nah. Bald ist es geschafft. Bald habe ich mein Zuhause wieder, wasserfrei und mit neuem Gartenkonzept. Immerhin ist das Wetter schlecht.
 
 ## `project1.title`
 
