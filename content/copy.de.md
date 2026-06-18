@@ -117,14 +117,13 @@ Kurz zu mir
 
 Genau richtig für **Datenjournalismus**.
 
-Mein Lebenslauf sieht aus wie eine Beitrittsliste zu jedem interessanten Club gleichzeitig. Ich habe Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Immer dabei: extreme **Neugier**, ein Faible für **Daten**, ein gesunder **Detektivsinn** und ein Ohr für **Geschichten**. 
+Bisher habe ich Erdmännchen erforscht, Spiele programmiert, Verbrechen studiert und Gehirne vermessen. Der rote Faden? **Neugier**, **Mustererkennung** und **Kommunikation**.
 
-Genug geübt, jetzt mach ich das beruflich. Das ist mein **Portfolio**.
-Als Journalistin, Wissenschaftskommunikatorin, oder überall dort, wo jemand komplexe Dinge auch dem Hund erklären können muss. Gerne auch in bunt und zum Draufklicken.
+Willkommen bei **Datenpunk**. Ich übersetze Zahlen in Geschichten und verpacke sie so, dass es auch mein Hund versteht. Gerne auch in bunt und zum Draufklicken.
 
 ## `home.aboutTeaserLink`
 
-Mehr zu mir
+Die ganze Story
 
 ## `projectsPage.title`
 
@@ -412,7 +411,7 @@ Sprungmarken auf dieser Seite
 
 ## `project1.intro`
 
-Ein Prototypprojekt um Cursor als Entwicklungsumgebung zu testen. MicZH sammelt wiederkehrende Open-Mic-Termine in Zürich aus mehreren Quellen und stellt sie visuell und filterbar dar.
+Ein Prototyp um Cursor als Entwicklungsumgebung zu testen. MicZH sammelt Open-Mic-Termine in Zürich aus mehreren Quellen und stellt sie visuell und filterbar dar.
 
 ## `project1.specs.heading`
 
@@ -796,10 +795,10 @@ HTML/CSS/JavaScript
 
 ## `aboutPage.intro`
 
-Recruiter bekommen bei meinem Lebenslauf Schnappatmung.
+Recruiter bekommen bei meinem Lebenslauf regelmässig Schnappatmung.
 Als Wissenschaftlerin mit interdisziplinärem Hintergrund, breiter technischer Expertise und kreativem Fundament fühle ich mich am Tellerrand am wohlsten. Ich passe in keine Schublade, ich brauche wohl die ganze Schrankwand.
 
-Ich tauche gerne tief in Themen ein und gebe am nächsten Tag einen TED-Talk darüber. Absurdes bringt mich in den Hyperfocus. Um meine Freunde zu entlasten, mache ich das jetzt beruflich.
+Meine Superkraft? Ich kann mich in Rekordzeit tief in komplexe Themen eingraben und sie am nächsten Tag auf TED-Talk-Niveau präsentieren. Absurde Datensätze und vertrackte Fragestellungen triggern meinen Hyperfokus. Um mein Umfeld im Alltag etwas zu entlasten, mache ich genau das jetzt beruflich.
 
 ## `aboutPage.portraitCaption`
 
@@ -812,19 +811,19 @@ Mein Weg
 ## `aboutPage.background`
 
 **Mediendesign**
-Visuelles Denken, Gestaltung und wie man Dinge verständlich darstellt.
+Visuelles Denken, Gestaltung und die Kunst, komplexe Inhalte intuitiv darzustellen.
 
 **Forensic Psychology & Criminology**
-Menschliches Verhalten, Mustererkennung und warum Daten ohne Kontext gefährlich sind.
+Menschliches Verhalten, Mustererkennung und das Wissen, warum Daten ohne Kontext gefährlich sind.
 
 **Game Development**
-Frontendentwicklung, UI/UX und wie Zusammenarbeit in agilen, interdisziplinären Teams gelingt. 
+Frontendentwicklung, UI/UX und die Zusammenarbeit in agilen, interdisziplinären Teams. 
 
 **Cognitive Science**
-Sprache, Kognition und was menschliches vom maschinellem Denken unterscheidet.
+Sprache, Kognition und die Schnittstelle zwischen menschlicher und maschineller Logik.
 
 **Verhaltensbiologie**
-Evolution, Statistik, wissenschaftliche Publikation und wie man Forschung professionell vermittelt.
+Evolution, fortgeschrittene Statistik und die Fähigkeit, komplexe Themen massentauglich zu vermitteln.
 
 ## `aboutPage.mapAlt`
 
@@ -876,13 +875,13 @@ Bayes'sche Statistik, Modellierung, Machine Learning, Web Scraping, Experimentde
 Python, R, SQL, C#, JavaScript, MATLAB, Java
 
 **Recherche & Kommunikation**
-Wissenschaftliches Schreiben, Datenstorytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
+Wissenschaftliches Schreiben, Daten-Storytelling, Scientific Outreach, Konferenzpräsentationen, Quellenrecherche
 
 **Tools**
 RStudio, Cursor, Git, Adobe Audition, Praat
 
 **Sprachen**
-Deutsch (Muttersprache), Englisch (Fliessend)
+Deutsch (Muttersprache), Englisch (fliessend)
 
 ## `aboutPage.motivationHeading`
 
@@ -893,15 +892,15 @@ Meine schlaflosen Nächte
 Ich schlafe schlecht, wenn mich eine Frage nicht loslässt. Zum Glück passiert das ständig: 
 
 *Haben Algorithmen eigentlich Lieblingsdinosaurier?*
-*Wer dreht an der Kreislaufwirtschaft?*
-*Wieso ist das Gehirn manchmal so dramatisch?*
-*Und wo sind jetzt eigentlich all die Labubus?*
+*Wer dreht wirklich an der Kreislaufwirtschaft?*
+*Wieso ist die Amygdala immer so dramatisch?*
+*Und wo zur Hölle sind jetzt eigentlich all die Labubus?*
 
-In den meisten Fällen schalte ich dann den Rechner ein und fange an zu recherchieren. Muster im Datendschungel des Internets zu finden, Berichte zu überprüfen und generell Detektiv zu spielen, macht mich glücklich. Ob durch statistische Auswertung, OSINT oder einfach viel Literatur, ich verknüpfe, was auf den ersten Blick nicht zusammenhängt. 
+In den meisten Fällen schalte ich dann den Rechner ein und fange an zu graben. Ich liebe es, Detektiv zu spielen, tief im Datendschungel nach Mustern zu suchen und Berichte auf Herz und Nieren zu prüfen. Ich verknüpfe, was auf den ersten Blick absolut nichts miteinander zu tun hat – und mache eine Geschichte daraus.
 
 ## `aboutPage.motivationContactLink`
 
-Neugierig? Ich auch.
+Neugierig? Ich auch. Lass uns reden.
 
 ## `aboutPage.contactHeading`
 
