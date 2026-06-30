@@ -386,6 +386,8 @@
     var deckEl = root.querySelector("[data-kolumnen-deck]");
     var bodyEl = root.querySelector("[data-kolumnen-body]");
     var tagsEl = root.querySelector("[data-kolumnen-tags]");
+    var figureEl = root.querySelector("[data-kolumnen-figure]");
+    var imageEl = root.querySelector("[data-kolumnen-image]");
     if (!titleEl || !deckEl || !bodyEl) return;
 
     var base = "kolumnen.articles[" + index + "]";
@@ -393,6 +395,8 @@
     var titleVal = getByPath(bundle, base + ".title");
     var deckVal = getByPath(bundle, base + ".deck");
     var tagVal = getByPath(bundle, base + ".tag");
+    var imageVal = getByPath(bundle, base + ".image");
+    var imageAltVal = getByPath(bundle, base + ".imageAlt");
 
     titleEl.textContent = isRenderableValue(titleVal)
       ? String(titleVal)
@@ -409,6 +413,14 @@
         tagLi.textContent = String(tagVal);
         tagsEl.appendChild(tagLi);
       }
+    }
+
+    if (figureEl && imageEl && isRenderableValue(imageVal)) {
+      imageEl.src = String(imageVal).trim();
+      imageEl.alt = isRenderableValue(imageAltVal) ? String(imageAltVal) : "";
+      figureEl.hidden = false;
+    } else if (figureEl) {
+      figureEl.hidden = true;
     }
 
     bodyEl.innerHTML = "";

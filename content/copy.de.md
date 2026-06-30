@@ -227,11 +227,11 @@ Artikel lesen
 
 ## `projects[1].thumb`
 
-assets/images/testimg.jpg
+assets/images/undercons.jpg
 
 ## `projects[1].thumbAlt`
 
-Schöner Wohnen
+Baustelle und Absperrungen vor dem Haus
 
 ## `projects[1].tags[0]`
 
@@ -345,6 +345,14 @@ Schöner Wohnen
 
 Wenn in der Wohnung Handwerksarbeiten anstehen, ist das anstrengend. Der Tagesablauf, die Einrichtung und die Freizeit werden rund um den Termin organisiert, Urlaubstage umgeplant. Wenn zusätzlich auch noch vor dem Haus, im Garten oder an den Aussenwänden gearbeitet wird, fühlt es sich schnell so an, als bestünde ein akuter Belagerungszustand. Das Zuhause eine Notunterkunft, der Garten ein Truppenübungsplatz. Eine Abhandlung.
 
+## `kolumnen.articles[0].image`
+
+assets/images/undercons.jpg
+
+## `kolumnen.articles[0].imageAlt`
+
+Baustelle und Absperrungen vor dem Haus
+
 ## `kolumnen.articles[0].paragraphs[0]`
 
 Seit Jahren schöpfe ich bei Starkregen eimerweise Wasser aus meinem Kellerabteil. Wortwörtlich. Das Haus liegt am Hang, meine Wohnung im Souterrain, und das Grundwasser presst sich durch die marode Wand. Da der Keller als Hundeutensilienraum zweckentfremdet wurde, stehe ich dann bis zu den Knöcheln im eisenverfärbten Abwasser und stapfe auf der Suche nach Aufnehmer und Eimer durch die Plörre, die mir am frühen Morgen entgegenschwappt. Das Haus ist alt, die Vermieter informiert.
@@ -355,7 +363,7 @@ Innerhalb der letzten Monate wurde das Problem dann forciert. Ich hatte immer wi
 
 ## `kolumnen.articles[0].paragraphs[2]`
 
-Nach Terminabsprache räumte ich also am Sonntag das Kellerabteil leer, verteilte alles auf Schlaf- und Badezimmer und verrückte die Wohnzimmermöbel, um den optimalen Platz herauszuholen. Wohnen? Eher umzugsbereit. Montagmorgen, beim Frühstück im Stehen und eingeengt vom Sessel der Sitzecke, dann: Nichts. Hatte ich mich beim Termin geirrt? Vielleicht ja doch am Dienstag? Wieder nichts. Da ich keinerlei Kontaktdaten der Maler hatte, hiess es abwarten. Wie die Möbel waren schliesslich auch alle Termine der Woche verschoben. Sie könnten jederzeit auftauchen.
+Nach Terminabsprache räumte ich also am Sonntag das Kellerabteil leer, verteilte alles auf Schlaf- und Badezimmer und verrückte die Wohnzimmermöbel, um den optimalen Platz herauszuholen. Wohnen? Eher umzugsbereit. Montagmorgen, beim Frühstück im Stehen und eingeengt vom Sessel der Sitzecke, dann: nichts. Hatte ich mich beim Termin geirrt? Vielleicht ja doch am Dienstag? Wieder nichts. Da ich keinerlei Kontaktdaten der Maler hatte, hiess es abwarten. Wie die Möbel waren schliesslich auch alle Termine der Woche verschoben. Sie könnten jederzeit auftauchen.
 
 ## `kolumnen.articles[0].paragraphs[3]`
 
@@ -363,7 +371,7 @@ Zwei Wochen später treffe ich den Vorarbeiter zufällig am Haus. Notfallmässig
 
 ## `kolumnen.articles[0].paragraphs[4]`
 
-In der darauffolgenden Woche rufe ich dann doch die Vermieterin an, die meine Nummer weiterleitet. Mein Handy bleibt still, aber nach einer Woche ist der Vorarbeiter wieder vor Ort. Wir planen einen neuen Versuch inklusive dem Versprechen einer vorherigen Whatsapp-Nachricht. Gleichzeitig erreicht mich eine Mail, die eine Flachdachsanierung für die nächste Woche ankündigt. Ablauf: Mein Garten wird erst entfernt, das Dach freigelegt, neu isoliert und dann wieder bepflanzt. Zeitplan: ungewiss.
+In der darauffolgenden Woche rufe ich dann doch die Vermieterin an, die meine Nummer weiterleitet. Mein Handy bleibt still, aber nach einer Woche ist der Vorarbeiter wieder vor Ort. Wir planen einen neuen Versuch inklusive des Versprechens einer vorherigen WhatsApp-Nachricht. Gleichzeitig erreicht mich eine Mail, die eine Flachdachsanierung für die nächste Woche ankündigt. Der Ablauf: erst wird mein Garten komplett entfernt, das Dach freigelegt, neu isoliert und dann wieder bepflanzt. Der Zeitplan: ungewiss.
 
 ## `kolumnen.articles[0].paragraphs[5]`
 
@@ -371,7 +379,7 @@ Inzwischen ist es Juni und der Sommer nimmt Fahrt auf. Der Sitzplatz fällt also
 
 ## `kolumnen.articles[0].paragraphs[6]`
 
-In Woche drei taucht der Chef dann direkt um 7:30 Uhr persönlich an meiner Terrassentür auf. Morgen würden sie die Wand streichen. Und am Donnerstag. Um halb sieben am Abend gibt er mir noch eine exakte Uhrzeit durch. Am Dienstagmorgen wuchte ich also das Sofa wieder an die Seite und ziehe mir direkt einen Hexenschuss zu. Damit fällt das Wischen zumindest aus, denn der Aufnehmer ist am Boden unerreichbar. Zur vereinbarten Uhrzeit dann wieder: Nichts. Dafür ist der Mann im Garten weiterhin enorm lautstark und geruchsintensiv beschäftigt.
+In Woche drei taucht der Chef dann direkt um 7:30 Uhr persönlich an meiner Terrassentür auf. Morgen würden sie die Wand streichen. Und am Donnerstag. Um halb sieben am Abend gibt er mir noch eine exakte Uhrzeit durch. Am Dienstagmorgen wuchte ich also das Sofa wieder an die Seite und ziehe mir direkt einen Hexenschuss zu. Damit fällt das Wischen zumindest aus, denn der Aufnehmer ist am Boden unerreichbar. Zur vereinbarten Uhrzeit dann wieder: nichts. Dafür ist der Mann im Garten weiterhin enorm lautstark und geruchsintensiv beschäftigt.
 
 ## `kolumnen.articles[0].paragraphs[7]`
 

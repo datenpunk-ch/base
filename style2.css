@@ -1199,8 +1199,8 @@
     aspect-ratio: 16 / 9;
     height: auto;
     max-height: clamp(18rem, 60vh, 34rem);
-    object-fit: contain;
-    object-position: center bottom;
+    object-fit: cover;
+    object-position: center center;
   }
 
   /* Keep the over-image title aligned with featured-strip gutters. */
@@ -1221,6 +1221,8 @@
   .teaser-list--featured[data-featured-carousel] .teaser--featured .teaser__thumb {
     aspect-ratio: auto;
     height: clamp(15rem, 24vw, 22rem);
+    object-fit: cover;
+    object-position: center center;
   }
 
   /* Mobile: keep featured images taller so they don't read as “tiny”. */
@@ -1324,8 +1326,8 @@
     aspect-ratio: auto;
     height: clamp(16rem, 26vw, 24rem);
     flex: 0 0 auto;
-    /* Keep lower frame (e.g. audience) visible; size unchanged, only crop anchor. */
-    object-position: center bottom;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .teaser--featured .teaser__media {
@@ -1532,6 +1534,25 @@
   main.main--project[data-kolumnen-page] .article-divider {
     margin-top: var(--space-4);
     margin-bottom: var(--space-5);
+  }
+
+  main.main--project[data-kolumnen-page] .kolumnen-figure {
+    margin: 0 0 var(--space-3);
+    max-width: var(--measure);
+    overflow: hidden;
+  }
+
+  main.main--project[data-kolumnen-page] .kolumnen-figure[hidden] {
+    display: none;
+  }
+
+  .kolumnen-figure img {
+    display: block;
+    width: 100%;
+    height: clamp(4.5rem, 14vw, 7rem);
+    object-fit: cover;
+    object-position: center 58%;
+    filter: var(--thumb-filter);
   }
 
   main.main--project[data-kolumnen-page] [data-kolumnen-body] {

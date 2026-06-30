@@ -216,11 +216,11 @@ Read article
 
 ## `projects[1].thumb`
 
-assets/images/testimg.jpg
+assets/images/undercons.jpg
 
 ## `projects[1].thumbAlt`
 
-Schöner Wohnen
+Construction site and barriers in front of the house
 
 ## `projects[1].tags[0]`
 
@@ -333,6 +333,14 @@ Schöner Wohnen
 ## `kolumnen.articles[0].deck`
 
 Wenn in der Wohnung Handwerksarbeiten anstehen, ist das anstrengend. Der Tagesablauf, die Einrichtung und die Freizeit werden rund um den Termin organisiert, Urlaubstage umgeplant. Wenn zusätzlich auch noch vor dem Haus, im Garten oder an den Aussenwänden gearbeitet wird, fühlt es sich schnell so an, als bestünde ein akuter Belagerungszustand. Das Zuhause eine Notunterkunft, der Garten ein Truppenübungsplatz. Eine Abhandlung.
+
+## `kolumnen.articles[0].image`
+
+assets/images/undercons.jpg
+
+## `kolumnen.articles[0].imageAlt`
+
+Construction site and barriers in front of the house
 
 ## `kolumnen.articles[0].paragraphs[0]`
 
