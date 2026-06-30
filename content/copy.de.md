@@ -379,7 +379,7 @@ Inzwischen ist es Juni und der Sommer nimmt Fahrt auf. Der Sitzplatz fällt also
 
 ## `kolumnen.articles[0].paragraphs[6]`
 
-In Woche drei taucht der Chef dann direkt um 7:30 Uhr persönlich an meiner Terrassentür auf. Morgen würden sie die Wand streichen. Und am Donnerstag. Um halb sieben am Abend gibt er mir noch eine exakte Uhrzeit durch. Am Dienstagmorgen wuchte ich also das Sofa wieder an die Seite und ziehe mir direkt einen Hexenschuss zu. Damit fällt das Wischen zumindest aus, denn der Aufnehmer ist am Boden unerreichbar. Zur vereinbarten Uhrzeit dann wieder: nichts. Dafür ist der Mann im Garten weiterhin enorm lautstark und geruchsintensiv beschäftigt.
+In Woche drei taucht der Chef dann direkt um 7.30 Uhr persönlich an meiner Terrassentür auf. Morgen würden sie die Wand streichen. Und am Donnerstag. Um halb sieben am Abend gibt er mir noch eine exakte Uhrzeit durch. Am Dienstagmorgen wuchte ich also das Sofa wieder an die Seite und ziehe mir direkt einen Hexenschuss zu. Damit fällt das Wischen zumindest aus, denn der Aufnehmer ist am Boden unerreichbar. Zur vereinbarten Uhrzeit dann wieder: nichts. Dafür ist der Mann im Garten weiterhin enorm lautstark und geruchsintensiv beschäftigt.
 
 ## `kolumnen.articles[0].paragraphs[7]`
 
