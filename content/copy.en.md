@@ -392,7 +392,7 @@ Zurück zur Stellensuche. Wieder bereue ich, nicht einfach Dachdecker, Heizungsi
 
 ## `kolumnen.articles[0].paragraphs[4]`
 
-Doch manchmal lässt es sich nicht vermeiden. Wenn man nach Wochen der Suche mal wieder einen Lichtblick in Form einer Anzeige erblickt, die tatsächlich resoniert, schlägt das Herz schneller. Sofort male ich mir aus, wie ich als Redaktorin alle meine Spezialinteressen ausleben kann oder als Ethical Hacker ein Syndikat aushebe. Im Hyperfokus wird das Dossier erstellt. Nach Tagen obsessiven E-Mail-Checkens dann aber doch nur wieder die Nachricht, dass andere Bewerber ein passenderes Profil hatten. Ich bin authentisch frustriert. In der Zwischenzeit schreibt mir ein Kollege, dass früher Biberhaar als Schamhaartoupets genutzt wurde. Ich lächle und freue mich über den kurzen Moment der mentalen Auszeit.
+Doch manchmal lässt es sich nicht vermeiden. Wenn man nach Wochen der Suche mal wieder einen Lichtblick in Form einer Anzeige erblickt, die tatsächlich resoniert, schlägt das Herz schneller. Sofort male ich mir aus, wie ich als Redaktorin alle meine Spezialinteressen ausleben kann oder als Ethical Hacker ein Syndikat aushebe. Im Hyperfokus wird das Dossier erstellt. Bei so viel Einsatz flagged der AI-Checker das Anschreiben prompt als generiert. Nach Tagen obsessiven E-Mail-Checkens dann aber doch nur wieder die Nachricht, dass andere Bewerber ein passenderes Profil hatten. Ich bin authentisch frustriert. In der Zwischenzeit schreibt mir ein Kollege, dass früher Biberhaar als Schamhaartoupets genutzt wurde. Ich schmunzle und freue mich über den kurzen Moment der mentalen Auszeit.
 
 ## `kolumnen.articles[1].tag`
 
