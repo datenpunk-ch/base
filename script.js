@@ -368,12 +368,14 @@
   }
 
   /**
-   * Kolumnen page: render one article at a time (default index 0).
-   * Optional ?art=1 for older pieces; only that article is shown.
+   * Kolumnen page: one article per project link (?art=N, default 0).
    */
   function applyKolumnenArticle(bundle) {
     var root = document.querySelector("[data-kolumnen-page]");
     if (!root) return;
+
+    var listEl = root.querySelector("[data-kolumnen-list]");
+    if (!listEl) return;
 
     var params = new URLSearchParams(window.location.search);
     var index = 0;
@@ -382,48 +384,75 @@
       if (!isNaN(parsed) && parsed >= 0) index = parsed;
     }
 
-    var titleEl = root.querySelector("[data-kolumnen-title]");
-    var deckEl = root.querySelector("[data-kolumnen-deck]");
-    var bodyEl = root.querySelector("[data-kolumnen-body]");
-    var tagsEl = root.querySelector("[data-kolumnen-tags]");
-    var figureEl = root.querySelector("[data-kolumnen-figure]");
-    var imageEl = root.querySelector("[data-kolumnen-image]");
-    if (!titleEl || !deckEl || !bodyEl) return;
+    var tagsAria = getByPath(bundle, "kolumnenPage.tagsAria");
+    var tagsAriaText = isRenderableValue(tagsAria) ? String(tagsAria) : "Rubrik";
 
     var base = "kolumnen.articles[" + index + "]";
-
     var titleVal = getByPath(bundle, base + ".title");
     var deckVal = getByPath(bundle, base + ".deck");
     var tagVal = getByPath(bundle, base + ".tag");
     var imageVal = getByPath(bundle, base + ".image");
     var imageAltVal = getByPath(bundle, base + ".imageAlt");
 
-    titleEl.textContent = isRenderableValue(titleVal)
+    listEl.innerHTML = "";
+
+    var article = document.createElement("article");
+    article.className = "kolumnen-article";
+    article.id = "art-" + index;
+
+    var masthead = document.createElement("header");
+    masthead.className = "kolumnen-masthead";
+
+    if (isRenderableValue(imageVal)) {
+      var figure = document.createElement("figure");
+      figure.className = "kolumnen-figure reveal";
+      var img = document.createElement("img");
+      img.src = String(imageVal).trim();
+      img.alt = isRenderableValue(imageAltVal) ? String(imageAltVal) : "";
+      img.loading = "lazy";
+      img.decoding = "async";
+      figure.appendChild(img);
+      masthead.appendChild(figure);
+    }
+
+    var h1 = document.createElement("h1");
+    h1.className = "page-title reveal";
+    h1.textContent = isRenderableValue(titleVal)
       ? String(titleVal)
       : missingText(base + ".title");
-    deckEl.textContent = isRenderableValue(deckVal)
+    masthead.appendChild(h1);
+
+    if (isRenderableValue(tagVal)) {
+      var tagsUl = document.createElement("ul");
+      tagsUl.className = "teaser__tags tool-tags kolumnen-tags reveal";
+      tagsUl.setAttribute("aria-label", tagsAriaText);
+      var tagLi = document.createElement("li");
+      tagLi.className = "teaser__tag";
+      tagLi.textContent = String(tagVal);
+      tagsUl.appendChild(tagLi);
+      masthead.appendChild(tagsUl);
+    }
+
+    var deck = document.createElement("p");
+    deck.className = "standfirst reveal";
+    deck.textContent = isRenderableValue(deckVal)
       ? String(deckVal)
       : missingText(base + ".deck");
+    masthead.appendChild(deck);
+    article.appendChild(masthead);
 
-    if (tagsEl) {
-      tagsEl.innerHTML = "";
-      if (isRenderableValue(tagVal)) {
-        var tagLi = document.createElement("li");
-        tagLi.className = "teaser__tag";
-        tagLi.textContent = String(tagVal);
-        tagsEl.appendChild(tagLi);
-      }
-    }
+    var divider = document.createElement("div");
+    divider.className = "article-divider article-divider--double reveal";
+    divider.setAttribute("aria-hidden", "true");
+    article.appendChild(divider);
 
-    if (figureEl && imageEl && isRenderableValue(imageVal)) {
-      imageEl.src = String(imageVal).trim();
-      imageEl.alt = isRenderableValue(imageAltVal) ? String(imageAltVal) : "";
-      figureEl.hidden = false;
-    } else if (figureEl) {
-      figureEl.hidden = true;
-    }
+    var bodySection = document.createElement("section");
+    bodySection.className = "article-section";
+    bodySection.setAttribute(
+      "aria-label",
+      isRenderableValue(titleVal) ? String(titleVal) : "Artikel"
+    );
 
-    bodyEl.innerHTML = "";
     var pi = 0;
     while (true) {
       var pKey = base + ".paragraphs[" + pi + "]";
@@ -434,15 +463,17 @@
       var rendered = formatCopyInline(pVal);
       if (rendered.isHtml) p.innerHTML = rendered.html;
       else p.textContent = rendered.text;
-      bodyEl.appendChild(p);
+      bodySection.appendChild(p);
       pi++;
     }
     if (pi === 0) {
       var empty = document.createElement("p");
       empty.className = "reveal";
       empty.textContent = missingText(base + ".paragraphs[0]");
-      bodyEl.appendChild(empty);
+      bodySection.appendChild(empty);
     }
+    article.appendChild(bodySection);
+    listEl.appendChild(article);
 
     if (isRenderableValue(titleVal)) {
       var siteTitle = getByPath(bundle, "meta.siteTitle");

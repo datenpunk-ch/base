@@ -215,11 +215,11 @@ kolumnen.html
 
 ## `projects[1].title`
 
-Schöner Wohnen
+Vollzeitjob: Arbeitslos
 
 ## `projects[1].teaser`
 
-Handwerkstermine, wohnliche Ausnahmezustände oder wie ich meinen Frust in einen Text verwandelt habe.
+Stellensuche in der teuersten Stadt der Welt, Unterstimulation und die Suche nach dem Motivationskasper.
 
 ## `projects[1].cta`
 
@@ -227,11 +227,11 @@ Artikel lesen
 
 ## `projects[1].thumb`
 
-assets/images/undercons.jpg
+assets/images/arbeitslos.jpg
 
 ## `projects[1].thumbAlt`
 
-Baustelle und Absperrungen vor dem Haus
+Vollzeitjob: Arbeitslos
 
 ## `projects[1].tags[0]`
 
@@ -239,85 +239,117 @@ Kolumne
 
 ## `projects[2].id`
 
-project2
+kolumnen-schoener-wohnen
 
 ## `projects[2].href`
 
-project2.html
+kolumnen.html?art=1
 
 ## `projects[2].title`
 
-Swiss Film
+Schöner Wohnen
 
 ## `projects[2].teaser`
 
-Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten, kurzem Artikel und interaktive Charts.
+Handwerkstermine, wohnliche Ausnahmezustände oder wie ich meinen Frust in einen Text verwandelt habe.
 
 ## `projects[2].cta`
 
-Zum Projekt
+Artikel lesen
 
 ## `projects[2].thumb`
 
-assets/images/swissfilm.jpg
+assets/images/undercons.jpg
 
 ## `projects[2].thumbAlt`
 
-Bild zum Swiss Film Artikel
-
-## `projects[2].thumbRaw`
-
-true
-
-## `projects[2].github`
-
-https://github.com/datenpunk-ch/swiss_film_vod
+Baustelle und Absperrungen vor dem Haus
 
 ## `projects[2].tags[0]`
 
-Schweiz
-
-## `projects[2].tags[1]`
-
-Kultur
-
-## `projects[2].tags[2]`
-
-BFS
+Kolumne
 
 ## `projects[3].id`
 
-project_placeholder
+project2
 
 ## `projects[3].href`
 
-
+project2.html
 
 ## `projects[3].title`
 
-Erdmännosphere
+Swiss Film
 
 ## `projects[3].teaser`
 
-Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
+Wie steht es um den Schweizer Film im Kino? Acht Bayes Modelle basierend auf BFS-Daten, kurzem Artikel und interaktive Charts.
 
 ## `projects[3].cta`
 
-Demnächst
+Zum Projekt
 
 ## `projects[3].thumb`
 
-assets/images/meerkats.jpg
+assets/images/swissfilm.jpg
 
 ## `projects[3].thumbAlt`
 
-Erdmännchen
+Bild zum Swiss Film Artikel
+
+## `projects[3].thumbRaw`
+
+true
+
+## `projects[3].github`
+
+https://github.com/datenpunk-ch/swiss_film_vod
 
 ## `projects[3].tags[0]`
 
-In Vorbereitung
+Schweiz
 
 ## `projects[3].tags[1]`
+
+Kultur
+
+## `projects[3].tags[2]`
+
+BFS
+
+## `projects[4].id`
+
+project_placeholder
+
+## `projects[4].href`
+
+
+
+## `projects[4].title`
+
+Erdmännosphere
+
+## `projects[4].teaser`
+
+Meerkats against Patriarchy! Was 'männliche' Hormone mit der Macht der Wiibli und ihrem Nachwuchs zu tun haben.
+
+## `projects[4].cta`
+
+Demnächst
+
+## `projects[4].thumb`
+
+assets/images/meerkats.jpg
+
+## `projects[4].thumbAlt`
+
+Erdmännchen
+
+## `projects[4].tags[0]`
+
+In Vorbereitung
+
+## `projects[4].tags[1]`
 
 Wissenschaft
 
@@ -339,49 +371,89 @@ Kolumne
 
 ## `kolumnen.articles[0].title`
 
-Schöner Wohnen
+Vollzeitjob: Arbeitslos
 
 ## `kolumnen.articles[0].deck`
 
-Wenn in der Wohnung Handwerksarbeiten anstehen, ist das anstrengend. Der Tagesablauf, die Einrichtung und die Freizeit werden rund um den Termin organisiert, Urlaubstage umgeplant. Wenn zusätzlich auch noch vor dem Haus, im Garten oder an den Aussenwänden gearbeitet wird, fühlt es sich schnell so an, als bestünde ein akuter Belagerungszustand. Das Zuhause eine Notunterkunft, der Garten ein Truppenübungsplatz. Eine Abhandlung.
+In Zeiten von KI und Covid-geschuldeten Elitehochschulabsolventen ist die Stellensuche als Millennial mit buntem Lebenslauf («interdisziplinärer Hintergrund») eine Herausforderung. Für alle, denen die einfache Arbeitslosigkeit zu wenig Stress bereitet, empfehle ich die berufliche Neuorientierung in der teuersten Stadt der Welt. Schliesslich war ich immer ein High-Performer und durch Studienschulden und Nischenberufe das Leben nahe der Armutsgrenze gewohnt. Challenge accepted, sozusagen.
 
 ## `kolumnen.articles[0].image`
 
-assets/images/undercons.jpg
+assets/images/arbeitslos.jpg
 
 ## `kolumnen.articles[0].imageAlt`
 
-Baustelle und Absperrungen vor dem Haus
+Vollzeitjob: Arbeitslos
 
 ## `kolumnen.articles[0].paragraphs[0]`
 
-Seit Jahren schöpfe ich bei Starkregen eimerweise Wasser aus meinem Kellerabteil. Wortwörtlich. Das Haus liegt am Hang, meine Wohnung im Souterrain, und das Grundwasser presst sich durch die marode Wand. Da der Keller als Hundeutensilienraum zweckentfremdet wurde, stehe ich dann bis zu den Knöcheln im eisenverfärbten Abwasser und stapfe auf der Suche nach Aufnehmer und Eimer durch die Plörre, die mir am frühen Morgen entgegenschwappt. Das Haus ist alt, die Vermieter informiert.
+Nach ein paar Monaten der erfolglosen Suche nach einer neuen Herausforderung bestehen meine Tage zum Grossteil aus dem Absuchen verschiedenster Jobboards. Ich bin quasi Vollzeitarbeitslos. Schnell habe ich herausgefunden, dass die Suchfunktionen der Seiten noch suboptimal konfiguriert sind und mir oft einen wahllosen Mix aus Vakanzen zwischen Pflege und Consulting präsentieren. Zeitgleich setzt die Verzweiflung ein, sodass die Suchkriterien nach kurzer Zeit nur noch mit der Postleitzahl und einem grossen Radius gefüttert werden. Endloses Scrollen – jede Stelle ist laut Beschreibung ein absoluter Lottogewinn.
 
 ## `kolumnen.articles[0].paragraphs[1]`
 
-Innerhalb der letzten Monate wurde das Problem dann forciert. Ich hatte immer wieder eine Handvoll verschiedener Ingenieure in Küche und Wohnzimmer, um Feuchtigkeitswerte zu überprüfen. Dann endlich der Start der Bauarbeiten, bei dem zwei Wochen lang Noise-Cancelling-Headphones Pflicht waren und meine Wohnung gefühlt zur Notunterkunft bei Bergsprengungen wurde. Soweit, so gut. Die Hangseite war abgedeckt. Nun standen noch die Schönheitsbehandlungen an: Wasserflecken innerhalb des Wohnraums sollten schliesslich auch noch verschwinden.
+Mein Hirn ist nach den unzähligen, uneindeutigen Stellenanzeigen komplett unterstimuliert und hat Fragen: Wie viele Ausarbeitungen kann ein Kreisarchitekt wirklich liefern? Wer genau ist der User beim UX-Design für miltärische Aktionen? Abruptes Stutzen beim «Männer- und Gewaltberater». Honi soit qui mal y pense.
 
 ## `kolumnen.articles[0].paragraphs[2]`
 
-Nach Terminabsprache räumte ich also am Sonntag das Kellerabteil leer, verteilte alles auf Schlaf- und Badezimmer und verrückte die Wohnzimmermöbel, um den optimalen Platz herauszuholen. Wohnen? Eher umzugsbereit. Montagmorgen, beim Frühstück im Stehen und eingeengt vom Sessel der Sitzecke, dann: nichts. Hatte ich mich beim Termin geirrt? Vielleicht ja doch am Dienstag? Wieder nichts. Da ich keinerlei Kontaktdaten der Maler hatte, hiess es abwarten. Wie die Möbel waren schliesslich auch alle Termine der Woche verschoben. Sie könnten jederzeit auftauchen.
+Die Folgen von Arbeitslosigkeit auf die mentale Gesundheit werden leider oft unterschätzt. Wer ständig Absagen bekommt, fühlt sich nutzlos. Wer keinen Job hat, bekommt bei Smalltalk oft direkt Schnappatmung. Das ALG reicht nicht für eine aufregende Freizeitgestaltung. Folglich heisst es Rückzug und das Gefühl, allen anderen beim Leben zuzusehen, während man sich selbst einen Jobalert nach dem nächsten ins E-Mail-Postfach abonniert. Auch die Abhängigkeit von wohlgesinnten RAV-Beratern oder die Bearbeitungszeit der ALK sind nicht gerade empowering. Es ist schwierig, bei den finanziellen und zumeist existentiellen Sorgen den Kopf über Wasser zu halten und für jedes Anschreiben den Motivationskasper zu aktivieren. Auch die gut gemeinten «Nicht aufgeben, wird schon»-Ratschläge von Bekannten bringen nach einigen Monaten keine Erleichterung mehr. Hat Fabio nicht eben auch ganz mitleidig geschaut?
 
 ## `kolumnen.articles[0].paragraphs[3]`
 
-Zwei Wochen später treffe ich den Vorarbeiter zufällig am Haus. Notfallmässig seien sie abgezogen worden, könnten stattdessen aber in der nächsten Woche kommen. Ok, die Wohnung war ja weiterhin parat. Am Sonntag also wieder die grosse Putzroutine und das Warten am Montagmorgen. Immer in Lauerstellung, bloss nicht die Klingel überhören. Jedoch: wieder nichts. Verwirrt entschied ich mich dazu, zumindest das Sofa wieder in eine Position zu rücken, von der aus der Fernseher ohne längerfristige Nackenverdrehung erreichbar war. Im Badezimmer presste ich mich weiter an dem Kleiderständer vorbei, belagert mit Hundemänteln und Outdoor-Ausrüstung. Im Schlafzimmer streifte mich beim Zubettgehen jedes Mal der Ärmel meiner Winterjacke. Sie werden sich wohl melden.
+Zurück zur Stellensuche. Wieder bereue ich, nicht einfach Dachdecker, Heizungsinstallateur oder Schreiner gelernt zu haben, und beneide diese um die vielfach verwendbaren Anschreiben und die klare Suchmaskeneingabe. Ich hingegen glänze mit meinen vielen transferierbaren Skills, die ich für jedes Schreiben neu sortieren, verpacken und mit Schleife versehen muss. Überhaupt zehn Vakanzen im Monat zu finden, die nicht völlig konträr zu den bisherigen Stationen sind, ist eine Meisterleistung und erfordert einiges an Kreativität. Die Anschreiben wiederum müssen ein immenses Interesse an Arbeitgeber und Position widerspiegeln, während man sich aus Selbstschutz vor der fehlenden Einladung so überhaupt nicht festlegen darf, um die Enttäuschung so gering wie möglich zu halten.
 
 ## `kolumnen.articles[0].paragraphs[4]`
 
+Doch manchmal lässt es sich nicht vermeiden. Wenn man nach Wochen der Suche mal wieder einen Lichtblick in Form einer Anzeige erblickt, die tatsächlich resoniert, schlägt das Herz schneller. Sofort male ich mir aus, wie ich als Redaktorin alle meine Spezialinteressen ausleben kann oder als Ethical Hacker ein Syndikat aushebe. Im Hyperfokus wird das Dossier erstellt. Nach Tagen obsessiven E-Mail-Checkens dann aber doch nur wieder die Nachricht, dass andere Bewerber ein passenderes Profil hatten. Ich bin authentisch frustriert. In der Zwischenzeit schreibt mir ein Kollege, dass früher Biberhaar als Schamhaartoupets genutzt wurde. Ich lächle und freue mich über den kurzen Moment der mentalen Auszeit.
+
+## `kolumnen.articles[1].tag`
+
+Kolumne
+
+## `kolumnen.articles[1].title`
+
+Schöner Wohnen
+
+## `kolumnen.articles[1].deck`
+
+Wenn in der Wohnung Handwerksarbeiten anstehen, ist das anstrengend. Der Tagesablauf, die Einrichtung und die Freizeit werden rund um den Termin organisiert, Urlaubstage umgeplant. Wenn zusätzlich auch noch vor dem Haus, im Garten oder an den Aussenwänden gearbeitet wird, fühlt es sich schnell so an, als bestünde ein akuter Belagerungszustand. Das Zuhause eine Notunterkunft, der Garten ein Truppenübungsplatz. Eine Abhandlung.
+
+## `kolumnen.articles[1].image`
+
+assets/images/undercons.jpg
+
+## `kolumnen.articles[1].imageAlt`
+
+Baustelle und Absperrungen vor dem Haus
+
+## `kolumnen.articles[1].paragraphs[0]`
+
+Seit Jahren schöpfe ich bei Starkregen eimerweise Wasser aus meinem Kellerabteil. Wortwörtlich. Das Haus liegt am Hang, meine Wohnung im Souterrain, und das Grundwasser presst sich durch die marode Wand. Da der Keller als Hundeutensilienraum zweckentfremdet wurde, stehe ich dann bis zu den Knöcheln im eisenverfärbten Abwasser und stapfe auf der Suche nach Aufnehmer und Eimer durch die Plörre, die mir am frühen Morgen entgegenschwappt. Das Haus ist alt, die Vermieter informiert.
+
+## `kolumnen.articles[1].paragraphs[1]`
+
+Innerhalb der letzten Monate wurde das Problem dann forciert. Ich hatte immer wieder eine Handvoll verschiedener Ingenieure in Küche und Wohnzimmer, um Feuchtigkeitswerte zu überprüfen. Dann endlich der Start der Bauarbeiten, bei dem zwei Wochen lang Noise-Cancelling-Headphones Pflicht waren und meine Wohnung gefühlt zur Notunterkunft bei Bergsprengungen wurde. Soweit, so gut. Die Hangseite war abgedeckt. Nun standen noch die Schönheitsbehandlungen an: Wasserflecken innerhalb des Wohnraums sollten schliesslich auch noch verschwinden.
+
+## `kolumnen.articles[1].paragraphs[2]`
+
+Nach Terminabsprache räumte ich also am Sonntag das Kellerabteil leer, verteilte alles auf Schlaf- und Badezimmer und verrückte die Wohnzimmermöbel, um den optimalen Platz herauszuholen. Wohnen? Eher umzugsbereit. Montagmorgen, beim Frühstück im Stehen und eingeengt vom Sessel der Sitzecke, dann: nichts. Hatte ich mich beim Termin geirrt? Vielleicht ja doch am Dienstag? Wieder nichts. Da ich keinerlei Kontaktdaten der Maler hatte, hiess es abwarten. Wie die Möbel waren schliesslich auch alle Termine der Woche verschoben. Sie könnten jederzeit auftauchen.
+
+## `kolumnen.articles[1].paragraphs[3]`
+
+Zwei Wochen später treffe ich den Vorarbeiter zufällig am Haus. Notfallmässig seien sie abgezogen worden, könnten stattdessen aber in der nächsten Woche kommen. Ok, die Wohnung war ja weiterhin parat. Am Sonntag also wieder die grosse Putzroutine und das Warten am Montagmorgen. Immer in Lauerstellung, bloss nicht die Klingel überhören. Jedoch: wieder nichts. Verwirrt entschied ich mich dazu, zumindest das Sofa wieder in eine Position zu rücken, von der aus der Fernseher ohne längerfristige Nackenverdrehung erreichbar war. Im Badezimmer presste ich mich weiter an dem Kleiderständer vorbei, belagert mit Hundemänteln und Outdoor-Ausrüstung. Im Schlafzimmer streifte mich beim Zubettgehen jedes Mal der Ärmel meiner Winterjacke. Sie werden sich wohl melden.
+
+## `kolumnen.articles[1].paragraphs[4]`
+
 In der darauffolgenden Woche rufe ich dann doch die Vermieterin an, die meine Nummer weiterleitet. Mein Handy bleibt still, aber nach einer Woche ist der Vorarbeiter wieder vor Ort. Wir planen einen neuen Versuch inklusive des Versprechens einer vorherigen WhatsApp-Nachricht. Gleichzeitig erreicht mich eine Mail, die eine Flachdachsanierung für die nächste Woche ankündigt. Der Ablauf: erst wird mein Garten komplett entfernt, das Dach freigelegt, neu isoliert und dann wieder bepflanzt. Der Zeitplan: ungewiss.
 
-## `kolumnen.articles[0].paragraphs[5]`
+## `kolumnen.articles[1].paragraphs[5]`
 
 Inzwischen ist es Juni und der Sommer nimmt Fahrt auf. Der Sitzplatz fällt also in den nächsten Wochen aus, vor meiner Terrassentür stehen Holzabsperrungen, die mir den Zutritt verwehren. Die Arbeiter sind fleissig: Punkt 7 Uhr werden diverse laute Maschinen angeschmissen, der Garten gerodet, die Erde abgetragen, Hecken herausgerissen und ein Baum gefällt. Eine Woche lang. Mit konstantem Blick durch all meine Fenster stehe ich unter ständiger Beobachtung. Ab Woche zwei folgen Presslufthammer, Betonschleifer und Teer. Beim Fensteröffnen nach Feierabend um 18 Uhr weht der Lösungsmittelgeruch eines Edding-Fachgeschäfts in meine bis dahin völlig sauerstofffreie Wohnung. Ein Glück waren die Maler nicht da.
 
-## `kolumnen.articles[0].paragraphs[6]`
+## `kolumnen.articles[1].paragraphs[6]`
 
 In Woche drei taucht der Chef dann direkt um 7.30 Uhr persönlich an meiner Terrassentür auf. Morgen würden sie die Wand streichen. Und am Donnerstag. Um halb sieben am Abend gibt er mir noch eine exakte Uhrzeit durch. Am Dienstagmorgen wuchte ich also das Sofa wieder an die Seite und ziehe mir direkt einen Hexenschuss zu. Damit fällt das Wischen zumindest aus, denn der Aufnehmer ist am Boden unerreichbar. Zur vereinbarten Uhrzeit dann wieder: nichts. Dafür ist der Mann im Garten weiterhin enorm lautstark und geruchsintensiv beschäftigt.
 
-## `kolumnen.articles[0].paragraphs[7]`
+## `kolumnen.articles[1].paragraphs[7]`
 
 Eine halbe Stunde später dann doch die Ansage, dass sie in zehn Minuten kommen. Nach einer weiteren stehen sie tatsächlich vor meiner Tür. Ich ziehe mich wieder in mein verdunkeltes und damit blickdichtes Schlafzimmer zurück. Der Hund (gerade im Fellwechsel) und ich (allergisch) sind uns jetzt besonders nah. Bald ist es geschafft. Bald habe ich mein Zuhause wieder, wasserfrei und mit neuem Gartenkonzept. Immerhin ist das Wetter schlecht.
 
