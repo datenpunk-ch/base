@@ -1566,12 +1566,8 @@
     filter: var(--thumb-filter);
   }
 
-  main.main--project[data-kolumnen-page] [data-kolumnen-body] {
+  main.main--project[data-kolumnen-page] .article-section {
     padding-top: var(--space-1);
-  }
-
-  [data-kolumnen-body] p + p {
-    margin-top: 1.2rem;
   }
 
   .article-section p {
@@ -1583,6 +1579,14 @@
     color: var(--color-ink-body);
     text-align: left;
     hyphens: auto;
+  }
+
+  .article-section p + p {
+    margin-top: var(--space-3);
+  }
+
+  main.main--project[data-kolumnen-page] .article-section p + p {
+    margin-top: var(--space-4);
   }
 
   .embed-frame {

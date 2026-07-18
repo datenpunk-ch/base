@@ -435,9 +435,13 @@
 
     var deck = document.createElement("p");
     deck.className = "standfirst reveal";
-    deck.textContent = isRenderableValue(deckVal)
-      ? String(deckVal)
-      : missingText(base + ".deck");
+    if (isRenderableValue(deckVal)) {
+      var deckRendered = formatCopyInline(deckVal);
+      if (deckRendered.isHtml) deck.innerHTML = deckRendered.html;
+      else deck.textContent = deckRendered.text;
+    } else {
+      deck.textContent = missingText(base + ".deck");
+    }
     masthead.appendChild(deck);
     article.appendChild(masthead);
 
