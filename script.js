@@ -477,6 +477,71 @@
       bodySection.appendChild(empty);
     }
     article.appendChild(bodySection);
+
+    var listicleTitle = getByPath(bundle, base + ".listicle.title");
+    if (isRenderableValue(listicleTitle)) {
+      var listicle = document.createElement("section");
+      listicle.className = "article-listicle reveal";
+      listicle.setAttribute("aria-label", String(listicleTitle));
+
+      var listicleHeading = document.createElement("h2");
+      listicleHeading.className = "article-listicle__title";
+      var listicleTitleRendered = formatCopyInline(listicleTitle);
+      if (listicleTitleRendered.isHtml) {
+        listicleHeading.innerHTML = listicleTitleRendered.html;
+      } else {
+        listicleHeading.textContent = listicleTitleRendered.text;
+      }
+      listicle.appendChild(listicleHeading);
+
+      var list = document.createElement("ol");
+      list.className = "article-listicle__list";
+
+      var li = 0;
+      while (true) {
+        var itemBase = base + ".listicle.items[" + li + "]";
+        var itemTitle = getByPath(bundle, itemBase + ".title");
+        var itemText = getByPath(bundle, itemBase + ".text");
+        if (!isRenderableValue(itemTitle) && !isRenderableValue(itemText)) break;
+
+        var listItem = document.createElement("li");
+        listItem.className = "article-listicle__item reveal";
+
+        var itemBody = document.createElement("p");
+        itemBody.className = "article-listicle__text";
+
+        if (isRenderableValue(itemTitle)) {
+          var strong = document.createElement("strong");
+          strong.className = "article-listicle__hed";
+          var titleRendered = formatCopyInline(itemTitle);
+          if (titleRendered.isHtml) strong.innerHTML = titleRendered.html;
+          else strong.textContent = titleRendered.text;
+          itemBody.appendChild(strong);
+          itemBody.appendChild(document.createTextNode(" "));
+        }
+
+        if (isRenderableValue(itemText)) {
+          var textRendered = formatCopyInline(itemText);
+          if (textRendered.isHtml) {
+            var textSpan = document.createElement("span");
+            textSpan.innerHTML = textRendered.html;
+            itemBody.appendChild(textSpan);
+          } else {
+            itemBody.appendChild(document.createTextNode(textRendered.text));
+          }
+        }
+
+        listItem.appendChild(itemBody);
+        list.appendChild(listItem);
+        li++;
+      }
+
+      if (li > 0) {
+        listicle.appendChild(list);
+        article.appendChild(listicle);
+      }
+    }
+
     listEl.appendChild(article);
 
     if (isRenderableValue(titleVal)) {

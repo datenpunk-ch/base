@@ -398,6 +398,50 @@ Doch manchmal lässt es sich nicht vermeiden. Wenn man nach Wochen mal wieder ei
 
 In der Zwischenzeit schreibt mir ein Kollege, dass Menschen Biberhaar früher als Schamhaartoupets nutzten. Ich schmunzle und male mir direkt einen Pop-up-Store im Herzen Züris aus, der auf vegane Alternativen ebensolcher konzipiert ist. Zumindest ein Teil meines Hirns scheint Unternehmer zu sein. Genau richtig also, um doch noch die passende Nische im Arbeitsmarktdschungel zu finden.
 
+## `kolumnen.articles[0].listicle.title`
+
+5 Dinge, die ich als Vollzeitarbeitslose über die Stellensuche gelernt habe:
+
+## `kolumnen.articles[0].listicle.items[0].title`
+
+Framing ist das A und O
+
+## `kolumnen.articles[0].listicle.items[0].text`
+
+Was zählt, ist das richtige Mindset. Arbeitslosigkeit in der teuersten Stadt der Welt macht dich automatisch zum High-Performer. *Challenge accepted*, sozusagen.
+
+## `kolumnen.articles[0].listicle.items[1].title`
+
+«Und was machst du so» ist das neue Squidgame
+
+## `kolumnen.articles[0].listicle.items[1].text`
+
+Soziale Interaktionen werden zum Minenfeld des Selbstwerts, ständige Absagen verwässern den Glauben an all die «transferierbaren» Skills. Die mentalen Folgen von Arbeitslosigkeit werden oft unterschätzt. Zeit, sich ein neues Hobby zu suchen.
+
+## `kolumnen.articles[0].listicle.items[2].title`
+
+Qualität ist unmenschlich
+
+## `kolumnen.articles[0].listicle.items[2].text`
+
+Bei echter Motivation wird das Anschreiben prompt vom AI-Checker als KI-generiert geflaggt. So schnell wirst du nicht ersetzt.
+
+## `kolumnen.articles[0].listicle.items[3].title`
+
+Nischenjobs sind ein Ding
+
+## `kolumnen.articles[0].listicle.items[3].text`
+
+UX-Spezialisten für militärische Aktionen? Kreisarchitekten? Männer- und Gewaltberater? Die Jobalerts sind vielfältig und triggern kreatives Denken. Unmöglich, dass es nicht auch für deinen Lebenslauf die passende Stelle gibt.
+
+## `kolumnen.articles[0].listicle.items[4].title`
+
+Unterstimulation ist auch Stress
+
+## `kolumnen.articles[0].listicle.items[4].text`
+
+Wenn du merkst, dass aus jedem Fun Fact deiner Freunde direkt eine neue Pop-up-Store-Idee entwächst, ist es Zeit, eine Pause zu machen. Oder einen Businessplan.
+
 ## `kolumnen.articles[1].tag`
 
 Column
