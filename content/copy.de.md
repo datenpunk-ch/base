@@ -16,7 +16,7 @@ de
 
 ## `meta.documentTitle.index`
 
-Datenpunk — Zahlen. Stories. Gegen den Strich.
+Datenpunk — Zahlen. Stories.
 
 ## `meta.documentTitle.projects`
 
@@ -88,7 +88,7 @@ Datenpunk · Zürich
 
 ## `footer.note`
 
-Datenpunk — Zahlen. Stories. Gegen den Strich.
+Datenpunk — Zahlen. Stories.
 
 ## `footer.impressumLink`
 
@@ -100,7 +100,7 @@ Datenpunk.
 
 ## `home.kickerLine`
 
-Zahlen. Stories. Gegen den Strich.
+Zahlen. Stories.
 
 ## `home.intro`
 
